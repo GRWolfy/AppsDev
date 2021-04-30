@@ -48,8 +48,8 @@ namespace AppsDev
                   txtUsername.Text = Functions.Function.reader["Username"].ToString();
                   txtPassword.Text = Functions.Function.reader["Password"].ToString();
 
-                  setfirstname = Functions.Function.reader["Username"].ToString();
-                  setlastname = Functions.Function.reader["Password"].ToString();
+                  setfirstname = Functions.Function.reader["FirstName"].ToString();
+                  setlastname = Functions.Function.reader["LastName"].ToString();
 
                   var student = new Student.StudentDashboard();
                   student.Show();
@@ -59,6 +59,9 @@ namespace AppsDev
                {
                   txtUsername.Text = Functions.Function.reader["Username"].ToString();
                   txtPassword.Text = Functions.Function.reader["Password"].ToString();
+
+                  setfirstname = Functions.Function.reader["FirstName"].ToString();
+                  setlastname = Functions.Function.reader["LastName"].ToString();
 
                   var admin = new Admin.AdminDashboard();
                   admin.Show();
