@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
 
 namespace AppsDev
@@ -43,7 +37,7 @@ namespace AppsDev
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('"+txtFirstName.Text+"', '"+txtLastName.Text+ "', '" + txtAge.Text + "', '" +gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 2 + "', '" + txtEmail.Text + "')";
+            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('"+txtFirstName.Text+"', '"+txtLastName.Text+ "', '" + txtAge.Text + "', '" +gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Success", "Login", MessageBoxButtons.OK);
@@ -51,8 +45,6 @@ namespace AppsDev
             Login login = new Login();
             login.Show();
             Hide();
-
-            //28:34
          }
 
          catch(Exception ex)
@@ -112,10 +104,55 @@ namespace AppsDev
 
       private void txtUsername_KeyUp(object sender, KeyEventArgs e)
       {
-         Functions.Function.gen = "SELECT count(*) FROM users WHERE  username VALUES";
-         Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+         try
+         {
+            Connection.Connection.DB();
+            Functions.Function.gen = "SELECT * FROM users WHERE  Username = '" + txtUsername.Text + "' ";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.reader = Functions.Function.command.ExecuteReader();
 
-         Connection.Connection.con.Close();
+            if (Functions.Function.reader.HasRows)
+            {
+               labelUsername.Text = "Username already exist";
+            }
+            else
+            {
+               labelUsername.Text = "Username available";
+            }
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+      }
+
+      private void txtConfirmPassword_KeyUp(object sender, KeyEventArgs e)
+      {
+         if (txtPassword.Text.Equals(txtConfirmPassword.Text))
+         {
+            btnSave.Enabled = true;
+            labelPassword.Text = "Matched";
+         }
+         else
+         {
+            btnSave.Enabled = false;
+            labelPassword.Text = "Check password";
+         }
+      }
+
+      private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+      {
+         if (txtPassword.Text.Equals(txtConfirmPassword.Text))
+         {
+            btnSave.Enabled = true;
+            labelPassword.Text = "Matched";
+         }
+         else
+         {
+            btnSave.Enabled = false;
+            labelPassword.Text = "Check password";
+         }
       }
    }
 }

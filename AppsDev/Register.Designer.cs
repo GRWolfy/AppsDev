@@ -52,6 +52,8 @@ namespace AppsDev
          this.txtEmail = new System.Windows.Forms.TextBox();
          this.txtConfirmPassword = new System.Windows.Forms.TextBox();
          this.labelEmail = new System.Windows.Forms.Label();
+         this.labelUsername = new System.Windows.Forms.Label();
+         this.labelPassword = new System.Windows.Forms.Label();
          this.SuspendLayout();
          // 
          // label1
@@ -243,6 +245,7 @@ namespace AppsDev
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.Size = new System.Drawing.Size(189, 20);
          this.txtPassword.TabIndex = 19;
+         this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
          // 
          // txtEmail
          // 
@@ -260,6 +263,7 @@ namespace AppsDev
          this.txtConfirmPassword.Name = "txtConfirmPassword";
          this.txtConfirmPassword.Size = new System.Drawing.Size(189, 20);
          this.txtConfirmPassword.TabIndex = 21;
+         this.txtConfirmPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPassword_KeyUp);
          // 
          // labelEmail
          // 
@@ -270,11 +274,31 @@ namespace AppsDev
          this.labelEmail.TabIndex = 22;
          this.labelEmail.Text = "...";
          // 
+         // labelUsername
+         // 
+         this.labelUsername.AutoSize = true;
+         this.labelUsername.Location = new System.Drawing.Point(688, 118);
+         this.labelUsername.Name = "labelUsername";
+         this.labelUsername.Size = new System.Drawing.Size(16, 13);
+         this.labelUsername.TabIndex = 23;
+         this.labelUsername.Text = "...";
+         // 
+         // labelPassword
+         // 
+         this.labelPassword.AutoSize = true;
+         this.labelPassword.Location = new System.Drawing.Point(688, 186);
+         this.labelPassword.Name = "labelPassword";
+         this.labelPassword.Size = new System.Drawing.Size(16, 13);
+         this.labelPassword.TabIndex = 24;
+         this.labelPassword.Text = "...";
+         // 
          // Register
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.labelPassword);
+         this.Controls.Add(this.labelUsername);
          this.Controls.Add(this.labelEmail);
          this.Controls.Add(this.txtConfirmPassword);
          this.Controls.Add(this.txtEmail);
@@ -330,5 +354,7 @@ namespace AppsDev
       private System.Windows.Forms.TextBox txtEmail;
       private System.Windows.Forms.TextBox txtConfirmPassword;
       private System.Windows.Forms.Label labelEmail;
+      private System.Windows.Forms.Label labelUsername;
+      private System.Windows.Forms.Label labelPassword;
    }
 }
