@@ -31,22 +31,22 @@ namespace AppsDev.Admin
       {
          this.label1 = new System.Windows.Forms.Label();
          this.panel1 = new System.Windows.Forms.Panel();
-         this.btnLogout = new System.Windows.Forms.Button();
-         this.btnReports = new System.Windows.Forms.Button();
-         this.btnCollection = new System.Windows.Forms.Button();
-         this.btnEvents = new System.Windows.Forms.Button();
-         this.btnRegistration = new System.Windows.Forms.Button();
-         this.btnDashboard = new System.Windows.Forms.Button();
-         this.labelLastname = new System.Windows.Forms.Label();
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.labelFirstname = new System.Windows.Forms.Label();
+         this.labelLastname = new System.Windows.Forms.Label();
+         this.btnDashboard = new System.Windows.Forms.Button();
+         this.btnRegistration = new System.Windows.Forms.Button();
+         this.btnEvents = new System.Windows.Forms.Button();
+         this.btnCollection = new System.Windows.Forms.Button();
+         this.btnReports = new System.Windows.Forms.Button();
+         this.btnLogout = new System.Windows.Forms.Button();
          this.panel2 = new System.Windows.Forms.Panel();
-         this.lblTotalRegistration = new System.Windows.Forms.Label();
          this.panel3 = new System.Windows.Forms.Panel();
-         this.label2 = new System.Windows.Forms.Label();
          this.panel4 = new System.Windows.Forms.Panel();
-         this.label3 = new System.Windows.Forms.Label();
+         this.lblTotalRegistration = new System.Windows.Forms.Label();
          this.label5 = new System.Windows.Forms.Label();
+         this.label2 = new System.Windows.Forms.Label();
+         this.label3 = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.panel2.SuspendLayout();
@@ -82,70 +82,6 @@ namespace AppsDev.Admin
          this.panel1.TabIndex = 2;
          this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
          // 
-         // btnLogout
-         // 
-         this.btnLogout.Location = new System.Drawing.Point(24, 394);
-         this.btnLogout.Name = "btnLogout";
-         this.btnLogout.Size = new System.Drawing.Size(134, 28);
-         this.btnLogout.TabIndex = 10;
-         this.btnLogout.Text = "Logout";
-         this.btnLogout.UseVisualStyleBackColor = true;
-         // 
-         // btnReports
-         // 
-         this.btnReports.Location = new System.Drawing.Point(24, 351);
-         this.btnReports.Name = "btnReports";
-         this.btnReports.Size = new System.Drawing.Size(134, 28);
-         this.btnReports.TabIndex = 9;
-         this.btnReports.Text = "Reports";
-         this.btnReports.UseVisualStyleBackColor = true;
-         this.btnReports.Click += new System.EventHandler(this.button5_Click);
-         // 
-         // btnCollection
-         // 
-         this.btnCollection.Location = new System.Drawing.Point(24, 308);
-         this.btnCollection.Name = "btnCollection";
-         this.btnCollection.Size = new System.Drawing.Size(134, 28);
-         this.btnCollection.TabIndex = 8;
-         this.btnCollection.Text = "Colletion";
-         this.btnCollection.UseVisualStyleBackColor = true;
-         // 
-         // btnEvents
-         // 
-         this.btnEvents.Location = new System.Drawing.Point(24, 265);
-         this.btnEvents.Name = "btnEvents";
-         this.btnEvents.Size = new System.Drawing.Size(134, 28);
-         this.btnEvents.TabIndex = 7;
-         this.btnEvents.Text = "Events";
-         this.btnEvents.UseVisualStyleBackColor = true;
-         // 
-         // btnRegistration
-         // 
-         this.btnRegistration.Location = new System.Drawing.Point(24, 222);
-         this.btnRegistration.Name = "btnRegistration";
-         this.btnRegistration.Size = new System.Drawing.Size(134, 28);
-         this.btnRegistration.TabIndex = 6;
-         this.btnRegistration.Text = "Registration";
-         this.btnRegistration.UseVisualStyleBackColor = true;
-         // 
-         // btnDashboard
-         // 
-         this.btnDashboard.Location = new System.Drawing.Point(24, 179);
-         this.btnDashboard.Name = "btnDashboard";
-         this.btnDashboard.Size = new System.Drawing.Size(134, 28);
-         this.btnDashboard.TabIndex = 3;
-         this.btnDashboard.Text = "Dashboard";
-         this.btnDashboard.UseVisualStyleBackColor = true;
-         // 
-         // labelLastname
-         // 
-         this.labelLastname.AutoSize = true;
-         this.labelLastname.Location = new System.Drawing.Point(102, 145);
-         this.labelLastname.Name = "labelLastname";
-         this.labelLastname.Size = new System.Drawing.Size(35, 13);
-         this.labelLastname.TabIndex = 5;
-         this.labelLastname.Text = "label3";
-         // 
          // pictureBox1
          // 
          this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -166,6 +102,70 @@ namespace AppsDev.Admin
          this.labelFirstname.TabIndex = 3;
          this.labelFirstname.Text = "label2";
          // 
+         // labelLastname
+         // 
+         this.labelLastname.AutoSize = true;
+         this.labelLastname.Location = new System.Drawing.Point(102, 145);
+         this.labelLastname.Name = "labelLastname";
+         this.labelLastname.Size = new System.Drawing.Size(35, 13);
+         this.labelLastname.TabIndex = 5;
+         this.labelLastname.Text = "label3";
+         // 
+         // btnDashboard
+         // 
+         this.btnDashboard.Location = new System.Drawing.Point(24, 179);
+         this.btnDashboard.Name = "btnDashboard";
+         this.btnDashboard.Size = new System.Drawing.Size(134, 28);
+         this.btnDashboard.TabIndex = 3;
+         this.btnDashboard.Text = "Dashboard";
+         this.btnDashboard.UseVisualStyleBackColor = true;
+         // 
+         // btnRegistration
+         // 
+         this.btnRegistration.Location = new System.Drawing.Point(24, 222);
+         this.btnRegistration.Name = "btnRegistration";
+         this.btnRegistration.Size = new System.Drawing.Size(134, 28);
+         this.btnRegistration.TabIndex = 6;
+         this.btnRegistration.Text = "Registration";
+         this.btnRegistration.UseVisualStyleBackColor = true;
+         // 
+         // btnEvents
+         // 
+         this.btnEvents.Location = new System.Drawing.Point(24, 265);
+         this.btnEvents.Name = "btnEvents";
+         this.btnEvents.Size = new System.Drawing.Size(134, 28);
+         this.btnEvents.TabIndex = 7;
+         this.btnEvents.Text = "Events";
+         this.btnEvents.UseVisualStyleBackColor = true;
+         // 
+         // btnCollection
+         // 
+         this.btnCollection.Location = new System.Drawing.Point(24, 308);
+         this.btnCollection.Name = "btnCollection";
+         this.btnCollection.Size = new System.Drawing.Size(134, 28);
+         this.btnCollection.TabIndex = 8;
+         this.btnCollection.Text = "Colletion";
+         this.btnCollection.UseVisualStyleBackColor = true;
+         // 
+         // btnReports
+         // 
+         this.btnReports.Location = new System.Drawing.Point(24, 351);
+         this.btnReports.Name = "btnReports";
+         this.btnReports.Size = new System.Drawing.Size(134, 28);
+         this.btnReports.TabIndex = 9;
+         this.btnReports.Text = "Reports";
+         this.btnReports.UseVisualStyleBackColor = true;
+         this.btnReports.Click += new System.EventHandler(this.button5_Click);
+         // 
+         // btnLogout
+         // 
+         this.btnLogout.Location = new System.Drawing.Point(24, 394);
+         this.btnLogout.Name = "btnLogout";
+         this.btnLogout.Size = new System.Drawing.Size(134, 28);
+         this.btnLogout.TabIndex = 10;
+         this.btnLogout.Text = "Logout";
+         this.btnLogout.UseVisualStyleBackColor = true;
+         // 
          // panel2
          // 
          this.panel2.Controls.Add(this.lblTotalRegistration);
@@ -173,6 +173,22 @@ namespace AppsDev.Admin
          this.panel2.Name = "panel2";
          this.panel2.Size = new System.Drawing.Size(120, 150);
          this.panel2.TabIndex = 3;
+         // 
+         // panel3
+         // 
+         this.panel3.Controls.Add(this.label2);
+         this.panel3.Location = new System.Drawing.Point(425, 123);
+         this.panel3.Name = "panel3";
+         this.panel3.Size = new System.Drawing.Size(120, 150);
+         this.panel3.TabIndex = 4;
+         // 
+         // panel4
+         // 
+         this.panel4.Controls.Add(this.label3);
+         this.panel4.Location = new System.Drawing.Point(628, 123);
+         this.panel4.Name = "panel4";
+         this.panel4.Size = new System.Drawing.Size(120, 150);
+         this.panel4.TabIndex = 4;
          // 
          // lblTotalRegistration
          // 
@@ -183,15 +199,16 @@ namespace AppsDev.Admin
          this.lblTotalRegistration.Size = new System.Drawing.Size(68, 73);
          this.lblTotalRegistration.TabIndex = 5;
          this.lblTotalRegistration.Text = "0";
-         this.lblTotalRegistration.Click += new System.EventHandler(this.lblTotalRegistration_Click);
          // 
-         // panel3
+         // label5
          // 
-         this.panel3.Controls.Add(this.label2);
-         this.panel3.Location = new System.Drawing.Point(425, 123);
-         this.panel3.Name = "panel3";
-         this.panel3.Size = new System.Drawing.Size(120, 150);
-         this.panel3.TabIndex = 4;
+         this.label5.AutoSize = true;
+         this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label5.Location = new System.Drawing.Point(223, 295);
+         this.label5.Name = "label5";
+         this.label5.Size = new System.Drawing.Size(124, 18);
+         this.label5.TabIndex = 6;
+         this.label5.Text = "Total Registration";
          // 
          // label2
          // 
@@ -203,14 +220,6 @@ namespace AppsDev.Admin
          this.label2.TabIndex = 6;
          this.label2.Text = "0";
          // 
-         // panel4
-         // 
-         this.panel4.Controls.Add(this.label3);
-         this.panel4.Location = new System.Drawing.Point(628, 123);
-         this.panel4.Name = "panel4";
-         this.panel4.Size = new System.Drawing.Size(120, 150);
-         this.panel4.TabIndex = 4;
-         // 
          // label3
          // 
          this.label3.AutoSize = true;
@@ -220,16 +229,6 @@ namespace AppsDev.Admin
          this.label3.Size = new System.Drawing.Size(68, 73);
          this.label3.TabIndex = 7;
          this.label3.Text = "0";
-         // 
-         // label5
-         // 
-         this.label5.AutoSize = true;
-         this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label5.Location = new System.Drawing.Point(223, 295);
-         this.label5.Name = "label5";
-         this.label5.Size = new System.Drawing.Size(124, 18);
-         this.label5.TabIndex = 6;
-         this.label5.Text = "Total Registration";
          // 
          // AdminDashboard
          // 

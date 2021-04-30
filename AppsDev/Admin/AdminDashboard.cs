@@ -22,6 +22,7 @@ namespace AppsDev.Admin
       {
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
+         TotalCountRegister();
       }
 
       private void button5_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace AppsDev.Admin
 
       }
 
-      private void lblTotalRegistration_Click(object sender, EventArgs e)
+      private void TotalCountRegister()
       {
          try
          {
