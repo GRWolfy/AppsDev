@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminReports.Designer.cs">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCollection.Designer.cs">
+      <DependentUpon>AdminCollection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminEvents.Designer.cs">
+      <DependentUpon>AdminEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminRegistration.Designer.cs">
+      <DependentUpon>AdminRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection\Connection.cs" />
     <Compile Include="Functions\Function.cs" />
@@ -80,8 +104,20 @@
     <Compile Include="Student\StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\AdminReports.resx">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminCollection.resx">
+      <DependentUpon>AdminCollection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminEvents.resx">
+      <DependentUpon>AdminEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminRegistration.resx">
+      <DependentUpon>AdminRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -118,7 +154,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\AdmingSettingsBackground.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WolfAvatar.jpg" />
   </ItemGroup>

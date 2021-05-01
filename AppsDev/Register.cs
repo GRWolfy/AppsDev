@@ -7,13 +7,22 @@ namespace AppsDev
 {
    public partial class Register : Form
    {
+      private bool[] EachCheck = new bool[8];
+      private bool checker = false;
       public Register()
       {
          InitializeComponent();
+
+         for (int i = 0; i < EachCheck.Length; i++)
+         {
+            EachCheck[i] = false;
+         }
       }
 
       private void btnSave_Click(object sender, EventArgs e)
       {
+         
+
          string gender = "";
          if (rbtnMale.Checked)
          {
@@ -33,24 +42,32 @@ namespace AppsDev
             rbtnMale.Checked = false;
             rbtnFemale.Checked = false;
          }
-
-         try
+         if (checker)
          {
-            Connection.Connection.DB();
-            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('"+txtFirstName.Text+"', '"+txtLastName.Text+ "', '" + txtAge.Text + "', '" +gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
-            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
-            Functions.Function.command.ExecuteNonQuery();
-            MessageBox.Show("Success", "Login", MessageBoxButtons.OK);
-            Connection.Connection.con.Close();
-            Login login = new Login();
-            login.Show();
-            Hide();
-         }
+            try
+            {
+               btnSave.Enabled = true;
+               Connection.Connection.DB();
+               Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
+               Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+               Functions.Function.command.ExecuteNonQuery();
+               MessageBox.Show("Success", "Login", MessageBoxButtons.OK);
+               Connection.Connection.con.Close();
+               Login login = new Login();
+               login.Show();
+               Hide();
+            }
 
-         catch(Exception ex)
-         {
-            MessageBox.Show(ex.Message);
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.Message);
+            }
          }
+         else
+         {
+            btnSave.Enabled = false;
+         }
+         
       }
 
       private void btnBack_Click(object sender, EventArgs e)

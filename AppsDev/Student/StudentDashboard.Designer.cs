@@ -73,6 +73,7 @@ namespace AppsDev.Student
          this.Controls.Add(this.lblFirstname);
          this.Controls.Add(this.label1);
          this.Name = "StudentDashboard";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "StudentDashboard";
          this.Load += new System.EventHandler(this.StudentDashboard_Load);
          this.ResumeLayout(false);

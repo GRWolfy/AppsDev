@@ -71,6 +71,7 @@ namespace AppsDev
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.Size = new System.Drawing.Size(100, 20);
          this.txtPassword.TabIndex = 3;
+         this.txtPassword.UseSystemPasswordChar = true;
          // 
          // lblUsername
          // 
@@ -102,6 +103,7 @@ namespace AppsDev
          this.Controls.Add(this.linklRegister);
          this.Controls.Add(this.btnLoginAccount);
          this.Name = "Login";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Login";
          this.Load += new System.EventHandler(this.Login_Load);
          this.ResumeLayout(false);

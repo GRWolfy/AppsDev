@@ -245,6 +245,7 @@ namespace AppsDev
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.Size = new System.Drawing.Size(189, 20);
          this.txtPassword.TabIndex = 19;
+         this.txtPassword.UseSystemPasswordChar = true;
          this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
          // 
          // txtEmail
@@ -263,6 +264,7 @@ namespace AppsDev
          this.txtConfirmPassword.Name = "txtConfirmPassword";
          this.txtConfirmPassword.Size = new System.Drawing.Size(189, 20);
          this.txtConfirmPassword.TabIndex = 21;
+         this.txtConfirmPassword.UseSystemPasswordChar = true;
          this.txtConfirmPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPassword_KeyUp);
          // 
          // labelEmail
@@ -323,6 +325,7 @@ namespace AppsDev
          this.Controls.Add(this.btnSave);
          this.Controls.Add(this.label1);
          this.Name = "Register";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Register";
          this.ResumeLayout(false);
          this.PerformLayout();

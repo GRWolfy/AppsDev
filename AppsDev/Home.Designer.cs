@@ -74,6 +74,7 @@ namespace AppsDev
          this.Controls.Add(this.btnClose);
          this.Controls.Add(this.btnLogin);
          this.Name = "Home";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Home";
          this.ResumeLayout(false);
          this.PerformLayout();
