@@ -84,6 +84,15 @@ namespace AppsDev
 
       private void Login_Load(object sender, EventArgs e)
       {
+         tooltipPaimon.SetToolTip(pictureBox1, "Do you need help?");
+         pictureBox2.Visible = false;
+      }
+
+      private void pictureBox1_Click(object sender, EventArgs e)
+      {
+         pictureBox1.Visible = false;
+         pictureBox2.Visible = true;
+         tooltipAngry.SetToolTip(pictureBox2, "PAIMON DONT WANT TO HELP YOU!");
 
       }
    }
