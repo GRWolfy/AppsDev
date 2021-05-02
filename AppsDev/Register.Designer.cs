@@ -59,7 +59,7 @@ namespace AppsDev
          // label1
          // 
          this.label1.AutoSize = true;
-         this.label1.Location = new System.Drawing.Point(22, 113);
+         this.label1.Location = new System.Drawing.Point(44, 115);
          this.label1.Name = "label1";
          this.label1.Size = new System.Drawing.Size(60, 13);
          this.label1.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace AppsDev
          // 
          // btnSave
          // 
-         this.btnSave.Location = new System.Drawing.Point(510, 357);
+         this.btnSave.Location = new System.Drawing.Point(318, 313);
          this.btnSave.Name = "btnSave";
          this.btnSave.Size = new System.Drawing.Size(207, 53);
          this.btnSave.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace AppsDev
          // 
          // txtFirstName
          // 
-         this.txtFirstName.Location = new System.Drawing.Point(143, 110);
+         this.txtFirstName.Location = new System.Drawing.Point(129, 115);
          this.txtFirstName.Multiline = true;
          this.txtFirstName.Name = "txtFirstName";
          this.txtFirstName.Size = new System.Drawing.Size(189, 20);
@@ -86,7 +86,7 @@ namespace AppsDev
          // rbtnMale
          // 
          this.rbtnMale.AutoSize = true;
-         this.rbtnMale.Location = new System.Drawing.Point(142, 222);
+         this.rbtnMale.Location = new System.Drawing.Point(128, 227);
          this.rbtnMale.Name = "rbtnMale";
          this.rbtnMale.Size = new System.Drawing.Size(48, 17);
          this.rbtnMale.TabIndex = 3;
@@ -103,7 +103,7 @@ namespace AppsDev
             "Married",
             "Divorced",
             "Widowed"});
-         this.cmboxStatus.Location = new System.Drawing.Point(143, 253);
+         this.cmboxStatus.Location = new System.Drawing.Point(129, 258);
          this.cmboxStatus.Name = "cmboxStatus";
          this.cmboxStatus.Size = new System.Drawing.Size(120, 21);
          this.cmboxStatus.TabIndex = 4;
@@ -111,7 +111,7 @@ namespace AppsDev
          // rbtnFemale
          // 
          this.rbtnFemale.AutoSize = true;
-         this.rbtnFemale.Location = new System.Drawing.Point(196, 222);
+         this.rbtnFemale.Location = new System.Drawing.Point(182, 227);
          this.rbtnFemale.Name = "rbtnFemale";
          this.rbtnFemale.Size = new System.Drawing.Size(59, 17);
          this.rbtnFemale.TabIndex = 5;
@@ -122,7 +122,7 @@ namespace AppsDev
          // rbtnOther
          // 
          this.rbtnOther.AutoSize = true;
-         this.rbtnOther.Location = new System.Drawing.Point(263, 222);
+         this.rbtnOther.Location = new System.Drawing.Point(249, 227);
          this.rbtnOther.Name = "rbtnOther";
          this.rbtnOther.Size = new System.Drawing.Size(51, 17);
          this.rbtnOther.TabIndex = 6;
@@ -143,7 +143,7 @@ namespace AppsDev
          // label2
          // 
          this.label2.AutoSize = true;
-         this.label2.Location = new System.Drawing.Point(22, 147);
+         this.label2.Location = new System.Drawing.Point(44, 149);
          this.label2.Name = "label2";
          this.label2.Size = new System.Drawing.Size(61, 13);
          this.label2.TabIndex = 8;
@@ -152,7 +152,7 @@ namespace AppsDev
          // label3
          // 
          this.label3.AutoSize = true;
-         this.label3.Location = new System.Drawing.Point(373, 114);
+         this.label3.Location = new System.Drawing.Point(362, 116);
          this.label3.Name = "label3";
          this.label3.Size = new System.Drawing.Size(58, 13);
          this.label3.TabIndex = 9;
@@ -161,7 +161,7 @@ namespace AppsDev
          // label4
          // 
          this.label4.AutoSize = true;
-         this.label4.Location = new System.Drawing.Point(373, 143);
+         this.label4.Location = new System.Drawing.Point(362, 145);
          this.label4.Name = "label4";
          this.label4.Size = new System.Drawing.Size(56, 13);
          this.label4.TabIndex = 10;
@@ -170,7 +170,7 @@ namespace AppsDev
          // label5
          // 
          this.label5.AutoSize = true;
-         this.label5.Location = new System.Drawing.Point(373, 181);
+         this.label5.Location = new System.Drawing.Point(362, 183);
          this.label5.Name = "label5";
          this.label5.Size = new System.Drawing.Size(94, 13);
          this.label5.TabIndex = 11;
@@ -179,7 +179,7 @@ namespace AppsDev
          // label6
          // 
          this.label6.AutoSize = true;
-         this.label6.Location = new System.Drawing.Point(22, 182);
+         this.label6.Location = new System.Drawing.Point(44, 184);
          this.label6.Name = "label6";
          this.label6.Size = new System.Drawing.Size(29, 13);
          this.label6.TabIndex = 12;
@@ -188,7 +188,7 @@ namespace AppsDev
          // label7
          // 
          this.label7.AutoSize = true;
-         this.label7.Location = new System.Drawing.Point(22, 256);
+         this.label7.Location = new System.Drawing.Point(44, 258);
          this.label7.Name = "label7";
          this.label7.Size = new System.Drawing.Size(40, 13);
          this.label7.TabIndex = 13;
@@ -197,7 +197,7 @@ namespace AppsDev
          // label8
          // 
          this.label8.AutoSize = true;
-         this.label8.Location = new System.Drawing.Point(373, 220);
+         this.label8.Location = new System.Drawing.Point(362, 222);
          this.label8.Name = "label8";
          this.label8.Size = new System.Drawing.Size(35, 13);
          this.label8.TabIndex = 14;
@@ -206,7 +206,7 @@ namespace AppsDev
          // label9
          // 
          this.label9.AutoSize = true;
-         this.label9.Location = new System.Drawing.Point(22, 224);
+         this.label9.Location = new System.Drawing.Point(44, 226);
          this.label9.Name = "label9";
          this.label9.Size = new System.Drawing.Size(45, 13);
          this.label9.TabIndex = 15;
@@ -214,7 +214,7 @@ namespace AppsDev
          // 
          // txtLastName
          // 
-         this.txtLastName.Location = new System.Drawing.Point(143, 144);
+         this.txtLastName.Location = new System.Drawing.Point(129, 149);
          this.txtLastName.Multiline = true;
          this.txtLastName.Name = "txtLastName";
          this.txtLastName.Size = new System.Drawing.Size(189, 20);
@@ -222,7 +222,7 @@ namespace AppsDev
          // 
          // txtAge
          // 
-         this.txtAge.Location = new System.Drawing.Point(143, 179);
+         this.txtAge.Location = new System.Drawing.Point(129, 184);
          this.txtAge.Multiline = true;
          this.txtAge.Name = "txtAge";
          this.txtAge.Size = new System.Drawing.Size(189, 20);
@@ -231,7 +231,7 @@ namespace AppsDev
          // 
          // txtUsername
          // 
-         this.txtUsername.Location = new System.Drawing.Point(493, 111);
+         this.txtUsername.Location = new System.Drawing.Point(462, 113);
          this.txtUsername.Multiline = true;
          this.txtUsername.Name = "txtUsername";
          this.txtUsername.Size = new System.Drawing.Size(189, 20);
@@ -240,9 +240,9 @@ namespace AppsDev
          // 
          // txtPassword
          // 
-         this.txtPassword.Location = new System.Drawing.Point(493, 140);
-         this.txtPassword.Multiline = true;
+         this.txtPassword.Location = new System.Drawing.Point(462, 142);
          this.txtPassword.Name = "txtPassword";
+         this.txtPassword.PasswordChar = '•';
          this.txtPassword.Size = new System.Drawing.Size(189, 20);
          this.txtPassword.TabIndex = 19;
          this.txtPassword.UseSystemPasswordChar = true;
@@ -250,7 +250,7 @@ namespace AppsDev
          // 
          // txtEmail
          // 
-         this.txtEmail.Location = new System.Drawing.Point(493, 217);
+         this.txtEmail.Location = new System.Drawing.Point(462, 219);
          this.txtEmail.Multiline = true;
          this.txtEmail.Name = "txtEmail";
          this.txtEmail.Size = new System.Drawing.Size(189, 20);
@@ -259,9 +259,9 @@ namespace AppsDev
          // 
          // txtConfirmPassword
          // 
-         this.txtConfirmPassword.Location = new System.Drawing.Point(493, 178);
-         this.txtConfirmPassword.Multiline = true;
+         this.txtConfirmPassword.Location = new System.Drawing.Point(462, 180);
          this.txtConfirmPassword.Name = "txtConfirmPassword";
+         this.txtConfirmPassword.PasswordChar = '•';
          this.txtConfirmPassword.Size = new System.Drawing.Size(189, 20);
          this.txtConfirmPassword.TabIndex = 21;
          this.txtConfirmPassword.UseSystemPasswordChar = true;
@@ -270,7 +270,7 @@ namespace AppsDev
          // labelEmail
          // 
          this.labelEmail.AutoSize = true;
-         this.labelEmail.Location = new System.Drawing.Point(688, 222);
+         this.labelEmail.Location = new System.Drawing.Point(657, 226);
          this.labelEmail.Name = "labelEmail";
          this.labelEmail.Size = new System.Drawing.Size(16, 13);
          this.labelEmail.TabIndex = 22;
@@ -279,7 +279,7 @@ namespace AppsDev
          // labelUsername
          // 
          this.labelUsername.AutoSize = true;
-         this.labelUsername.Location = new System.Drawing.Point(688, 118);
+         this.labelUsername.Location = new System.Drawing.Point(657, 120);
          this.labelUsername.Name = "labelUsername";
          this.labelUsername.Size = new System.Drawing.Size(16, 13);
          this.labelUsername.TabIndex = 23;
@@ -288,7 +288,7 @@ namespace AppsDev
          // labelPassword
          // 
          this.labelPassword.AutoSize = true;
-         this.labelPassword.Location = new System.Drawing.Point(688, 186);
+         this.labelPassword.Location = new System.Drawing.Point(657, 187);
          this.labelPassword.Name = "labelPassword";
          this.labelPassword.Size = new System.Drawing.Size(16, 13);
          this.labelPassword.TabIndex = 24;
@@ -324,6 +324,7 @@ namespace AppsDev
          this.Controls.Add(this.txtFirstName);
          this.Controls.Add(this.btnSave);
          this.Controls.Add(this.label1);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
          this.Name = "Register";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Register";

@@ -73,6 +73,7 @@ namespace AppsDev
          this.Controls.Add(this.linklRegister);
          this.Controls.Add(this.btnClose);
          this.Controls.Add(this.btnLogin);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
          this.Name = "Home";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Home";

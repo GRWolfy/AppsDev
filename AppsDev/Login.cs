@@ -67,10 +67,10 @@ namespace AppsDev
                   admin.Show();
                   Hide();
                }
-               else
-               {
-                  MessageBox.Show("Wrong Credentials");
-               }
+            }
+            else
+            {
+               MessageBox.Show("Incorrect username or password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
          }
 

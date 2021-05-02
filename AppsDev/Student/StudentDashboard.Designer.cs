@@ -50,9 +50,9 @@ namespace AppsDev.Student
          this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.lblFirstname.Location = new System.Drawing.Point(96, 110);
          this.lblFirstname.Name = "lblFirstname";
-         this.lblFirstname.Size = new System.Drawing.Size(70, 25);
+         this.lblFirstname.Size = new System.Drawing.Size(116, 25);
          this.lblFirstname.TabIndex = 1;
-         this.lblFirstname.Text = "label2";
+         this.lblFirstname.Text = "First Name";
          // 
          // lblLastname
          // 
@@ -60,9 +60,9 @@ namespace AppsDev.Student
          this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.lblLastname.Location = new System.Drawing.Point(227, 110);
          this.lblLastname.Name = "lblLastname";
-         this.lblLastname.Size = new System.Drawing.Size(70, 25);
+         this.lblLastname.Size = new System.Drawing.Size(115, 25);
          this.lblLastname.TabIndex = 2;
-         this.lblLastname.Text = "label3";
+         this.lblLastname.Text = "Last Name";
          // 
          // StudentDashboard
          // 
@@ -72,6 +72,7 @@ namespace AppsDev.Student
          this.Controls.Add(this.lblLastname);
          this.Controls.Add(this.lblFirstname);
          this.Controls.Add(this.label1);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
          this.Name = "StudentDashboard";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "StudentDashboard";

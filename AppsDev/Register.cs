@@ -51,7 +51,7 @@ namespace AppsDev
                Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
                Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
                Functions.Function.command.ExecuteNonQuery();
-               MessageBox.Show("Success", "Login", MessageBoxButtons.OK);
+               MessageBox.Show("Registratioin success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                Connection.Connection.con.Close();
                Login login = new Login();
                login.Show();
