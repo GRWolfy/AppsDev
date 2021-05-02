@@ -7,6 +7,8 @@ namespace AppsDev
 {
    public partial class Register : Form
    {
+      private bool[] EachCheck = new bool[8];
+      private bool checker = false;
       public Register()
       {
          InitializeComponent();
