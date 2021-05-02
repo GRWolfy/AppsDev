@@ -42,38 +42,32 @@ namespace AppsDev
             rbtnMale.Checked = false;
             rbtnFemale.Checked = false;
          }
-         if (checker)
-         {
-            try
-            {
-               btnSave.Enabled = true;
-               Connection.Connection.DB();
-               Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
-               Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
-               Functions.Function.command.ExecuteNonQuery();
-               MessageBox.Show("Registratioin success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               Connection.Connection.con.Close();
-               Login login = new Login();
-               login.Show();
-               Hide();
-            }
 
-            catch (Exception ex)
-            {
-               MessageBox.Show(ex.Message);
-            }
-         }
-         else
+         try
          {
-            btnSave.Enabled = false;
+            btnSave.Enabled = true;
+            Connection.Connection.DB();
+            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.command.ExecuteNonQuery();
+            MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Connection.Connection.con.Close();
+            Login login = new Login();
+            login.Show();
+            Hide();
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
          }
          
       }
 
       private void btnBack_Click(object sender, EventArgs e)
       {
-         Home home = new Home();
-         home.Show();
+         var login = new Login();
+         login.Show();
          Hide();
       }
 
@@ -131,10 +125,12 @@ namespace AppsDev
             if (Functions.Function.reader.HasRows)
             {
                labelUsername.Text = "Username already exist";
+               btnSave.Enabled = false;
             }
             else
             {
                labelUsername.Text = "Username available";
+               btnSave.Enabled = true;
             }
          }
 

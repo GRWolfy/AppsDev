@@ -92,7 +92,7 @@ namespace AppsDev
       {
          pictureBox1.Visible = false;
          pictureBox2.Visible = true;
-         tooltipAngry.SetToolTip(pictureBox2, "PAIMON DONT WANT TO HELP YOU!");
+         tooltipAngry.SetToolTip(pictureBox2, "PAIMON DOESN'T WANT TO HELP YOU!");
 
       }
    }

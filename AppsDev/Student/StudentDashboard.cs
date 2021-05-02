@@ -22,5 +22,12 @@ namespace AppsDev.Student
          lblFirstname.Text = Login.setfirstname;
          lblLastname.Text = Login.setlastname;
       }
+
+      private void btnLogout_Click(object sender, EventArgs e)
+      {
+         var login = new Login();
+         login.Show();
+         Hide();
+      }
    }
 }

@@ -37,9 +37,9 @@ namespace AppsDev
          this.lblUsername = new System.Windows.Forms.Label();
          this.lvlPassword = new System.Windows.Forms.Label();
          this.panel1 = new System.Windows.Forms.Panel();
-         this.tooltipPaimon = new System.Windows.Forms.ToolTip(this.components);
          this.pictureBox2 = new System.Windows.Forms.PictureBox();
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
+         this.tooltipPaimon = new System.Windows.Forms.ToolTip(this.components);
          this.tooltipAngry = new System.Windows.Forms.ToolTip(this.components);
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,18 +70,16 @@ namespace AppsDev
          // txtUsername
          // 
          this.txtUsername.Location = new System.Drawing.Point(551, 125);
-         this.txtUsername.Multiline = true;
          this.txtUsername.Name = "txtUsername";
-         this.txtUsername.Size = new System.Drawing.Size(150, 23);
+         this.txtUsername.Size = new System.Drawing.Size(150, 20);
          this.txtUsername.TabIndex = 2;
          // 
          // txtPassword
          // 
          this.txtPassword.Location = new System.Drawing.Point(552, 197);
-         this.txtPassword.Multiline = true;
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.PasswordChar = '•';
-         this.txtPassword.Size = new System.Drawing.Size(150, 23);
+         this.txtPassword.Size = new System.Drawing.Size(150, 20);
          this.txtPassword.TabIndex = 3;
          this.txtPassword.UseSystemPasswordChar = true;
          // 
@@ -107,18 +105,13 @@ namespace AppsDev
          // 
          // panel1
          // 
-         this.panel1.BackColor = System.Drawing.Color.Thistle;
+         this.panel1.BackColor = System.Drawing.Color.LightBlue;
          this.panel1.Controls.Add(this.pictureBox2);
          this.panel1.Controls.Add(this.pictureBox1);
          this.panel1.Location = new System.Drawing.Point(0, 2);
          this.panel1.Name = "panel1";
          this.panel1.Size = new System.Drawing.Size(344, 453);
          this.panel1.TabIndex = 6;
-         // 
-         // tooltipPaimon
-         // 
-         this.tooltipPaimon.IsBalloon = true;
-         this.tooltipPaimon.ToolTipTitle = "CLICK HERE!";
          // 
          // pictureBox2
          // 
@@ -141,6 +134,11 @@ namespace AppsDev
          this.pictureBox1.TabStop = false;
          this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
          // 
+         // tooltipPaimon
+         // 
+         this.tooltipPaimon.IsBalloon = true;
+         this.tooltipPaimon.ToolTipTitle = "CLICK HERE!";
+         // 
          // tooltipAngry
          // 
          this.tooltipAngry.IsBalloon = true;
@@ -157,7 +155,7 @@ namespace AppsDev
          this.Controls.Add(this.txtUsername);
          this.Controls.Add(this.linklRegister);
          this.Controls.Add(this.btnLoginAccount);
-         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
          this.Name = "Login";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Login";

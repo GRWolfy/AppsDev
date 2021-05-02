@@ -32,11 +32,12 @@ namespace AppsDev
          this.btnLogin = new System.Windows.Forms.Button();
          this.btnClose = new System.Windows.Forms.Button();
          this.linklRegister = new System.Windows.Forms.LinkLabel();
+         this.panel1 = new System.Windows.Forms.Panel();
          this.SuspendLayout();
          // 
          // btnLogin
          // 
-         this.btnLogin.Location = new System.Drawing.Point(179, 279);
+         this.btnLogin.Location = new System.Drawing.Point(399, 254);
          this.btnLogin.Name = "btnLogin";
          this.btnLogin.Size = new System.Drawing.Size(146, 58);
          this.btnLogin.TabIndex = 0;
@@ -46,7 +47,7 @@ namespace AppsDev
          // 
          // btnClose
          // 
-         this.btnClose.Location = new System.Drawing.Point(454, 279);
+         this.btnClose.Location = new System.Drawing.Point(607, 254);
          this.btnClose.Name = "btnClose";
          this.btnClose.Size = new System.Drawing.Size(146, 58);
          this.btnClose.TabIndex = 1;
@@ -57,23 +58,32 @@ namespace AppsDev
          // linklRegister
          // 
          this.linklRegister.AutoSize = true;
-         this.linklRegister.Location = new System.Drawing.Point(211, 366);
+         this.linklRegister.Location = new System.Drawing.Point(477, 341);
          this.linklRegister.Name = "linklRegister";
-         this.linklRegister.Size = new System.Drawing.Size(103, 13);
+         this.linklRegister.Size = new System.Drawing.Size(195, 13);
          this.linklRegister.TabIndex = 2;
          this.linklRegister.TabStop = true;
-         this.linklRegister.Text = "Click here to register";
+         this.linklRegister.Text = "Need an account? Click here to register";
          this.linklRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklRegister_LinkClicked);
+         // 
+         // panel1
+         // 
+         this.panel1.BackColor = System.Drawing.Color.LightBlue;
+         this.panel1.Location = new System.Drawing.Point(0, 1);
+         this.panel1.Name = "panel1";
+         this.panel1.Size = new System.Drawing.Size(344, 453);
+         this.panel1.TabIndex = 3;
          // 
          // Home
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.panel1);
          this.Controls.Add(this.linklRegister);
          this.Controls.Add(this.btnClose);
          this.Controls.Add(this.btnLogin);
-         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
          this.Name = "Home";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Home";
@@ -87,6 +97,7 @@ namespace AppsDev
       private System.Windows.Forms.Button btnLogin;
       private System.Windows.Forms.Button btnClose;
       private System.Windows.Forms.LinkLabel linklRegister;
+      private System.Windows.Forms.Panel panel1;
    }
 }
 
