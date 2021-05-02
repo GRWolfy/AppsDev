@@ -12,56 +12,68 @@ namespace AppsDev
       public Register()
       {
          InitializeComponent();
-
-         for (int i = 0; i < EachCheck.Length; i++)
-         {
-            EachCheck[i] = false;
-         }
       }
 
       private void btnSave_Click(object sender, EventArgs e)
       {
-         
-
          string gender = "";
          if (rbtnMale.Checked)
          {
             gender = "Male";
             rbtnFemale.Checked = false;
             rbtnOther.Checked = false;
+            EachCheck[3] = true;
          }
          else if (rbtnFemale.Checked)
          {
             gender = "Female";
             rbtnMale.Checked = false;
             rbtnOther.Checked = false;
+            EachCheck[3] = true;
          }
          else
          {
             gender = "Other";
             rbtnMale.Checked = false;
             rbtnFemale.Checked = false;
+            EachCheck[3] = true;
+         }
+         for (int i = 0; i < EachCheck.Length; i++)
+         {
+            if (EachCheck[i] == false)
+            {
+               Console.WriteLine(i+": "+EachCheck[i].ToString());
+               MessageBox.Show("Incorrent/Missing Field", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               checker = false;
+               break;
+            }
+            else if (EachCheck[i] == true && i == EachCheck.Length - 1)
+            {
+               checker = true;
+            }
          }
 
-         try
+         if (checker)
          {
-            btnSave.Enabled = true;
-            Connection.Connection.DB();
-            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
-            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
-            Functions.Function.command.ExecuteNonQuery();
-            MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Connection.Connection.con.Close();
-            Login login = new Login();
-            login.Show();
-            Hide();
-         }
+            try
+            {
+               btnSave.Enabled = true;
+               Connection.Connection.DB();
+               Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + 1 + "', '" + txtEmail.Text + "')";
+               Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+               Functions.Function.command.ExecuteNonQuery();
+               MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               Connection.Connection.con.Close();
+               Login login = new Login();
+               login.Show();
+               Hide();
+            }
 
-         catch (Exception ex)
-         {
-            MessageBox.Show(ex.Message);
-         }
-         
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.Message);
+            }
+         }  
       }
 
       private void btnBack_Click(object sender, EventArgs e)
@@ -79,24 +91,12 @@ namespace AppsDev
          {
             e.Handled = true;
             btnSave.Enabled = false;
+            EachCheck[2] = false;
          }
          else
          {
             btnSave.Enabled = true;
-         }
-      }
-
-      private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
-      {
-         if (IsValidEmail(txtEmail.Text))
-         {
-            btnSave.Enabled = true;
-            labelEmail.Text = "OK";
-         }
-         else
-         {
-            btnSave.Enabled = false;
-            labelEmail.Text = "Invalid email";
+            EachCheck[2] = true;
          }
       }
 
@@ -126,11 +126,13 @@ namespace AppsDev
             {
                labelUsername.Text = "Username already exist";
                btnSave.Enabled = false;
+               EachCheck[5] = false;
             }
             else
             {
                labelUsername.Text = "Username available";
                btnSave.Enabled = true;
+               EachCheck[5] = true;
             }
          }
 
@@ -146,11 +148,13 @@ namespace AppsDev
          {
             btnSave.Enabled = true;
             labelPassword.Text = "Matched";
+            EachCheck[6] = true;
          }
          else
          {
             btnSave.Enabled = false;
             labelPassword.Text = "Check password";
+            EachCheck[6] = false;
          }
       }
 
@@ -160,11 +164,89 @@ namespace AppsDev
          {
             btnSave.Enabled = true;
             labelPassword.Text = "Matched";
+            EachCheck[6] = true;
          }
          else
          {
             btnSave.Enabled = false;
             labelPassword.Text = "Check password";
+            EachCheck[6] = false;
+         }
+      }
+
+      private void Register_Load(object sender, EventArgs e)
+      {
+         for (int i = 0; i < EachCheck.Length; i++)
+         {
+            EachCheck[i] = false;
+         }
+      }
+
+      private void cmboxStatus_SelectedValueChanged(object sender, EventArgs e)
+      {
+         EachCheck[4] = true;
+      }
+
+      private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+      {
+         if (txtFirstName.Text == null)
+         {
+            EachCheck[0] = false;
+         }
+         else
+         {
+            EachCheck[0] = true; ;
+         }
+      }
+
+      private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+      {
+         if (txtLastName.Text == null)
+         {
+            EachCheck[1] = false;
+         }
+         else
+         {
+            EachCheck[1] = true; ;
+         }
+      }
+
+      private void txtEmail_KeyUp(object sender, KeyEventArgs e)
+      {
+         bool check = false;
+         try
+         {
+            Connection.Connection.DB();
+            Functions.Function.gen = "SELECT * FROM Users WHERE  Email = '" + txtEmail.Text + "' ";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.reader = Functions.Function.command.ExecuteReader();
+
+            if (Functions.Function.reader.HasRows)
+            {
+               check = false;
+            }
+            else
+            {
+               check = true;
+            }
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+
+         if (IsValidEmail(txtEmail.Text) && check)
+         {
+            btnSave.Enabled = true;
+            labelEmail.Text = "OK";
+            EachCheck[7] = true;
+         }
+         else
+         {
+            btnSave.Enabled = false;
+            labelEmail.Text = "Invalid email";
+            EachCheck[7] = false;
          }
       }
    }

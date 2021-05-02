@@ -83,6 +83,7 @@ namespace AppsDev
          this.txtFirstName.Name = "txtFirstName";
          this.txtFirstName.Size = new System.Drawing.Size(189, 20);
          this.txtFirstName.TabIndex = 2;
+         this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
          // 
          // rbtnMale
          // 
@@ -108,6 +109,7 @@ namespace AppsDev
          this.cmboxStatus.Name = "cmboxStatus";
          this.cmboxStatus.Size = new System.Drawing.Size(120, 21);
          this.cmboxStatus.TabIndex = 4;
+         this.cmboxStatus.SelectedValueChanged += new System.EventHandler(this.cmboxStatus_SelectedValueChanged);
          // 
          // rbtnFemale
          // 
@@ -153,7 +155,7 @@ namespace AppsDev
          // label3
          // 
          this.label3.AutoSize = true;
-         this.label3.Location = new System.Drawing.Point(361, 205);
+         this.label3.Location = new System.Drawing.Point(374, 205);
          this.label3.Name = "label3";
          this.label3.Size = new System.Drawing.Size(58, 13);
          this.label3.TabIndex = 9;
@@ -162,7 +164,7 @@ namespace AppsDev
          // label4
          // 
          this.label4.AutoSize = true;
-         this.label4.Location = new System.Drawing.Point(361, 234);
+         this.label4.Location = new System.Drawing.Point(374, 237);
          this.label4.Name = "label4";
          this.label4.Size = new System.Drawing.Size(56, 13);
          this.label4.TabIndex = 10;
@@ -180,7 +182,7 @@ namespace AppsDev
          // label6
          // 
          this.label6.AutoSize = true;
-         this.label6.Location = new System.Drawing.Point(376, 85);
+         this.label6.Location = new System.Drawing.Point(376, 88);
          this.label6.Name = "label6";
          this.label6.Size = new System.Drawing.Size(29, 13);
          this.label6.TabIndex = 12;
@@ -189,7 +191,7 @@ namespace AppsDev
          // label7
          // 
          this.label7.AutoSize = true;
-         this.label7.Location = new System.Drawing.Point(376, 159);
+         this.label7.Location = new System.Drawing.Point(374, 162);
          this.label7.Name = "label7";
          this.label7.Size = new System.Drawing.Size(40, 13);
          this.label7.TabIndex = 13;
@@ -198,7 +200,7 @@ namespace AppsDev
          // label8
          // 
          this.label8.AutoSize = true;
-         this.label8.Location = new System.Drawing.Point(361, 311);
+         this.label8.Location = new System.Drawing.Point(370, 311);
          this.label8.Name = "label8";
          this.label8.Size = new System.Drawing.Size(35, 13);
          this.label8.TabIndex = 14;
@@ -207,7 +209,7 @@ namespace AppsDev
          // label9
          // 
          this.label9.AutoSize = true;
-         this.label9.Location = new System.Drawing.Point(376, 124);
+         this.label9.Location = new System.Drawing.Point(374, 127);
          this.label9.Name = "label9";
          this.label9.Size = new System.Drawing.Size(45, 13);
          this.label9.TabIndex = 15;
@@ -220,6 +222,7 @@ namespace AppsDev
          this.txtLastName.Name = "txtLastName";
          this.txtLastName.Size = new System.Drawing.Size(189, 20);
          this.txtLastName.TabIndex = 16;
+         this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
          // 
          // txtAge
          // 
@@ -241,7 +244,7 @@ namespace AppsDev
          // 
          // txtPassword
          // 
-         this.txtPassword.Location = new System.Drawing.Point(461, 231);
+         this.txtPassword.Location = new System.Drawing.Point(461, 234);
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.PasswordChar = '•';
          this.txtPassword.Size = new System.Drawing.Size(189, 20);
@@ -256,7 +259,7 @@ namespace AppsDev
          this.txtEmail.Name = "txtEmail";
          this.txtEmail.Size = new System.Drawing.Size(189, 20);
          this.txtEmail.TabIndex = 20;
-         this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+         this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
          // 
          // txtConfirmPassword
          // 
@@ -297,7 +300,7 @@ namespace AppsDev
          // 
          // panel1
          // 
-         this.panel1.BackColor = System.Drawing.Color.LightBlue;
+         this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
          this.panel1.Location = new System.Drawing.Point(0, 0);
          this.panel1.Name = "panel1";
          this.panel1.Size = new System.Drawing.Size(344, 453);
@@ -338,6 +341,7 @@ namespace AppsDev
          this.Name = "Register";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Register";
+         this.Load += new System.EventHandler(this.Register_Load);
          this.ResumeLayout(false);
          this.PerformLayout();
 

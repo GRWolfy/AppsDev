@@ -15,6 +15,7 @@ namespace AppsDev.Admin
       {
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
+         btnRegistration.Enabled = false;
       }
 
       private void button5_Click(object sender, EventArgs e)
@@ -56,6 +57,13 @@ namespace AppsDev.Admin
          adminregistration.Show();
          Hide();
 
+      }
+
+      private void btnDashboard_Click(object sender, EventArgs e)
+      {
+         var admindashboard = new AdminDashboard();
+         admindashboard.Show();
+         Hide();
       }
    }
 }

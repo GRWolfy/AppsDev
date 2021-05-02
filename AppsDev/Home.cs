@@ -35,12 +35,5 @@ namespace AppsDev
          register.Show();
          Hide();
       }
-
-      private void btnTest_Click(object sender, EventArgs e)
-      {
-         var test = new Test();
-         test.Show();
-         Hide();
-      }
    }
 }

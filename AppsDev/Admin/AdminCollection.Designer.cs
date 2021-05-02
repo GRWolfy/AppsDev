@@ -130,6 +130,7 @@ namespace AppsDev.Admin
          this.btnDashboard.TabIndex = 3;
          this.btnDashboard.Text = "Dashboard";
          this.btnDashboard.UseVisualStyleBackColor = true;
+         this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
          // 
          // labelLastname
          // 

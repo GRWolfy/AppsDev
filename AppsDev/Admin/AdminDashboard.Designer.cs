@@ -38,6 +38,7 @@ namespace AppsDev.Admin
          this.btnRegistration = new System.Windows.Forms.Button();
          this.btnDashboard = new System.Windows.Forms.Button();
          this.labelLastname = new System.Windows.Forms.Label();
+         this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.labelFirstname = new System.Windows.Forms.Label();
          this.panel2 = new System.Windows.Forms.Panel();
          this.lblTotalRegistration = new System.Windows.Forms.Label();
@@ -51,12 +52,11 @@ namespace AppsDev.Admin
          this.linklViewRegistration = new System.Windows.Forms.LinkLabel();
          this.linklViewEvents = new System.Windows.Forms.LinkLabel();
          this.linklViewCollection = new System.Windows.Forms.LinkLabel();
-         this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.panel1.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.panel2.SuspendLayout();
          this.panel3.SuspendLayout();
          this.panel4.SuspendLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.SuspendLayout();
          // 
          // label1
@@ -145,6 +145,7 @@ namespace AppsDev.Admin
          this.btnDashboard.TabIndex = 3;
          this.btnDashboard.Text = "Dashboard";
          this.btnDashboard.UseVisualStyleBackColor = true;
+         this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
          // 
          // labelLastname
          // 
@@ -154,6 +155,17 @@ namespace AppsDev.Admin
          this.labelLastname.Size = new System.Drawing.Size(58, 13);
          this.labelLastname.TabIndex = 5;
          this.labelLastname.Text = "Last Name";
+         // 
+         // pictureBox1
+         // 
+         this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+         this.pictureBox1.Image = global::AppsDev.Properties.Resources.WolfAvatar;
+         this.pictureBox1.Location = new System.Drawing.Point(24, 11);
+         this.pictureBox1.Name = "pictureBox1";
+         this.pictureBox1.Size = new System.Drawing.Size(134, 113);
+         this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.pictureBox1.TabIndex = 0;
+         this.pictureBox1.TabStop = false;
          // 
          // labelFirstname
          // 
@@ -260,6 +272,7 @@ namespace AppsDev.Admin
          this.linklViewRegistration.TabIndex = 9;
          this.linklViewRegistration.TabStop = true;
          this.linklViewRegistration.Text = "View Registration";
+         this.linklViewRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewRegistration_LinkClicked);
          // 
          // linklViewEvents
          // 
@@ -270,6 +283,7 @@ namespace AppsDev.Admin
          this.linklViewEvents.TabIndex = 10;
          this.linklViewEvents.TabStop = true;
          this.linklViewEvents.Text = "View Events";
+         this.linklViewEvents.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewEvents_LinkClicked);
          // 
          // linklViewCollection
          // 
@@ -280,17 +294,7 @@ namespace AppsDev.Admin
          this.linklViewCollection.TabIndex = 11;
          this.linklViewCollection.TabStop = true;
          this.linklViewCollection.Text = "View Collection";
-         // 
-         // pictureBox1
-         // 
-         this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-         this.pictureBox1.Image = global::AppsDev.Properties.Resources.WolfAvatar;
-         this.pictureBox1.Location = new System.Drawing.Point(24, 11);
-         this.pictureBox1.Name = "pictureBox1";
-         this.pictureBox1.Size = new System.Drawing.Size(134, 113);
-         this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-         this.pictureBox1.TabIndex = 0;
-         this.pictureBox1.TabStop = false;
+         this.linklViewCollection.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewCollection_LinkClicked);
          // 
          // AdminDashboard
          // 
@@ -317,13 +321,13 @@ namespace AppsDev.Admin
          this.Load += new System.EventHandler(this.AdminDashboard_Load);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
          this.panel2.ResumeLayout(false);
          this.panel2.PerformLayout();
          this.panel3.ResumeLayout(false);
          this.panel3.PerformLayout();
          this.panel4.ResumeLayout(false);
          this.panel4.PerformLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 

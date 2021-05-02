@@ -105,7 +105,7 @@ namespace AppsDev
          // 
          // panel1
          // 
-         this.panel1.BackColor = System.Drawing.Color.LightBlue;
+         this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
          this.panel1.Controls.Add(this.pictureBox2);
          this.panel1.Controls.Add(this.pictureBox1);
          this.panel1.Location = new System.Drawing.Point(0, 2);
@@ -137,7 +137,6 @@ namespace AppsDev
          // tooltipPaimon
          // 
          this.tooltipPaimon.IsBalloon = true;
-         this.tooltipPaimon.ToolTipTitle = "CLICK HERE!";
          // 
          // tooltipAngry
          // 
