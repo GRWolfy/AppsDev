@@ -42,8 +42,7 @@ namespace AppsDev
          {
             if (EachCheck[i] == false)
             {
-               Console.WriteLine(i+": "+EachCheck[i].ToString());
-               MessageBox.Show("Incorrent/Missing Field", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show("Please review your inputs", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                checker = false;
                break;
             }
