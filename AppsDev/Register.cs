@@ -7,16 +7,9 @@ namespace AppsDev
 {
    public partial class Register : Form
    {
-      private bool[] EachCheck = new bool[8];
-      private bool checker = false;
       public Register()
       {
          InitializeComponent();
-
-         for (int i = 0; i < EachCheck.Length; i++)
-         {
-            EachCheck[i] = false;
-         }
       }
 
       private void btnSave_Click(object sender, EventArgs e)
