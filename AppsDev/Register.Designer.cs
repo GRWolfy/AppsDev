@@ -38,23 +38,23 @@ namespace AppsDev
          this.rbtnOther = new System.Windows.Forms.RadioButton();
          this.btnBack = new System.Windows.Forms.Button();
          this.label2 = new System.Windows.Forms.Label();
-         this.label3 = new System.Windows.Forms.Label();
-         this.label4 = new System.Windows.Forms.Label();
-         this.label5 = new System.Windows.Forms.Label();
          this.label6 = new System.Windows.Forms.Label();
          this.label7 = new System.Windows.Forms.Label();
-         this.label8 = new System.Windows.Forms.Label();
          this.label9 = new System.Windows.Forms.Label();
          this.txtLastName = new System.Windows.Forms.TextBox();
          this.txtAge = new System.Windows.Forms.TextBox();
-         this.txtUsername = new System.Windows.Forms.TextBox();
-         this.txtPassword = new System.Windows.Forms.TextBox();
-         this.txtEmail = new System.Windows.Forms.TextBox();
-         this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-         this.labelEmail = new System.Windows.Forms.Label();
-         this.labelUsername = new System.Windows.Forms.Label();
-         this.labelPassword = new System.Windows.Forms.Label();
          this.panel1 = new System.Windows.Forms.Panel();
+         this.labelPassword = new System.Windows.Forms.Label();
+         this.labelUsername = new System.Windows.Forms.Label();
+         this.labelEmail = new System.Windows.Forms.Label();
+         this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+         this.txtEmail = new System.Windows.Forms.TextBox();
+         this.txtPassword = new System.Windows.Forms.TextBox();
+         this.txtUsername = new System.Windows.Forms.TextBox();
+         this.label8 = new System.Windows.Forms.Label();
+         this.label5 = new System.Windows.Forms.Label();
+         this.label4 = new System.Windows.Forms.Label();
+         this.label3 = new System.Windows.Forms.Label();
          this.SuspendLayout();
          // 
          // label1
@@ -152,33 +152,6 @@ namespace AppsDev
          this.label2.TabIndex = 8;
          this.label2.Text = "Last Name:";
          // 
-         // label3
-         // 
-         this.label3.AutoSize = true;
-         this.label3.Location = new System.Drawing.Point(374, 205);
-         this.label3.Name = "label3";
-         this.label3.Size = new System.Drawing.Size(58, 13);
-         this.label3.TabIndex = 9;
-         this.label3.Text = "Username:";
-         // 
-         // label4
-         // 
-         this.label4.AutoSize = true;
-         this.label4.Location = new System.Drawing.Point(374, 237);
-         this.label4.Name = "label4";
-         this.label4.Size = new System.Drawing.Size(56, 13);
-         this.label4.TabIndex = 10;
-         this.label4.Text = "Password:";
-         // 
-         // label5
-         // 
-         this.label5.AutoSize = true;
-         this.label5.Location = new System.Drawing.Point(361, 272);
-         this.label5.Name = "label5";
-         this.label5.Size = new System.Drawing.Size(94, 13);
-         this.label5.TabIndex = 11;
-         this.label5.Text = "Confirm Password:";
-         // 
          // label6
          // 
          this.label6.AutoSize = true;
@@ -196,15 +169,6 @@ namespace AppsDev
          this.label7.Size = new System.Drawing.Size(40, 13);
          this.label7.TabIndex = 13;
          this.label7.Text = "Status:";
-         // 
-         // label8
-         // 
-         this.label8.AutoSize = true;
-         this.label8.Location = new System.Drawing.Point(370, 311);
-         this.label8.Name = "label8";
-         this.label8.Size = new System.Drawing.Size(35, 13);
-         this.label8.TabIndex = 14;
-         this.label8.Text = "Email:";
          // 
          // label9
          // 
@@ -233,33 +197,40 @@ namespace AppsDev
          this.txtAge.TabIndex = 17;
          this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
          // 
-         // txtUsername
+         // panel1
          // 
-         this.txtUsername.Location = new System.Drawing.Point(461, 202);
-         this.txtUsername.Multiline = true;
-         this.txtUsername.Name = "txtUsername";
-         this.txtUsername.Size = new System.Drawing.Size(189, 20);
-         this.txtUsername.TabIndex = 18;
-         this.txtUsername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyUp);
+         this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+         this.panel1.Location = new System.Drawing.Point(0, 0);
+         this.panel1.Name = "panel1";
+         this.panel1.Size = new System.Drawing.Size(344, 453);
+         this.panel1.TabIndex = 25;
          // 
-         // txtPassword
+         // labelPassword
          // 
-         this.txtPassword.Location = new System.Drawing.Point(461, 234);
-         this.txtPassword.Name = "txtPassword";
-         this.txtPassword.PasswordChar = '•';
-         this.txtPassword.Size = new System.Drawing.Size(189, 20);
-         this.txtPassword.TabIndex = 19;
-         this.txtPassword.UseSystemPasswordChar = true;
-         this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
+         this.labelPassword.AutoSize = true;
+         this.labelPassword.Location = new System.Drawing.Point(656, 276);
+         this.labelPassword.Name = "labelPassword";
+         this.labelPassword.Size = new System.Drawing.Size(16, 13);
+         this.labelPassword.TabIndex = 24;
+         this.labelPassword.Text = "...";
          // 
-         // txtEmail
+         // labelUsername
          // 
-         this.txtEmail.Location = new System.Drawing.Point(461, 308);
-         this.txtEmail.Multiline = true;
-         this.txtEmail.Name = "txtEmail";
-         this.txtEmail.Size = new System.Drawing.Size(189, 20);
-         this.txtEmail.TabIndex = 20;
-         this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
+         this.labelUsername.AutoSize = true;
+         this.labelUsername.Location = new System.Drawing.Point(656, 209);
+         this.labelUsername.Name = "labelUsername";
+         this.labelUsername.Size = new System.Drawing.Size(16, 13);
+         this.labelUsername.TabIndex = 23;
+         this.labelUsername.Text = "...";
+         // 
+         // labelEmail
+         // 
+         this.labelEmail.AutoSize = true;
+         this.labelEmail.Location = new System.Drawing.Point(656, 315);
+         this.labelEmail.Name = "labelEmail";
+         this.labelEmail.Size = new System.Drawing.Size(16, 13);
+         this.labelEmail.TabIndex = 22;
+         this.labelEmail.Text = "...";
          // 
          // txtConfirmPassword
          // 
@@ -271,40 +242,69 @@ namespace AppsDev
          this.txtConfirmPassword.UseSystemPasswordChar = true;
          this.txtConfirmPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPassword_KeyUp);
          // 
-         // labelEmail
+         // txtEmail
          // 
-         this.labelEmail.AutoSize = true;
-         this.labelEmail.Location = new System.Drawing.Point(656, 315);
-         this.labelEmail.Name = "labelEmail";
-         this.labelEmail.Size = new System.Drawing.Size(16, 13);
-         this.labelEmail.TabIndex = 22;
-         this.labelEmail.Text = "...";
+         this.txtEmail.Location = new System.Drawing.Point(461, 308);
+         this.txtEmail.Multiline = true;
+         this.txtEmail.Name = "txtEmail";
+         this.txtEmail.Size = new System.Drawing.Size(189, 20);
+         this.txtEmail.TabIndex = 20;
+         this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
          // 
-         // labelUsername
+         // txtPassword
          // 
-         this.labelUsername.AutoSize = true;
-         this.labelUsername.Location = new System.Drawing.Point(656, 209);
-         this.labelUsername.Name = "labelUsername";
-         this.labelUsername.Size = new System.Drawing.Size(16, 13);
-         this.labelUsername.TabIndex = 23;
-         this.labelUsername.Text = "...";
+         this.txtPassword.Location = new System.Drawing.Point(461, 234);
+         this.txtPassword.Name = "txtPassword";
+         this.txtPassword.PasswordChar = '•';
+         this.txtPassword.Size = new System.Drawing.Size(189, 20);
+         this.txtPassword.TabIndex = 19;
+         this.txtPassword.UseSystemPasswordChar = true;
+         this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
          // 
-         // labelPassword
+         // txtUsername
          // 
-         this.labelPassword.AutoSize = true;
-         this.labelPassword.Location = new System.Drawing.Point(656, 276);
-         this.labelPassword.Name = "labelPassword";
-         this.labelPassword.Size = new System.Drawing.Size(16, 13);
-         this.labelPassword.TabIndex = 24;
-         this.labelPassword.Text = "...";
+         this.txtUsername.Location = new System.Drawing.Point(461, 202);
+         this.txtUsername.Multiline = true;
+         this.txtUsername.Name = "txtUsername";
+         this.txtUsername.Size = new System.Drawing.Size(189, 20);
+         this.txtUsername.TabIndex = 18;
+         this.txtUsername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyUp);
          // 
-         // panel1
+         // label8
          // 
-         this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-         this.panel1.Location = new System.Drawing.Point(0, 0);
-         this.panel1.Name = "panel1";
-         this.panel1.Size = new System.Drawing.Size(344, 453);
-         this.panel1.TabIndex = 25;
+         this.label8.AutoSize = true;
+         this.label8.Location = new System.Drawing.Point(370, 311);
+         this.label8.Name = "label8";
+         this.label8.Size = new System.Drawing.Size(35, 13);
+         this.label8.TabIndex = 14;
+         this.label8.Text = "Email:";
+         // 
+         // label5
+         // 
+         this.label5.AutoSize = true;
+         this.label5.Location = new System.Drawing.Point(361, 272);
+         this.label5.Name = "label5";
+         this.label5.Size = new System.Drawing.Size(94, 13);
+         this.label5.TabIndex = 11;
+         this.label5.Text = "Confirm Password:";
+         // 
+         // label4
+         // 
+         this.label4.AutoSize = true;
+         this.label4.Location = new System.Drawing.Point(374, 237);
+         this.label4.Name = "label4";
+         this.label4.Size = new System.Drawing.Size(56, 13);
+         this.label4.TabIndex = 10;
+         this.label4.Text = "Password:";
+         // 
+         // label3
+         // 
+         this.label3.AutoSize = true;
+         this.label3.Location = new System.Drawing.Point(374, 205);
+         this.label3.Name = "label3";
+         this.label3.Size = new System.Drawing.Size(58, 13);
+         this.label3.TabIndex = 9;
+         this.label3.Text = "Username:";
          // 
          // Register
          // 
@@ -358,22 +358,22 @@ namespace AppsDev
       private System.Windows.Forms.RadioButton rbtnOther;
       private System.Windows.Forms.Button btnBack;
       private System.Windows.Forms.Label label2;
-      private System.Windows.Forms.Label label3;
-      private System.Windows.Forms.Label label4;
-      private System.Windows.Forms.Label label5;
       private System.Windows.Forms.Label label6;
       private System.Windows.Forms.Label label7;
-      private System.Windows.Forms.Label label8;
       private System.Windows.Forms.Label label9;
       private System.Windows.Forms.TextBox txtLastName;
       private System.Windows.Forms.TextBox txtAge;
-      private System.Windows.Forms.TextBox txtUsername;
-      private System.Windows.Forms.TextBox txtPassword;
-      private System.Windows.Forms.TextBox txtEmail;
-      private System.Windows.Forms.TextBox txtConfirmPassword;
-      private System.Windows.Forms.Label labelEmail;
-      private System.Windows.Forms.Label labelUsername;
-      private System.Windows.Forms.Label labelPassword;
       private System.Windows.Forms.Panel panel1;
+      private System.Windows.Forms.Label labelPassword;
+      private System.Windows.Forms.Label labelUsername;
+      private System.Windows.Forms.Label labelEmail;
+      private System.Windows.Forms.TextBox txtConfirmPassword;
+      private System.Windows.Forms.TextBox txtEmail;
+      private System.Windows.Forms.TextBox txtPassword;
+      private System.Windows.Forms.TextBox txtUsername;
+      private System.Windows.Forms.Label label8;
+      private System.Windows.Forms.Label label5;
+      private System.Windows.Forms.Label label4;
+      private System.Windows.Forms.Label label3;
    }
 }

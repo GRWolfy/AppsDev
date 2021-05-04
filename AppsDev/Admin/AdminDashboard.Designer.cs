@@ -52,6 +52,7 @@ namespace AppsDev.Admin
          this.linklViewRegistration = new System.Windows.Forms.LinkLabel();
          this.linklViewEvents = new System.Windows.Forms.LinkLabel();
          this.linklViewCollection = new System.Windows.Forms.LinkLabel();
+         this.label7 = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.panel2.SuspendLayout();
@@ -296,11 +297,22 @@ namespace AppsDev.Admin
          this.linklViewCollection.Text = "View Collection";
          this.linklViewCollection.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewCollection_LinkClicked);
          // 
+         // label7
+         // 
+         this.label7.AutoSize = true;
+         this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label7.Location = new System.Drawing.Point(210, 70);
+         this.label7.Name = "label7";
+         this.label7.Size = new System.Drawing.Size(117, 25);
+         this.label7.TabIndex = 12;
+         this.label7.Text = "Dashboard";
+         // 
          // AdminDashboard
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.label7);
          this.Controls.Add(this.linklViewCollection);
          this.Controls.Add(this.linklViewEvents);
          this.Controls.Add(this.linklViewRegistration);
@@ -358,5 +370,6 @@ namespace AppsDev.Admin
       private System.Windows.Forms.LinkLabel linklViewRegistration;
       private System.Windows.Forms.LinkLabel linklViewEvents;
       private System.Windows.Forms.LinkLabel linklViewCollection;
+      private System.Windows.Forms.Label label7;
    }
 }

@@ -40,6 +40,7 @@ namespace AppsDev.Admin
          this.labelLastname = new System.Windows.Forms.Label();
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.labelFirstname = new System.Windows.Forms.Label();
+         this.label2 = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.SuspendLayout();
@@ -161,11 +162,22 @@ namespace AppsDev.Admin
          this.labelFirstname.TabIndex = 3;
          this.labelFirstname.Text = "First Name";
          // 
+         // label2
+         // 
+         this.label2.AutoSize = true;
+         this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label2.Location = new System.Drawing.Point(210, 70);
+         this.label2.Name = "label2";
+         this.label2.Size = new System.Drawing.Size(118, 25);
+         this.label2.TabIndex = 4;
+         this.label2.Text = "Collections";
+         // 
          // AdminCollection
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.label2);
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
          this.DoubleBuffered = true;
@@ -196,5 +208,6 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Button btnRegistration;
       private System.Windows.Forms.Button btnDashboard;
       private System.Windows.Forms.Button btnLogout;
+      private System.Windows.Forms.Label label2;
    }
 }
