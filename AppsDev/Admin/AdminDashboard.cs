@@ -94,6 +94,7 @@ namespace AppsDev.Admin
       {
          var adminregistration = new AdminRegistration();
          adminregistration.Show();
+         adminregistration.showTabControl();
          Hide();
       }
 

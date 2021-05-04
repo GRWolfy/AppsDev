@@ -16,6 +16,7 @@ namespace AppsDev.Admin
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
          btnRegistration.Enabled = false;
+         getRegistration();
       }
 
       private void button5_Click(object sender, EventArgs e)
@@ -65,5 +66,62 @@ namespace AppsDev.Admin
          admindashboard.Show();
          Hide();
       }
+
+      private void btnSave_Click(object sender, EventArgs e)
+      {
+         string gender = "";
+         if (rbtnMale.Checked)
+         {
+            gender = "Male";
+            rbtnFemale.Checked = false;
+            rbtnOther.Checked = false;
+            //EachCheck[3] = true;
+         }
+         else if (rbtnFemale.Checked)
+         {
+            gender = "Female";
+            rbtnMale.Checked = false;
+            rbtnOther.Checked = false;
+            //EachCheck[3] = true;
+         }
+         else
+         {
+            gender = "Other";
+            rbtnMale.Checked = false;
+            rbtnFemale.Checked = false;
+            //EachCheck[3] = true;
+         }
+
+         try
+         {
+            Connection.Connection.DB();
+            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + gender + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTimePicker.Value.Date + "', '" + txtRoleId.Text + "', '" + txtEmail.Text + "')";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.command.ExecuteNonQuery();
+            MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Connection.Connection.con.Close();
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+      }
+
+      public void getRegistration()
+      {
+         Connection.Connection.DB();
+         Functions.Function.gen = "SELECT * FROM Users INNER JOIN Role ON Role.RoleId = Users.RoleId WHERE Role.RoleId = 1;";
+         Functions.Function.fill(Functions.Function.gen, dataGridRegister);
+      }
+
+      public void showTabControl() 
+      {
+         tabControlRegistration.SelectedIndex = 1;
+      }
    }
 }
+
+/*
+   
+ */
