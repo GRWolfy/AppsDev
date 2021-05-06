@@ -36,7 +36,7 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "SELECT COUNT(*) AS total FROM Users INNER JOIN Role on Role.RoleId = Users.RoleId WHERE Role.RoleId = 1";
+            Functions.Function.gen = "SELECT COUNT(*) AS total FROM Users WHERE RoleId = 1";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.reader = Functions.Function.command.ExecuteReader();
 

@@ -211,7 +211,7 @@ namespace AppsDev.Admin
          // 
          this.tabControlRegistration.Controls.Add(this.tabPage1);
          this.tabControlRegistration.Controls.Add(this.tabPage2);
-         this.tabControlRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.tabControlRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.tabControlRegistration.Location = new System.Drawing.Point(190, 116);
          this.tabControlRegistration.Name = "tabControlRegistration";
          this.tabControlRegistration.SelectedIndex = 0;
@@ -248,10 +248,10 @@ namespace AppsDev.Admin
          this.tabPage1.Controls.Add(this.label29);
          this.tabPage1.Controls.Add(this.label30);
          this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.tabPage1.Location = new System.Drawing.Point(4, 29);
+         this.tabPage1.Location = new System.Drawing.Point(4, 22);
          this.tabPage1.Name = "tabPage1";
          this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-         this.tabPage1.Size = new System.Drawing.Size(590, 274);
+         this.tabPage1.Size = new System.Drawing.Size(590, 281);
          this.tabPage1.TabIndex = 0;
          this.tabPage1.Text = "Add | Update Registration";
          this.tabPage1.UseVisualStyleBackColor = true;
@@ -528,10 +528,10 @@ namespace AppsDev.Admin
          // tabPage2
          // 
          this.tabPage2.Controls.Add(this.dataGridRegister);
-         this.tabPage2.Location = new System.Drawing.Point(4, 22);
+         this.tabPage2.Location = new System.Drawing.Point(4, 29);
          this.tabPage2.Name = "tabPage2";
          this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-         this.tabPage2.Size = new System.Drawing.Size(590, 281);
+         this.tabPage2.Size = new System.Drawing.Size(590, 274);
          this.tabPage2.TabIndex = 1;
          this.tabPage2.Text = "View Registration";
          this.tabPage2.UseVisualStyleBackColor = true;

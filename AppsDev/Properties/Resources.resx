@@ -121,11 +121,20 @@
   <data name="AngryPaimon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AngryPaimon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Klee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Klee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Paimon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paimon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KleeAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KleeAvatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdmingSettingsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdmingSettingsBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WolfAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WolfAvatar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,10 +142,10 @@
   <data name="bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AdmingSettingsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdmingSettingsBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Klee" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Klee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="potentialLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\potentialLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
