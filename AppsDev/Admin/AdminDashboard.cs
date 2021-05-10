@@ -135,5 +135,18 @@ namespace AppsDev.Admin
             MessageBox.Show(ex.Message);
          }
       }
+
+      private void TotalCollection()
+      {
+         Functions.Function.gen = "SELECT COUNT(*) AS total FROM Events";
+         Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+         Functions.Function.reader = Functions.Function.command.ExecuteReader();
+
+         if (Functions.Function.reader.HasRows)
+         {
+            Functions.Function.reader.Read();
+            lblTotalEvents.Text = (Functions.Function.reader["total"].ToString());
+         }
+      }
    }
 }

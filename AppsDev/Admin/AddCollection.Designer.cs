@@ -34,7 +34,7 @@ namespace AppsDev.Admin
          this.label1111 = new System.Windows.Forms.Label();
          this.txtID = new System.Windows.Forms.TextBox();
          this.label = new System.Windows.Forms.Label();
-         this.btnSave = new System.Windows.Forms.Button();
+         this.btnCollect = new System.Windows.Forms.Button();
          this.label1 = new System.Windows.Forms.Label();
          this.label2 = new System.Windows.Forms.Label();
          this.cmbEvents = new System.Windows.Forms.ComboBox();
@@ -52,7 +52,6 @@ namespace AppsDev.Admin
          this.lblDate.Size = new System.Drawing.Size(58, 13);
          this.lblDate.TabIndex = 97;
          this.lblDate.Text = "Last Name";
-         this.lblDate.Visible = false;
          // 
          // txtFirstName
          // 
@@ -87,6 +86,7 @@ namespace AppsDev.Admin
          // label
          // 
          this.label.AutoSize = true;
+         this.label.Enabled = false;
          this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.label.Location = new System.Drawing.Point(182, 159);
          this.label.Name = "label";
@@ -94,14 +94,15 @@ namespace AppsDev.Admin
          this.label.TabIndex = 93;
          this.label.Text = "User ID";
          // 
-         // btnSave
+         // btnCollect
          // 
-         this.btnSave.Location = new System.Drawing.Point(285, 370);
-         this.btnSave.Name = "btnSave";
-         this.btnSave.Size = new System.Drawing.Size(64, 36);
-         this.btnSave.TabIndex = 100;
-         this.btnSave.Text = "Save";
-         this.btnSave.UseVisualStyleBackColor = true;
+         this.btnCollect.Location = new System.Drawing.Point(285, 370);
+         this.btnCollect.Name = "btnCollect";
+         this.btnCollect.Size = new System.Drawing.Size(64, 36);
+         this.btnCollect.TabIndex = 100;
+         this.btnCollect.Text = "Collect";
+         this.btnCollect.UseVisualStyleBackColor = true;
+         this.btnCollect.Click += new System.EventHandler(this.btnCollect_Click);
          // 
          // label1
          // 
@@ -122,15 +123,16 @@ namespace AppsDev.Admin
          this.label2.Size = new System.Drawing.Size(40, 13);
          this.label2.TabIndex = 102;
          this.label2.Text = "Events";
-         this.label2.Visible = false;
          // 
          // cmbEvents
          // 
+         this.cmbEvents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
          this.cmbEvents.FormattingEnabled = true;
          this.cmbEvents.Location = new System.Drawing.Point(249, 274);
          this.cmbEvents.Name = "cmbEvents";
          this.cmbEvents.Size = new System.Drawing.Size(152, 21);
          this.cmbEvents.TabIndex = 103;
+         this.cmbEvents.SelectedIndexChanged += new System.EventHandler(this.cmbEvents_SelectedIndexChanged);
          // 
          // txtLastName
          // 
@@ -151,6 +153,7 @@ namespace AppsDev.Admin
          this.txtEventID.Name = "txtEventID";
          this.txtEventID.Size = new System.Drawing.Size(152, 20);
          this.txtEventID.TabIndex = 105;
+         this.txtEventID.Visible = false;
          // 
          // label3
          // 
@@ -161,6 +164,7 @@ namespace AppsDev.Admin
          this.label3.Size = new System.Drawing.Size(52, 13);
          this.label3.TabIndex = 106;
          this.label3.Text = "Event  ID";
+         this.label3.Visible = false;
          // 
          // AddCollection
          // 
@@ -173,7 +177,7 @@ namespace AppsDev.Admin
          this.Controls.Add(this.cmbEvents);
          this.Controls.Add(this.label2);
          this.Controls.Add(this.label1);
-         this.Controls.Add(this.btnSave);
+         this.Controls.Add(this.btnCollect);
          this.Controls.Add(this.lblDate);
          this.Controls.Add(this.txtFirstName);
          this.Controls.Add(this.label1111);
@@ -195,7 +199,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Label label1111;
       private System.Windows.Forms.TextBox txtID;
       private System.Windows.Forms.Label label;
-      private System.Windows.Forms.Button btnSave;
+      private System.Windows.Forms.Button btnCollect;
       private System.Windows.Forms.Label label1;
       private System.Windows.Forms.Label label2;
       private System.Windows.Forms.ComboBox cmbEvents;

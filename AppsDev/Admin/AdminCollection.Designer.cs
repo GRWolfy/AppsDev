@@ -29,6 +29,9 @@ namespace AppsDev.Admin
       /// </summary>
       private void InitializeComponent()
       {
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
          this.label1 = new System.Windows.Forms.Label();
          this.panel1 = new System.Windows.Forms.Panel();
          this.btnLogout = new System.Windows.Forms.Button();
@@ -43,22 +46,14 @@ namespace AppsDev.Admin
          this.label2 = new System.Windows.Forms.Label();
          this.tabControlCollection = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
-         this.txtEventid = new System.Windows.Forms.TextBox();
-         this.DateTimePick = new System.Windows.Forms.DateTimePicker();
-         this.lblDate = new System.Windows.Forms.Label();
-         this.btnDelete = new System.Windows.Forms.Button();
-         this.btnUpdate = new System.Windows.Forms.Button();
-         this.btnSave = new System.Windows.Forms.Button();
-         this.txtEventprice = new System.Windows.Forms.TextBox();
-         this.label1111 = new System.Windows.Forms.Label();
-         this.txtEventname = new System.Windows.Forms.TextBox();
-         this.label = new System.Windows.Forms.Label();
+         this.dataGridCollection = new System.Windows.Forms.DataGridView();
          this.tabPage2 = new System.Windows.Forms.TabPage();
          this.dataGridCollections = new System.Windows.Forms.DataGridView();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControlCollection.SuspendLayout();
          this.tabPage1.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollection)).BeginInit();
          this.tabPage2.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.dataGridCollections)).BeginInit();
          this.SuspendLayout();
@@ -203,16 +198,7 @@ namespace AppsDev.Admin
          // 
          // tabPage1
          // 
-         this.tabPage1.Controls.Add(this.txtEventid);
-         this.tabPage1.Controls.Add(this.DateTimePick);
-         this.tabPage1.Controls.Add(this.lblDate);
-         this.tabPage1.Controls.Add(this.btnDelete);
-         this.tabPage1.Controls.Add(this.btnUpdate);
-         this.tabPage1.Controls.Add(this.btnSave);
-         this.tabPage1.Controls.Add(this.txtEventprice);
-         this.tabPage1.Controls.Add(this.label1111);
-         this.tabPage1.Controls.Add(this.txtEventname);
-         this.tabPage1.Controls.Add(this.label);
+         this.tabPage1.Controls.Add(this.dataGridCollection);
          this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.tabPage1.Location = new System.Drawing.Point(4, 29);
          this.tabPage1.Name = "tabPage1";
@@ -222,102 +208,38 @@ namespace AppsDev.Admin
          this.tabPage1.Text = "Add | Update Collection";
          this.tabPage1.UseVisualStyleBackColor = true;
          // 
-         // txtEventid
+         // dataGridCollection
          // 
-         this.txtEventid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtEventid.Location = new System.Drawing.Point(237, 164);
-         this.txtEventid.Multiline = true;
-         this.txtEventid.Name = "txtEventid";
-         this.txtEventid.Size = new System.Drawing.Size(152, 20);
-         this.txtEventid.TabIndex = 92;
-         this.txtEventid.Visible = false;
-         // 
-         // DateTimePick
-         // 
-         this.DateTimePick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.DateTimePick.Location = new System.Drawing.Point(237, 123);
-         this.DateTimePick.Name = "DateTimePick";
-         this.DateTimePick.Size = new System.Drawing.Size(152, 20);
-         this.DateTimePick.TabIndex = 91;
-         this.DateTimePick.Visible = false;
-         // 
-         // lblDate
-         // 
-         this.lblDate.AutoSize = true;
-         this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblDate.Location = new System.Drawing.Point(190, 129);
-         this.lblDate.Name = "lblDate";
-         this.lblDate.Size = new System.Drawing.Size(33, 13);
-         this.lblDate.TabIndex = 90;
-         this.lblDate.Text = "Date:";
-         this.lblDate.Visible = false;
-         // 
-         // btnDelete
-         // 
-         this.btnDelete.Enabled = false;
-         this.btnDelete.Location = new System.Drawing.Point(314, 207);
-         this.btnDelete.Name = "btnDelete";
-         this.btnDelete.Size = new System.Drawing.Size(64, 36);
-         this.btnDelete.TabIndex = 89;
-         this.btnDelete.Text = "Delete";
-         this.btnDelete.UseVisualStyleBackColor = true;
-         // 
-         // btnUpdate
-         // 
-         this.btnUpdate.Enabled = false;
-         this.btnUpdate.Location = new System.Drawing.Point(237, 207);
-         this.btnUpdate.Name = "btnUpdate";
-         this.btnUpdate.Size = new System.Drawing.Size(64, 36);
-         this.btnUpdate.TabIndex = 88;
-         this.btnUpdate.Text = "Update";
-         this.btnUpdate.UseVisualStyleBackColor = true;
-         // 
-         // btnSave
-         // 
-         this.btnSave.Location = new System.Drawing.Point(160, 207);
-         this.btnSave.Name = "btnSave";
-         this.btnSave.Size = new System.Drawing.Size(64, 36);
-         this.btnSave.TabIndex = 87;
-         this.btnSave.Text = "Save";
-         this.btnSave.UseVisualStyleBackColor = true;
-         // 
-         // txtEventprice
-         // 
-         this.txtEventprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtEventprice.Location = new System.Drawing.Point(237, 86);
-         this.txtEventprice.Multiline = true;
-         this.txtEventprice.Name = "txtEventprice";
-         this.txtEventprice.Size = new System.Drawing.Size(152, 20);
-         this.txtEventprice.TabIndex = 80;
-         // 
-         // label1111
-         // 
-         this.label1111.AutoSize = true;
-         this.label1111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label1111.Location = new System.Drawing.Point(190, 86);
-         this.label1111.Name = "label1111";
-         this.label1111.Size = new System.Drawing.Size(34, 13);
-         this.label1111.TabIndex = 75;
-         this.label1111.Text = "Price:";
-         // 
-         // txtEventname
-         // 
-         this.txtEventname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtEventname.Location = new System.Drawing.Point(237, 52);
-         this.txtEventname.Multiline = true;
-         this.txtEventname.Name = "txtEventname";
-         this.txtEventname.Size = new System.Drawing.Size(152, 20);
-         this.txtEventname.TabIndex = 65;
-         // 
-         // label
-         // 
-         this.label.AutoSize = true;
-         this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label.Location = new System.Drawing.Point(170, 52);
-         this.label.Name = "label";
-         this.label.Size = new System.Drawing.Size(67, 13);
-         this.label.TabIndex = 63;
-         this.label.Text = "Event name:";
+         dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+         dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+         dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+         dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+         dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+         this.dataGridCollection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+         this.dataGridCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+         dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+         dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+         dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+         dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+         this.dataGridCollection.DefaultCellStyle = dataGridViewCellStyle2;
+         this.dataGridCollection.Location = new System.Drawing.Point(2, 4);
+         this.dataGridCollection.Name = "dataGridCollection";
+         dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+         dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+         dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+         dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+         dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+         this.dataGridCollection.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+         this.dataGridCollection.Size = new System.Drawing.Size(587, 267);
+         this.dataGridCollection.TabIndex = 1;
+         this.dataGridCollection.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridCollection_CellMouseClick);
          // 
          // tabPage2
          // 
@@ -337,7 +259,6 @@ namespace AppsDev.Admin
          this.dataGridCollections.Name = "dataGridCollections";
          this.dataGridCollections.Size = new System.Drawing.Size(587, 267);
          this.dataGridCollections.TabIndex = 0;
-         this.dataGridCollections.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridCollections_CellMouseClick);
          // 
          // AdminCollection
          // 
@@ -360,7 +281,7 @@ namespace AppsDev.Admin
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
          this.tabControlCollection.ResumeLayout(false);
          this.tabPage1.ResumeLayout(false);
-         this.tabPage1.PerformLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollection)).EndInit();
          this.tabPage2.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.dataGridCollections)).EndInit();
          this.ResumeLayout(false);
@@ -384,17 +305,8 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Label label2;
       private System.Windows.Forms.TabControl tabControlCollection;
       private System.Windows.Forms.TabPage tabPage1;
-      private System.Windows.Forms.TextBox txtEventid;
-      private System.Windows.Forms.DateTimePicker DateTimePick;
-      private System.Windows.Forms.Label lblDate;
-      private System.Windows.Forms.Button btnDelete;
-      private System.Windows.Forms.Button btnUpdate;
-      private System.Windows.Forms.Button btnSave;
-      private System.Windows.Forms.TextBox txtEventprice;
-      private System.Windows.Forms.Label label1111;
-      private System.Windows.Forms.TextBox txtEventname;
-      private System.Windows.Forms.Label label;
       private System.Windows.Forms.TabPage tabPage2;
       private System.Windows.Forms.DataGridView dataGridCollections;
+      private System.Windows.Forms.DataGridView dataGridCollection;
    }
 }

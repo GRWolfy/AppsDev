@@ -20,6 +20,8 @@ namespace AppsDev.Admin
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
          btnCollection.Enabled = false;
+         getRecords();
+         tabControlCollection.SelectedIndex = 1;
       }
 
       private void button5_Click(object sender, EventArgs e)
@@ -79,5 +81,28 @@ namespace AppsDev.Admin
          collect.Show();
          Hide();
       }
+
+      public void getRecords()
+      {
+         Connection.Connection.DB();
+         Functions.Function.gen = "SELECT Users.UserId AS [USER ID], Users.FirstName AS [FIRST NAME], Users.LastName AS [LAST NAME], Users.Age AS [AGE], Users.Gender AS [GENDER], Users.Status AS [STATUS], Users.Username AS [USERNAME], Users.Password AS [PASSWORD], Users.Dateregistered AS [DATE REGISTERED], Role.RoleId as [ROLE], Users.Email AS [EMAIL] FROM Users INNER JOIN Role ON Role.RoleId = Users.RoleId WHERE Users.RoleId = 1";
+         Functions.Function.fill(Functions.Function.gen, dataGridCollections);
+         Functions.Function.fill(Functions.Function.gen, dataGridCollection);
+      }
+
+      private void dataGridCollection_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+      {
+         var collect = new AddCollection();
+         setID = dataGridCollections.CurrentRow.Cells[0].Value.ToString();
+         setFirstname = dataGridCollections.CurrentRow.Cells[1].Value.ToString();
+         setLastname = dataGridCollections.CurrentRow.Cells[2].Value.ToString();
+         collect.Show();
+         Hide();
+      }
    }
 }
+/*
+ Select SUM(eventInfo.eventPrice) As TOTAL from eventInfo inner join collectionInfo on collectionInfo.eventId = eventInfo.eventId inner join userInfo on userInfo.userId = collectionInfo.collectionId where userInfo.userId = 16";
+SELECT SUM(Events.Eventprice) AS Total FROM Events INNER JOIN Collections ON Collections.EventId = Events.EventId INNER JOIN Users ON Users.UserId = Collections.CollectionId WHERE Users.UserId = 2012;
+
+ */

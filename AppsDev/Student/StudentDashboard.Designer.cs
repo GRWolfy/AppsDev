@@ -296,6 +296,7 @@ namespace AppsDev.Student
          this.Name = "StudentDashboard";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "StudentDashboard";
+         this.Load += new System.EventHandler(this.StudentDashboard_Load);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
