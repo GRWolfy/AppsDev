@@ -186,7 +186,7 @@ namespace AppsDev.Admin
          this.Name = "AdminReports";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Admin_Reports";
-         this.Load += new System.EventHandler(this.AdminDashboard_Load);
+         this.Load += new System.EventHandler(this.AdminReports_Load);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

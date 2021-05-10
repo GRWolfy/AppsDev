@@ -43,12 +43,14 @@ namespace AppsDev.Admin
          this.label2 = new System.Windows.Forms.Label();
          this.tabControlRegistration = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
+         this.lblUserid = new System.Windows.Forms.Label();
+         this.txtUserid = new System.Windows.Forms.TextBox();
          this.btnDelete = new System.Windows.Forms.Button();
          this.btnUpdate = new System.Windows.Forms.Button();
          this.btnSave = new System.Windows.Forms.Button();
-         this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
-         this.label17 = new System.Windows.Forms.Label();
-         this.label18 = new System.Windows.Forms.Label();
+         this.DateTimePick = new System.Windows.Forms.DateTimePicker();
+         this.lblDate = new System.Windows.Forms.Label();
+         this.lblRoleid = new System.Windows.Forms.Label();
          this.txtRoleId = new System.Windows.Forms.TextBox();
          this.txtAge = new System.Windows.Forms.TextBox();
          this.txtLastName = new System.Windows.Forms.TextBox();
@@ -72,6 +74,8 @@ namespace AppsDev.Admin
          this.label30 = new System.Windows.Forms.Label();
          this.tabPage2 = new System.Windows.Forms.TabPage();
          this.dataGridRegister = new System.Windows.Forms.DataGridView();
+         this.txtSearch = new System.Windows.Forms.TextBox();
+         this.label3 = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControlRegistration.SuspendLayout();
@@ -220,12 +224,14 @@ namespace AppsDev.Admin
          // 
          // tabPage1
          // 
+         this.tabPage1.Controls.Add(this.lblUserid);
+         this.tabPage1.Controls.Add(this.txtUserid);
          this.tabPage1.Controls.Add(this.btnDelete);
          this.tabPage1.Controls.Add(this.btnUpdate);
          this.tabPage1.Controls.Add(this.btnSave);
-         this.tabPage1.Controls.Add(this.DateTimePicker);
-         this.tabPage1.Controls.Add(this.label17);
-         this.tabPage1.Controls.Add(this.label18);
+         this.tabPage1.Controls.Add(this.DateTimePick);
+         this.tabPage1.Controls.Add(this.lblDate);
+         this.tabPage1.Controls.Add(this.lblRoleid);
          this.tabPage1.Controls.Add(this.txtRoleId);
          this.tabPage1.Controls.Add(this.txtAge);
          this.tabPage1.Controls.Add(this.txtLastName);
@@ -248,31 +254,56 @@ namespace AppsDev.Admin
          this.tabPage1.Controls.Add(this.label29);
          this.tabPage1.Controls.Add(this.label30);
          this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.tabPage1.Location = new System.Drawing.Point(4, 22);
+         this.tabPage1.Location = new System.Drawing.Point(4, 29);
          this.tabPage1.Name = "tabPage1";
          this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-         this.tabPage1.Size = new System.Drawing.Size(590, 281);
+         this.tabPage1.Size = new System.Drawing.Size(590, 274);
          this.tabPage1.TabIndex = 0;
          this.tabPage1.Text = "Add | Update Registration";
          this.tabPage1.UseVisualStyleBackColor = true;
          // 
+         // lblUserid
+         // 
+         this.lblUserid.AutoSize = true;
+         this.lblUserid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblUserid.Location = new System.Drawing.Point(279, 228);
+         this.lblUserid.Name = "lblUserid";
+         this.lblUserid.Size = new System.Drawing.Size(46, 13);
+         this.lblUserid.TabIndex = 91;
+         this.lblUserid.Text = "User ID:";
+         this.lblUserid.Visible = false;
+         // 
+         // txtUserid
+         // 
+         this.txtUserid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtUserid.Location = new System.Drawing.Point(358, 225);
+         this.txtUserid.Multiline = true;
+         this.txtUserid.Name = "txtUserid";
+         this.txtUserid.Size = new System.Drawing.Size(122, 20);
+         this.txtUserid.TabIndex = 90;
+         this.txtUserid.Visible = false;
+         // 
          // btnDelete
          // 
+         this.btnDelete.Enabled = false;
          this.btnDelete.Location = new System.Drawing.Point(169, 216);
          this.btnDelete.Name = "btnDelete";
          this.btnDelete.Size = new System.Drawing.Size(64, 36);
          this.btnDelete.TabIndex = 89;
          this.btnDelete.Text = "Delete";
          this.btnDelete.UseVisualStyleBackColor = true;
+         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
          // 
          // btnUpdate
          // 
+         this.btnUpdate.Enabled = false;
          this.btnUpdate.Location = new System.Drawing.Point(92, 216);
          this.btnUpdate.Name = "btnUpdate";
          this.btnUpdate.Size = new System.Drawing.Size(64, 36);
          this.btnUpdate.TabIndex = 88;
          this.btnUpdate.Text = "Update";
          this.btnUpdate.UseVisualStyleBackColor = true;
+         this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
          // 
          // btnSave
          // 
@@ -284,33 +315,36 @@ namespace AppsDev.Admin
          this.btnSave.UseVisualStyleBackColor = true;
          this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
          // 
-         // DateTimePicker
+         // DateTimePick
          // 
-         this.DateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.DateTimePicker.Location = new System.Drawing.Point(358, 159);
-         this.DateTimePicker.Name = "DateTimePicker";
-         this.DateTimePicker.Size = new System.Drawing.Size(152, 20);
-         this.DateTimePicker.TabIndex = 86;
+         this.DateTimePick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.DateTimePick.Location = new System.Drawing.Point(358, 159);
+         this.DateTimePick.Name = "DateTimePick";
+         this.DateTimePick.Size = new System.Drawing.Size(152, 20);
+         this.DateTimePick.TabIndex = 86;
+         this.DateTimePick.Visible = false;
          // 
-         // label17
+         // lblDate
          // 
-         this.label17.AutoSize = true;
-         this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label17.Location = new System.Drawing.Point(292, 165);
-         this.label17.Name = "label17";
-         this.label17.Size = new System.Drawing.Size(33, 13);
-         this.label17.TabIndex = 85;
-         this.label17.Text = "Date:";
+         this.lblDate.AutoSize = true;
+         this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblDate.Location = new System.Drawing.Point(292, 165);
+         this.lblDate.Name = "lblDate";
+         this.lblDate.Size = new System.Drawing.Size(33, 13);
+         this.lblDate.TabIndex = 85;
+         this.lblDate.Text = "Date:";
+         this.lblDate.Visible = false;
          // 
-         // label18
+         // lblRoleid
          // 
-         this.label18.AutoSize = true;
-         this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label18.Location = new System.Drawing.Point(279, 198);
-         this.label18.Name = "label18";
-         this.label18.Size = new System.Drawing.Size(46, 13);
-         this.label18.TabIndex = 84;
-         this.label18.Text = "Role ID:";
+         this.lblRoleid.AutoSize = true;
+         this.lblRoleid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblRoleid.Location = new System.Drawing.Point(279, 198);
+         this.lblRoleid.Name = "lblRoleid";
+         this.lblRoleid.Size = new System.Drawing.Size(46, 13);
+         this.lblRoleid.TabIndex = 84;
+         this.lblRoleid.Text = "Role ID:";
+         this.lblRoleid.Visible = false;
          // 
          // txtRoleId
          // 
@@ -320,6 +354,7 @@ namespace AppsDev.Admin
          this.txtRoleId.Name = "txtRoleId";
          this.txtRoleId.Size = new System.Drawing.Size(122, 20);
          this.txtRoleId.TabIndex = 83;
+         this.txtRoleId.Visible = false;
          // 
          // txtAge
          // 
@@ -527,6 +562,8 @@ namespace AppsDev.Admin
          // 
          // tabPage2
          // 
+         this.tabPage2.Controls.Add(this.label3);
+         this.tabPage2.Controls.Add(this.txtSearch);
          this.tabPage2.Controls.Add(this.dataGridRegister);
          this.tabPage2.Location = new System.Drawing.Point(4, 29);
          this.tabPage2.Name = "tabPage2";
@@ -539,10 +576,28 @@ namespace AppsDev.Admin
          // dataGridRegister
          // 
          this.dataGridRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridRegister.Location = new System.Drawing.Point(2, 2);
+         this.dataGridRegister.Location = new System.Drawing.Point(2, 35);
          this.dataGridRegister.Name = "dataGridRegister";
-         this.dataGridRegister.Size = new System.Drawing.Size(587, 271);
+         this.dataGridRegister.Size = new System.Drawing.Size(587, 238);
          this.dataGridRegister.TabIndex = 0;
+         this.dataGridRegister.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridRegister_CellMouseClick);
+         // 
+         // txtSearch
+         // 
+         this.txtSearch.Location = new System.Drawing.Point(233, 6);
+         this.txtSearch.Name = "txtSearch";
+         this.txtSearch.Size = new System.Drawing.Size(100, 26);
+         this.txtSearch.TabIndex = 1;
+         this.txtSearch.TextChanged += new System.EventHandler(this.txrSearch_TextChanged);
+         // 
+         // label3
+         // 
+         this.label3.AutoSize = true;
+         this.label3.Location = new System.Drawing.Point(163, 9);
+         this.label3.Name = "label3";
+         this.label3.Size = new System.Drawing.Size(64, 20);
+         this.label3.TabIndex = 2;
+         this.label3.Text = "Search:";
          // 
          // AdminRegistration
          // 
@@ -559,7 +614,7 @@ namespace AppsDev.Admin
          this.Name = "AdminRegistration";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "AdminRegistration";
-         this.Load += new System.EventHandler(this.AdminDashboard_Load);
+         this.Load += new System.EventHandler(this.AdminRegistration_Load);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -567,6 +622,7 @@ namespace AppsDev.Admin
          this.tabPage1.ResumeLayout(false);
          this.tabPage1.PerformLayout();
          this.tabPage2.ResumeLayout(false);
+         this.tabPage2.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.dataGridRegister)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
@@ -590,9 +646,9 @@ namespace AppsDev.Admin
       private System.Windows.Forms.TabControl tabControlRegistration;
       private System.Windows.Forms.TabPage tabPage1;
       private System.Windows.Forms.TabPage tabPage2;
-      private System.Windows.Forms.DateTimePicker DateTimePicker;
-      private System.Windows.Forms.Label label17;
-      private System.Windows.Forms.Label label18;
+      private System.Windows.Forms.DateTimePicker DateTimePick;
+      private System.Windows.Forms.Label lblDate;
+      private System.Windows.Forms.Label lblRoleid;
       private System.Windows.Forms.TextBox txtRoleId;
       private System.Windows.Forms.TextBox txtAge;
       private System.Windows.Forms.TextBox txtLastName;
@@ -618,5 +674,9 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Button btnUpdate;
       private System.Windows.Forms.Button btnSave;
       private System.Windows.Forms.DataGridView dataGridRegister;
+      private System.Windows.Forms.Label lblUserid;
+      private System.Windows.Forms.TextBox txtUserid;
+      private System.Windows.Forms.Label label3;
+      private System.Windows.Forms.TextBox txtSearch;
    }
 }

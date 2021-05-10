@@ -269,10 +269,10 @@ namespace AppsDev.Admin
          this.linklViewRegistration.AutoSize = true;
          this.linklViewRegistration.Location = new System.Drawing.Point(233, 352);
          this.linklViewRegistration.Name = "linklViewRegistration";
-         this.linklViewRegistration.Size = new System.Drawing.Size(89, 13);
+         this.linklViewRegistration.Size = new System.Drawing.Size(90, 13);
          this.linklViewRegistration.TabIndex = 9;
          this.linklViewRegistration.TabStop = true;
-         this.linklViewRegistration.Text = "View Registration";
+         this.linklViewRegistration.Text = "Total Registration";
          this.linklViewRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewRegistration_LinkClicked);
          // 
          // linklViewEvents
@@ -280,10 +280,10 @@ namespace AppsDev.Admin
          this.linklViewEvents.AutoSize = true;
          this.linklViewEvents.Location = new System.Drawing.Point(629, 352);
          this.linklViewEvents.Name = "linklViewEvents";
-         this.linklViewEvents.Size = new System.Drawing.Size(66, 13);
+         this.linklViewEvents.Size = new System.Drawing.Size(67, 13);
          this.linklViewEvents.TabIndex = 10;
          this.linklViewEvents.TabStop = true;
-         this.linklViewEvents.Text = "View Events";
+         this.linklViewEvents.Text = "Total Events";
          this.linklViewEvents.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewEvents_LinkClicked);
          // 
          // linklViewCollection
@@ -291,10 +291,10 @@ namespace AppsDev.Admin
          this.linklViewCollection.AutoSize = true;
          this.linklViewCollection.Location = new System.Drawing.Point(434, 352);
          this.linklViewCollection.Name = "linklViewCollection";
-         this.linklViewCollection.Size = new System.Drawing.Size(79, 13);
+         this.linklViewCollection.Size = new System.Drawing.Size(80, 13);
          this.linklViewCollection.TabIndex = 11;
          this.linklViewCollection.TabStop = true;
-         this.linklViewCollection.Text = "View Collection";
+         this.linklViewCollection.Text = "Total Collection";
          this.linklViewCollection.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklViewCollection_LinkClicked);
          // 
          // label7

@@ -16,6 +16,7 @@ namespace AppsDev.Admin
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
          btnEvents.Enabled = false;
+         getEvents();
       }
 
       private void button5_Click(object sender, EventArgs e)
@@ -64,6 +65,38 @@ namespace AppsDev.Admin
          var admindashboard = new AdminDashboard();
          admindashboard.Show();
          Hide();
+      }
+
+      private void btnSave_Click(object sender, EventArgs e)
+      {
+         try
+         {
+            Connection.Connection.DB();
+            Functions.Function.gen = "INSERT INTO Events(Eventname, Eventprice, Dateregistered) VALUES('" + txtEventname.Text + "', '" + txtEventprice.Text + "', '" + DateTime.Now.ToString("dd-MM-yyyy") + "')";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.command.ExecuteNonQuery();
+            MessageBox.Show("Event saved.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            getEvents();
+            tabControlRegistration.SelectedIndex = 1;
+            Connection.Connection.con.Close();
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+      }
+
+      private void getEvents()
+      {
+         Connection.Connection.DB();
+         Functions.Function.gen = "SELECT Events.EventId AS [EVENT ID], Events.Eventname AS [EVENT NAME], Events.Eventprice AS [EVENT PRICE], Events.Dateregistered AS [DATE REGISTERED] FROM Events";
+         Functions.Function.fill(Functions.Function.gen, dataGridEvents);
+      }
+
+      private void btnUpdate_Click(object sender, EventArgs e)
+      {
+
       }
    }
 }

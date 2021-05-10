@@ -11,7 +11,7 @@ namespace AppsDev.Admin
          InitializeComponent();
       }
 
-      private void AdminDashboard_Load(object sender, EventArgs e)
+      private void AdminCollection_Load(object sender, EventArgs e)
       {
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
