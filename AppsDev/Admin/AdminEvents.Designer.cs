@@ -41,8 +41,10 @@ namespace AppsDev.Admin
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.labelFirstname = new System.Windows.Forms.Label();
          this.label2 = new System.Windows.Forms.Label();
-         this.tabControlRegistration = new System.Windows.Forms.TabControl();
+         this.tabControlEvents = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
+         this.DateTimePick = new System.Windows.Forms.DateTimePicker();
+         this.lblDate = new System.Windows.Forms.Label();
          this.btnDelete = new System.Windows.Forms.Button();
          this.btnUpdate = new System.Windows.Forms.Button();
          this.btnSave = new System.Windows.Forms.Button();
@@ -54,9 +56,10 @@ namespace AppsDev.Admin
          this.label3 = new System.Windows.Forms.Label();
          this.txtSearch = new System.Windows.Forms.TextBox();
          this.dataGridEvents = new System.Windows.Forms.DataGridView();
+         this.txtEventid = new System.Windows.Forms.TextBox();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-         this.tabControlRegistration.SuspendLayout();
+         this.tabControlEvents.SuspendLayout();
          this.tabPage1.SuspendLayout();
          this.tabPage2.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.dataGridEvents)).BeginInit();
@@ -189,19 +192,22 @@ namespace AppsDev.Admin
          this.label2.TabIndex = 4;
          this.label2.Text = "Events";
          // 
-         // tabControlRegistration
+         // tabControlEvents
          // 
-         this.tabControlRegistration.Controls.Add(this.tabPage1);
-         this.tabControlRegistration.Controls.Add(this.tabPage2);
-         this.tabControlRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.tabControlRegistration.Location = new System.Drawing.Point(190, 116);
-         this.tabControlRegistration.Name = "tabControlRegistration";
-         this.tabControlRegistration.SelectedIndex = 0;
-         this.tabControlRegistration.Size = new System.Drawing.Size(598, 307);
-         this.tabControlRegistration.TabIndex = 6;
+         this.tabControlEvents.Controls.Add(this.tabPage1);
+         this.tabControlEvents.Controls.Add(this.tabPage2);
+         this.tabControlEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.tabControlEvents.Location = new System.Drawing.Point(190, 116);
+         this.tabControlEvents.Name = "tabControlEvents";
+         this.tabControlEvents.SelectedIndex = 0;
+         this.tabControlEvents.Size = new System.Drawing.Size(598, 307);
+         this.tabControlEvents.TabIndex = 6;
          // 
          // tabPage1
          // 
+         this.tabPage1.Controls.Add(this.txtEventid);
+         this.tabPage1.Controls.Add(this.DateTimePick);
+         this.tabPage1.Controls.Add(this.lblDate);
          this.tabPage1.Controls.Add(this.btnDelete);
          this.tabPage1.Controls.Add(this.btnUpdate);
          this.tabPage1.Controls.Add(this.btnSave);
@@ -218,6 +224,26 @@ namespace AppsDev.Admin
          this.tabPage1.Text = "Add | Update Event";
          this.tabPage1.UseVisualStyleBackColor = true;
          // 
+         // DateTimePick
+         // 
+         this.DateTimePick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.DateTimePick.Location = new System.Drawing.Point(237, 123);
+         this.DateTimePick.Name = "DateTimePick";
+         this.DateTimePick.Size = new System.Drawing.Size(152, 20);
+         this.DateTimePick.TabIndex = 91;
+         this.DateTimePick.Visible = false;
+         // 
+         // lblDate
+         // 
+         this.lblDate.AutoSize = true;
+         this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblDate.Location = new System.Drawing.Point(190, 129);
+         this.lblDate.Name = "lblDate";
+         this.lblDate.Size = new System.Drawing.Size(33, 13);
+         this.lblDate.TabIndex = 90;
+         this.lblDate.Text = "Date:";
+         this.lblDate.Visible = false;
+         // 
          // btnDelete
          // 
          this.btnDelete.Enabled = false;
@@ -227,6 +253,7 @@ namespace AppsDev.Admin
          this.btnDelete.TabIndex = 89;
          this.btnDelete.Text = "Delete";
          this.btnDelete.UseVisualStyleBackColor = true;
+         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
          // 
          // btnUpdate
          // 
@@ -255,7 +282,7 @@ namespace AppsDev.Admin
          this.txtEventprice.Location = new System.Drawing.Point(237, 86);
          this.txtEventprice.Multiline = true;
          this.txtEventprice.Name = "txtEventprice";
-         this.txtEventprice.Size = new System.Drawing.Size(120, 20);
+         this.txtEventprice.Size = new System.Drawing.Size(152, 20);
          this.txtEventprice.TabIndex = 80;
          // 
          // label1111
@@ -274,7 +301,7 @@ namespace AppsDev.Admin
          this.txtEventname.Location = new System.Drawing.Point(237, 52);
          this.txtEventname.Multiline = true;
          this.txtEventname.Name = "txtEventname";
-         this.txtEventname.Size = new System.Drawing.Size(120, 20);
+         this.txtEventname.Size = new System.Drawing.Size(152, 20);
          this.txtEventname.TabIndex = 65;
          // 
          // label
@@ -323,13 +350,24 @@ namespace AppsDev.Admin
          this.dataGridEvents.Name = "dataGridEvents";
          this.dataGridEvents.Size = new System.Drawing.Size(587, 238);
          this.dataGridEvents.TabIndex = 0;
+         this.dataGridEvents.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridEvents_CellMouseClick);
+         // 
+         // txtEventid
+         // 
+         this.txtEventid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtEventid.Location = new System.Drawing.Point(237, 164);
+         this.txtEventid.Multiline = true;
+         this.txtEventid.Name = "txtEventid";
+         this.txtEventid.Size = new System.Drawing.Size(152, 20);
+         this.txtEventid.TabIndex = 92;
+         this.txtEventid.Visible = false;
          // 
          // AdminEvents
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
-         this.Controls.Add(this.tabControlRegistration);
+         this.Controls.Add(this.tabControlEvents);
          this.Controls.Add(this.label2);
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
@@ -339,11 +377,11 @@ namespace AppsDev.Admin
          this.Name = "AdminEvents";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "AdminEvents";
-         this.Load += new System.EventHandler(this.AdminDashboard_Load);
+         this.Load += new System.EventHandler(this.AdminEvents_Load);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-         this.tabControlRegistration.ResumeLayout(false);
+         this.tabControlEvents.ResumeLayout(false);
          this.tabPage1.ResumeLayout(false);
          this.tabPage1.PerformLayout();
          this.tabPage2.ResumeLayout(false);
@@ -368,7 +406,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Button btnDashboard;
       private System.Windows.Forms.Button btnLogout;
       private System.Windows.Forms.Label label2;
-      private System.Windows.Forms.TabControl tabControlRegistration;
+      private System.Windows.Forms.TabControl tabControlEvents;
       private System.Windows.Forms.TabPage tabPage1;
       private System.Windows.Forms.Button btnDelete;
       private System.Windows.Forms.Button btnUpdate;
@@ -381,5 +419,8 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Label label3;
       private System.Windows.Forms.TextBox txtSearch;
       private System.Windows.Forms.DataGridView dataGridEvents;
+      private System.Windows.Forms.DateTimePicker DateTimePick;
+      private System.Windows.Forms.Label lblDate;
+      private System.Windows.Forms.TextBox txtEventid;
    }
 }

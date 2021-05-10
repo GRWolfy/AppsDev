@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppsDev.Student
 {
-   public partial class StudentDashboard : Form
+   public partial class StudentProfile : Form
    {
-      public StudentDashboard()
+      public StudentProfile()
       {
          InitializeComponent();
       }

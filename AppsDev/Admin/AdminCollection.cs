@@ -6,6 +6,10 @@ namespace AppsDev.Admin
 {
    public partial class AdminCollection : Form
    {
+      public static string setID;
+      public static string setFirstname;
+      public static string setLastname;
+
       public AdminCollection()
       {
          InitializeComponent();
@@ -63,6 +67,16 @@ namespace AppsDev.Admin
       {
          var admindashboard = new AdminDashboard();
          admindashboard.Show();
+         Hide();
+      }
+
+      private void dataGridCollections_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+      {
+         var collect = new AddCollection();
+         setID = dataGridCollections.CurrentRow.Cells[0].Value.ToString();
+         setFirstname = dataGridCollections.CurrentRow.Cells[1].Value.ToString();
+         setLastname = dataGridCollections.CurrentRow.Cells[2].Value.ToString();
+         collect.Show();
          Hide();
       }
    }

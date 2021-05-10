@@ -41,8 +41,26 @@ namespace AppsDev.Admin
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.labelFirstname = new System.Windows.Forms.Label();
          this.label2 = new System.Windows.Forms.Label();
+         this.tabControlCollection = new System.Windows.Forms.TabControl();
+         this.tabPage1 = new System.Windows.Forms.TabPage();
+         this.txtEventid = new System.Windows.Forms.TextBox();
+         this.DateTimePick = new System.Windows.Forms.DateTimePicker();
+         this.lblDate = new System.Windows.Forms.Label();
+         this.btnDelete = new System.Windows.Forms.Button();
+         this.btnUpdate = new System.Windows.Forms.Button();
+         this.btnSave = new System.Windows.Forms.Button();
+         this.txtEventprice = new System.Windows.Forms.TextBox();
+         this.label1111 = new System.Windows.Forms.Label();
+         this.txtEventname = new System.Windows.Forms.TextBox();
+         this.label = new System.Windows.Forms.Label();
+         this.tabPage2 = new System.Windows.Forms.TabPage();
+         this.dataGridCollections = new System.Windows.Forms.DataGridView();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+         this.tabControlCollection.SuspendLayout();
+         this.tabPage1.SuspendLayout();
+         this.tabPage2.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollections)).BeginInit();
          this.SuspendLayout();
          // 
          // label1
@@ -172,11 +190,161 @@ namespace AppsDev.Admin
          this.label2.TabIndex = 4;
          this.label2.Text = "Collections";
          // 
+         // tabControlCollection
+         // 
+         this.tabControlCollection.Controls.Add(this.tabPage1);
+         this.tabControlCollection.Controls.Add(this.tabPage2);
+         this.tabControlCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.tabControlCollection.Location = new System.Drawing.Point(190, 116);
+         this.tabControlCollection.Name = "tabControlCollection";
+         this.tabControlCollection.SelectedIndex = 0;
+         this.tabControlCollection.Size = new System.Drawing.Size(598, 307);
+         this.tabControlCollection.TabIndex = 7;
+         // 
+         // tabPage1
+         // 
+         this.tabPage1.Controls.Add(this.txtEventid);
+         this.tabPage1.Controls.Add(this.DateTimePick);
+         this.tabPage1.Controls.Add(this.lblDate);
+         this.tabPage1.Controls.Add(this.btnDelete);
+         this.tabPage1.Controls.Add(this.btnUpdate);
+         this.tabPage1.Controls.Add(this.btnSave);
+         this.tabPage1.Controls.Add(this.txtEventprice);
+         this.tabPage1.Controls.Add(this.label1111);
+         this.tabPage1.Controls.Add(this.txtEventname);
+         this.tabPage1.Controls.Add(this.label);
+         this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.tabPage1.Location = new System.Drawing.Point(4, 29);
+         this.tabPage1.Name = "tabPage1";
+         this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+         this.tabPage1.Size = new System.Drawing.Size(590, 274);
+         this.tabPage1.TabIndex = 0;
+         this.tabPage1.Text = "Add | Update Collection";
+         this.tabPage1.UseVisualStyleBackColor = true;
+         // 
+         // txtEventid
+         // 
+         this.txtEventid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtEventid.Location = new System.Drawing.Point(237, 164);
+         this.txtEventid.Multiline = true;
+         this.txtEventid.Name = "txtEventid";
+         this.txtEventid.Size = new System.Drawing.Size(152, 20);
+         this.txtEventid.TabIndex = 92;
+         this.txtEventid.Visible = false;
+         // 
+         // DateTimePick
+         // 
+         this.DateTimePick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.DateTimePick.Location = new System.Drawing.Point(237, 123);
+         this.DateTimePick.Name = "DateTimePick";
+         this.DateTimePick.Size = new System.Drawing.Size(152, 20);
+         this.DateTimePick.TabIndex = 91;
+         this.DateTimePick.Visible = false;
+         // 
+         // lblDate
+         // 
+         this.lblDate.AutoSize = true;
+         this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblDate.Location = new System.Drawing.Point(190, 129);
+         this.lblDate.Name = "lblDate";
+         this.lblDate.Size = new System.Drawing.Size(33, 13);
+         this.lblDate.TabIndex = 90;
+         this.lblDate.Text = "Date:";
+         this.lblDate.Visible = false;
+         // 
+         // btnDelete
+         // 
+         this.btnDelete.Enabled = false;
+         this.btnDelete.Location = new System.Drawing.Point(314, 207);
+         this.btnDelete.Name = "btnDelete";
+         this.btnDelete.Size = new System.Drawing.Size(64, 36);
+         this.btnDelete.TabIndex = 89;
+         this.btnDelete.Text = "Delete";
+         this.btnDelete.UseVisualStyleBackColor = true;
+         // 
+         // btnUpdate
+         // 
+         this.btnUpdate.Enabled = false;
+         this.btnUpdate.Location = new System.Drawing.Point(237, 207);
+         this.btnUpdate.Name = "btnUpdate";
+         this.btnUpdate.Size = new System.Drawing.Size(64, 36);
+         this.btnUpdate.TabIndex = 88;
+         this.btnUpdate.Text = "Update";
+         this.btnUpdate.UseVisualStyleBackColor = true;
+         // 
+         // btnSave
+         // 
+         this.btnSave.Location = new System.Drawing.Point(160, 207);
+         this.btnSave.Name = "btnSave";
+         this.btnSave.Size = new System.Drawing.Size(64, 36);
+         this.btnSave.TabIndex = 87;
+         this.btnSave.Text = "Save";
+         this.btnSave.UseVisualStyleBackColor = true;
+         // 
+         // txtEventprice
+         // 
+         this.txtEventprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtEventprice.Location = new System.Drawing.Point(237, 86);
+         this.txtEventprice.Multiline = true;
+         this.txtEventprice.Name = "txtEventprice";
+         this.txtEventprice.Size = new System.Drawing.Size(152, 20);
+         this.txtEventprice.TabIndex = 80;
+         // 
+         // label1111
+         // 
+         this.label1111.AutoSize = true;
+         this.label1111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label1111.Location = new System.Drawing.Point(190, 86);
+         this.label1111.Name = "label1111";
+         this.label1111.Size = new System.Drawing.Size(34, 13);
+         this.label1111.TabIndex = 75;
+         this.label1111.Text = "Price:";
+         // 
+         // txtEventname
+         // 
+         this.txtEventname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtEventname.Location = new System.Drawing.Point(237, 52);
+         this.txtEventname.Multiline = true;
+         this.txtEventname.Name = "txtEventname";
+         this.txtEventname.Size = new System.Drawing.Size(152, 20);
+         this.txtEventname.TabIndex = 65;
+         // 
+         // label
+         // 
+         this.label.AutoSize = true;
+         this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label.Location = new System.Drawing.Point(170, 52);
+         this.label.Name = "label";
+         this.label.Size = new System.Drawing.Size(67, 13);
+         this.label.TabIndex = 63;
+         this.label.Text = "Event name:";
+         // 
+         // tabPage2
+         // 
+         this.tabPage2.Controls.Add(this.dataGridCollections);
+         this.tabPage2.Location = new System.Drawing.Point(4, 29);
+         this.tabPage2.Name = "tabPage2";
+         this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+         this.tabPage2.Size = new System.Drawing.Size(590, 274);
+         this.tabPage2.TabIndex = 1;
+         this.tabPage2.Text = "View Collection";
+         this.tabPage2.UseVisualStyleBackColor = true;
+         // 
+         // dataGridCollections
+         // 
+         this.dataGridCollections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridCollections.Location = new System.Drawing.Point(2, 6);
+         this.dataGridCollections.Name = "dataGridCollections";
+         this.dataGridCollections.Size = new System.Drawing.Size(587, 267);
+         this.dataGridCollections.TabIndex = 0;
+         this.dataGridCollections.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridCollections_CellMouseClick);
+         // 
          // AdminCollection
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.tabControlCollection);
          this.Controls.Add(this.label2);
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
@@ -190,6 +358,11 @@ namespace AppsDev.Admin
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+         this.tabControlCollection.ResumeLayout(false);
+         this.tabPage1.ResumeLayout(false);
+         this.tabPage1.PerformLayout();
+         this.tabPage2.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollections)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -209,5 +382,19 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Button btnDashboard;
       private System.Windows.Forms.Button btnLogout;
       private System.Windows.Forms.Label label2;
+      private System.Windows.Forms.TabControl tabControlCollection;
+      private System.Windows.Forms.TabPage tabPage1;
+      private System.Windows.Forms.TextBox txtEventid;
+      private System.Windows.Forms.DateTimePicker DateTimePick;
+      private System.Windows.Forms.Label lblDate;
+      private System.Windows.Forms.Button btnDelete;
+      private System.Windows.Forms.Button btnUpdate;
+      private System.Windows.Forms.Button btnSave;
+      private System.Windows.Forms.TextBox txtEventprice;
+      private System.Windows.Forms.Label label1111;
+      private System.Windows.Forms.TextBox txtEventname;
+      private System.Windows.Forms.Label label;
+      private System.Windows.Forms.TabPage tabPage2;
+      private System.Windows.Forms.DataGridView dataGridCollections;
    }
 }

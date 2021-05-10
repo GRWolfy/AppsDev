@@ -16,6 +16,7 @@ namespace AppsDev.Admin
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
          TotalCountRegister();
+         TotalCountEvents();
          btnDashboard.Enabled = false;
       }
 
@@ -110,6 +111,29 @@ namespace AppsDev.Admin
          var adminevents = new AdminEvents();
          adminevents.Show();
          Hide();
+      }
+
+      private void TotalCountEvents()
+      {
+         try
+         {
+            Connection.Connection.DB();
+            Functions.Function.gen = "SELECT COUNT(*) AS total FROM Events";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.reader = Functions.Function.command.ExecuteReader();
+
+            if (Functions.Function.reader.HasRows)
+            {
+               Functions.Function.reader.Read();
+               lblTotalEvents.Text = (Functions.Function.reader["total"].ToString());
+            }
+         }
+
+         catch (Exception ex)
+         {
+            Connection.Connection.con.Close();
+            MessageBox.Show(ex.Message);
+         }
       }
    }
 }

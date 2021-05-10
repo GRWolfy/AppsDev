@@ -45,7 +45,7 @@ namespace AppsDev.Admin
          this.panel3 = new System.Windows.Forms.Panel();
          this.label2 = new System.Windows.Forms.Label();
          this.panel4 = new System.Windows.Forms.Panel();
-         this.label3 = new System.Windows.Forms.Label();
+         this.lblTotalEvents = new System.Windows.Forms.Label();
          this.label5 = new System.Windows.Forms.Label();
          this.label4 = new System.Windows.Forms.Label();
          this.label6 = new System.Windows.Forms.Label();
@@ -218,21 +218,21 @@ namespace AppsDev.Admin
          // panel4
          // 
          this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-         this.panel4.Controls.Add(this.label3);
+         this.panel4.Controls.Add(this.lblTotalEvents);
          this.panel4.Location = new System.Drawing.Point(628, 123);
          this.panel4.Name = "panel4";
          this.panel4.Size = new System.Drawing.Size(120, 150);
          this.panel4.TabIndex = 4;
          // 
-         // label3
+         // lblTotalEvents
          // 
-         this.label3.AutoSize = true;
-         this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label3.Location = new System.Drawing.Point(26, 36);
-         this.label3.Name = "label3";
-         this.label3.Size = new System.Drawing.Size(68, 73);
-         this.label3.TabIndex = 7;
-         this.label3.Text = "0";
+         this.lblTotalEvents.AutoSize = true;
+         this.lblTotalEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTotalEvents.Location = new System.Drawing.Point(26, 36);
+         this.lblTotalEvents.Name = "lblTotalEvents";
+         this.lblTotalEvents.Size = new System.Drawing.Size(68, 73);
+         this.lblTotalEvents.TabIndex = 7;
+         this.lblTotalEvents.Text = "0";
          // 
          // label5
          // 
@@ -363,7 +363,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Panel panel3;
       private System.Windows.Forms.Label label2;
       private System.Windows.Forms.Panel panel4;
-      private System.Windows.Forms.Label label3;
+      private System.Windows.Forms.Label lblTotalEvents;
       private System.Windows.Forms.Label label5;
       private System.Windows.Forms.Label label4;
       private System.Windows.Forms.Label label6;

@@ -11,7 +11,7 @@ namespace AppsDev.Admin
          InitializeComponent();
       }
 
-      private void AdminDashboard_Load(object sender, EventArgs e)
+      private void AdminEvents_Load(object sender, EventArgs e)
       {
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
@@ -77,7 +77,7 @@ namespace AppsDev.Admin
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Event saved.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             getEvents();
-            tabControlRegistration.SelectedIndex = 1;
+            tabControlEvents.SelectedIndex = 1;
             Connection.Connection.con.Close();
          }
 
@@ -96,7 +96,71 @@ namespace AppsDev.Admin
 
       private void btnUpdate_Click(object sender, EventArgs e)
       {
+         try
+         {
+            Connection.Connection.DB();
+            Functions.Function.gen = "UPDATE Events SET Eventname = '" + txtEventname.Text + "', Eventprice = '" + txtEventprice.Text +"', dateregistered = '"+ DateTimePick.Value.Date + "' WHERE EventId = '"+ txtEventid.Text +"' ";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.command.ExecuteNonQuery();
+            MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            getEvents();
+            tabControlEvents.SelectedIndex = 1;
+            Connection.Connection.con.Close();
+         }
 
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+      }
+
+      private void btnDelete_Click(object sender, EventArgs e)
+      {
+         try
+         {
+            Connection.Connection.DB();
+            var gen = MessageBox.Show("Are you sure you want to delete this record?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (gen == DialogResult.Yes)
+            {
+               Functions.Function.gen = "DELETE FROM Events WHERE EventId = '" + txtEventid.Text + "' ";
+               Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+               Functions.Function.command.ExecuteNonQuery();
+               Connection.Connection.con.Close();
+               AdminEvents_Load(sender, e);
+               tabControlEvents.SelectedIndex = 1;
+            }
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+      }
+
+      private void dataGridEvents_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+      {
+         try
+         {
+            txtEventid.Text = dataGridEvents[0, e.RowIndex].Value.ToString();
+            txtEventname.Text = dataGridEvents[1, e.RowIndex].Value.ToString();
+            txtEventprice.Text = dataGridEvents[2, e.RowIndex].Value.ToString();
+            DateTimePick.Value = Convert.ToDateTime(dataGridEvents.Rows[e.RowIndex].Cells[3].Value.ToString());
+
+
+            btnSave.Enabled = false;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+            lblDate.Visible = true;
+            DateTimePick.Visible = true;
+
+            tabControlEvents.SelectedIndex = 0;
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
       }
    }
 }
