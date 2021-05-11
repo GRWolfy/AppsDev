@@ -43,7 +43,7 @@ namespace AppsDev.Admin
          this.panel2 = new System.Windows.Forms.Panel();
          this.lblTotalRegistration = new System.Windows.Forms.Label();
          this.panel3 = new System.Windows.Forms.Panel();
-         this.label2 = new System.Windows.Forms.Label();
+         this.lblTotalCollection = new System.Windows.Forms.Label();
          this.panel4 = new System.Windows.Forms.Panel();
          this.lblTotalEvents = new System.Windows.Forms.Label();
          this.label5 = new System.Windows.Forms.Label();
@@ -199,21 +199,21 @@ namespace AppsDev.Admin
          // panel3
          // 
          this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-         this.panel3.Controls.Add(this.label2);
+         this.panel3.Controls.Add(this.lblTotalCollection);
          this.panel3.Location = new System.Drawing.Point(425, 123);
          this.panel3.Name = "panel3";
          this.panel3.Size = new System.Drawing.Size(120, 150);
          this.panel3.TabIndex = 4;
          // 
-         // label2
+         // lblTotalCollection
          // 
-         this.label2.AutoSize = true;
-         this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label2.Location = new System.Drawing.Point(28, 36);
-         this.label2.Name = "label2";
-         this.label2.Size = new System.Drawing.Size(68, 73);
-         this.label2.TabIndex = 6;
-         this.label2.Text = "0";
+         this.lblTotalCollection.AutoSize = true;
+         this.lblTotalCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTotalCollection.Location = new System.Drawing.Point(28, 36);
+         this.lblTotalCollection.Name = "lblTotalCollection";
+         this.lblTotalCollection.Size = new System.Drawing.Size(39, 42);
+         this.lblTotalCollection.TabIndex = 6;
+         this.lblTotalCollection.Text = "0";
          // 
          // panel4
          // 
@@ -361,7 +361,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Panel panel2;
       private System.Windows.Forms.Label lblTotalRegistration;
       private System.Windows.Forms.Panel panel3;
-      private System.Windows.Forms.Label label2;
+      private System.Windows.Forms.Label lblTotalCollection;
       private System.Windows.Forms.Panel panel4;
       private System.Windows.Forms.Label lblTotalEvents;
       private System.Windows.Forms.Label label5;

@@ -56,11 +56,15 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "INSERT INTO Collections(EventId, UserId, Status, CollectionDate, CollectedBy) VALUES('" + txtEventID.Text + "', '" + txtID.Text + "', '"+ Paid +"', '" + DateTime.Now.ToString("dd-MM-yyyy") + "', '"+ Collector +"')";
+            Functions.Function.gen = "INSERT INTO Collections(EventId, UserId, Status, CollectionDate, CollectedBy) VALUES('" + txtEventID.Text + "', '" + txtID.Text + "', '"+ Paid +"', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '"+ Collector +"')";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Collection saved.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.Connection.con.Close();
+            var admincollection = new AdminCollection();
+            admincollection.Show();
+            admincollection.showTabControl();
+            Hide();
          }
 
          catch (Exception ex)

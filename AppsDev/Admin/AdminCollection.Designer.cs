@@ -48,14 +48,14 @@ namespace AppsDev.Admin
          this.tabPage1 = new System.Windows.Forms.TabPage();
          this.dataGridCollection = new System.Windows.Forms.DataGridView();
          this.tabPage2 = new System.Windows.Forms.TabPage();
-         this.dataGridCollections = new System.Windows.Forms.DataGridView();
+         this.dataGridViewCollections = new System.Windows.Forms.DataGridView();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControlCollection.SuspendLayout();
          this.tabPage1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.dataGridCollection)).BeginInit();
          this.tabPage2.SuspendLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollections)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollections)).BeginInit();
          this.SuspendLayout();
          // 
          // label1
@@ -243,7 +243,7 @@ namespace AppsDev.Admin
          // 
          // tabPage2
          // 
-         this.tabPage2.Controls.Add(this.dataGridCollections);
+         this.tabPage2.Controls.Add(this.dataGridViewCollections);
          this.tabPage2.Location = new System.Drawing.Point(4, 29);
          this.tabPage2.Name = "tabPage2";
          this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -252,13 +252,13 @@ namespace AppsDev.Admin
          this.tabPage2.Text = "View Collection";
          this.tabPage2.UseVisualStyleBackColor = true;
          // 
-         // dataGridCollections
+         // dataGridViewCollections
          // 
-         this.dataGridCollections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridCollections.Location = new System.Drawing.Point(2, 6);
-         this.dataGridCollections.Name = "dataGridCollections";
-         this.dataGridCollections.Size = new System.Drawing.Size(587, 267);
-         this.dataGridCollections.TabIndex = 0;
+         this.dataGridViewCollections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridViewCollections.Location = new System.Drawing.Point(2, 6);
+         this.dataGridViewCollections.Name = "dataGridViewCollections";
+         this.dataGridViewCollections.Size = new System.Drawing.Size(587, 267);
+         this.dataGridViewCollections.TabIndex = 0;
          // 
          // AdminCollection
          // 
@@ -283,7 +283,7 @@ namespace AppsDev.Admin
          this.tabPage1.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.dataGridCollection)).EndInit();
          this.tabPage2.ResumeLayout(false);
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollections)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollections)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -306,7 +306,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.TabControl tabControlCollection;
       private System.Windows.Forms.TabPage tabPage1;
       private System.Windows.Forms.TabPage tabPage2;
-      private System.Windows.Forms.DataGridView dataGridCollections;
+      private System.Windows.Forms.DataGridView dataGridViewCollections;
       private System.Windows.Forms.DataGridView dataGridCollection;
    }
 }

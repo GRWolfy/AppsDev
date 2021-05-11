@@ -17,6 +17,7 @@ namespace AppsDev.Admin
          labelLastname.Text = Login.setlastname;
          TotalCountRegister();
          TotalCountEvents();
+         TotalCollection();
          btnDashboard.Enabled = false;
       }
 
@@ -138,14 +139,24 @@ namespace AppsDev.Admin
 
       private void TotalCollection()
       {
-         Functions.Function.gen = "SELECT COUNT(*) AS total FROM Events";
-         Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
-         Functions.Function.reader = Functions.Function.command.ExecuteReader();
-
-         if (Functions.Function.reader.HasRows)
+         try
          {
-            Functions.Function.reader.Read();
-            lblTotalEvents.Text = (Functions.Function.reader["total"].ToString());
+            Connection.Connection.DB();
+            Functions.Function.gen = "SELECT SUM(Events.Eventprice) AS [Total] FROM Collections INNER JOIN Events ON Collections.EventId = Events.EventId WHERE Collections.Status = 'Paid'";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
+            Functions.Function.reader = Functions.Function.command.ExecuteReader();
+
+            if (Functions.Function.reader.HasRows)
+            {
+               Functions.Function.reader.Read();
+               lblTotalCollection.Text = (Functions.Function.reader["Total"].ToString());
+            }
+         }
+
+         catch (Exception ex)
+         {
+            Connection.Connection.con.Close();
+            MessageBox.Show(ex.Message);
          }
       }
    }
