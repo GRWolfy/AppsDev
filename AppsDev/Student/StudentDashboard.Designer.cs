@@ -268,10 +268,10 @@ namespace AppsDev.Student
          // lblTotalPayments
          // 
          this.lblTotalPayments.AutoSize = true;
-         this.lblTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.lblTotalPayments.Location = new System.Drawing.Point(26, 36);
          this.lblTotalPayments.Name = "lblTotalPayments";
-         this.lblTotalPayments.Size = new System.Drawing.Size(68, 73);
+         this.lblTotalPayments.Size = new System.Drawing.Size(51, 55);
          this.lblTotalPayments.TabIndex = 5;
          this.lblTotalPayments.Text = "0";
          // 

@@ -15,6 +15,7 @@ namespace AppsDev
    {
       public static string setfirstname = "";
       public static string setlastname = "";
+      public static int setuserId = 0;
       public Login()
       {
          InitializeComponent();
@@ -50,6 +51,7 @@ namespace AppsDev
 
                   setfirstname = Functions.Function.reader["FirstName"].ToString();
                   setlastname = Functions.Function.reader["LastName"].ToString();
+                  setuserId = Convert.ToInt32(Functions.Function.reader["UserId"]);
 
                   var student = new Student.StudentDashboard();
                   student.Show();
