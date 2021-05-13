@@ -104,6 +104,7 @@ namespace AppsDev.Admin
       {
          var admincollection = new AdminCollection();
          admincollection.Show();
+         admincollection.showTabControl();
          Hide();
       }
 
@@ -111,6 +112,7 @@ namespace AppsDev.Admin
       {
          var adminevents = new AdminEvents();
          adminevents.Show();
+         adminevents.showTabControl();
          Hide();
       }
 
@@ -126,7 +128,7 @@ namespace AppsDev.Admin
             if (Functions.Function.reader.HasRows)
             {
                Functions.Function.reader.Read();
-               lblTotalEvents.Text = (Functions.Function.reader["total"].ToString());
+               lblTotalCollection.Text = (Functions.Function.reader["total"].ToString());
             }
          }
 

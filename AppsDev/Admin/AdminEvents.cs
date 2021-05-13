@@ -77,6 +77,7 @@ namespace AppsDev.Admin
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Event saved.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             getEvents();
+            ResetFormControls();
             tabControlEvents.SelectedIndex = 1;
             Connection.Connection.con.Close();
          }
@@ -104,6 +105,7 @@ namespace AppsDev.Admin
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             getEvents();
+            ResetFormControls();
             tabControlEvents.SelectedIndex = 1;
             Connection.Connection.con.Close();
          }
@@ -128,6 +130,7 @@ namespace AppsDev.Admin
                Functions.Function.command.ExecuteNonQuery();
                Connection.Connection.con.Close();
                AdminEvents_Load(sender, e);
+               ResetFormControls();
                tabControlEvents.SelectedIndex = 1;
             }
          }
@@ -161,6 +164,18 @@ namespace AppsDev.Admin
          {
             MessageBox.Show(ex.Message);
          }
+      }
+
+      private void ResetFormControls()
+      {
+         txtEventname.Clear();
+         txtEventprice.Clear();
+         txtEventid.Clear();
+      }
+
+      public void showTabControl()
+      {
+         tabControlEvents.SelectedIndex = 1;
       }
    }
 }

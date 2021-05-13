@@ -98,11 +98,12 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + getGender() + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("dd-MM-yyyy") + "', '" + 1 + "', '" + txtEmail.Text + "')";
+            Functions.Function.gen = "INSERT INTO Users(FirstName, LastName, Age, Gender, Status, Username, Password, Dateregistered, RoleId, Email)values('" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + txtAge.Text + "', '" + getGender() + "', '" + cmboxStatus.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + 1 + "', '" + txtEmail.Text + "')";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Registration success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             getRegistrationALL();
+            ResetFormControls();
             tabControlRegistration.SelectedIndex = 1;
             Connection.Connection.con.Close();
          }
@@ -196,6 +197,7 @@ namespace AppsDev.Admin
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             getRegistrationALL();
+            ResetFormControls();
             tabControlRegistration.SelectedIndex = 1;
             Connection.Connection.con.Close();
          }
@@ -219,6 +221,7 @@ namespace AppsDev.Admin
                Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
                Functions.Function.command.ExecuteNonQuery();
                Connection.Connection.con.Close();
+               ResetFormControls();
                AdminRegistration_Load(sender, e);
                tabControlRegistration.SelectedIndex = 1;
             }
@@ -244,18 +247,20 @@ namespace AppsDev.Admin
          }
       }
 
-      private void rbtnLastName_CheckedChanged(object sender, EventArgs e)
+      private void ResetFormControls()
       {
-         try
-         {
-            Functions.Function.gen = "SELECT * FROM USERS ORDER BY '"+ rbtnLastName.Text +"' ";
-            Functions.Function.fill(Functions.Function.gen, dataGridRegister);
-         }
-
-         catch (Exception ex)
-         {
-            MessageBox.Show(ex.Message);
-         }
+         txtFirstName.Clear();
+         txtLastName.Clear();
+         txtAge.Clear();
+         cmboxStatus.Items.Clear();
+         txtUsername.Clear();
+         txtPassword.Clear();
+         txtEmail.Clear();
+         txtRoleId.Clear();
+         txtUserid.Clear();
+         rbtnFemale.Checked = false;
+         rbtnMale.Checked = false;
+         rbtnOther.Checked = false;
       }
    }
 }

@@ -31,7 +31,6 @@ namespace AppsDev.Student
       {
          this.panel1 = new System.Windows.Forms.Panel();
          this.btnLogout = new System.Windows.Forms.Button();
-         this.btnProfile = new System.Windows.Forms.Button();
          this.btnViewPayments = new System.Windows.Forms.Button();
          this.btnDashboard = new System.Windows.Forms.Button();
          this.labelLastname = new System.Windows.Forms.Label();
@@ -43,14 +42,14 @@ namespace AppsDev.Student
          this.linklViewEvents = new System.Windows.Forms.LinkLabel();
          this.linklViewpayments = new System.Windows.Forms.LinkLabel();
          this.label6 = new System.Windows.Forms.Label();
-         this.label4 = new System.Windows.Forms.Label();
          this.label5 = new System.Windows.Forms.Label();
          this.panel4 = new System.Windows.Forms.Panel();
-         this.lblBalance = new System.Windows.Forms.Label();
+         this.lblTotalEvents = new System.Windows.Forms.Label();
          this.panel3 = new System.Windows.Forms.Panel();
-         this.lblTotalAttendance = new System.Windows.Forms.Label();
+         this.lvlTotalCollection = new System.Windows.Forms.Label();
          this.panel2 = new System.Windows.Forms.Panel();
          this.lblTotalPayments = new System.Windows.Forms.Label();
+         this.Label1111 = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.panel4.SuspendLayout();
@@ -62,7 +61,6 @@ namespace AppsDev.Student
          // 
          this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
          this.panel1.Controls.Add(this.btnLogout);
-         this.panel1.Controls.Add(this.btnProfile);
          this.panel1.Controls.Add(this.btnViewPayments);
          this.panel1.Controls.Add(this.btnDashboard);
          this.panel1.Controls.Add(this.labelLastname);
@@ -75,21 +73,13 @@ namespace AppsDev.Student
          // 
          // btnLogout
          // 
-         this.btnLogout.Location = new System.Drawing.Point(24, 309);
+         this.btnLogout.Location = new System.Drawing.Point(24, 265);
          this.btnLogout.Name = "btnLogout";
          this.btnLogout.Size = new System.Drawing.Size(134, 28);
          this.btnLogout.TabIndex = 10;
          this.btnLogout.Text = "Logout";
          this.btnLogout.UseVisualStyleBackColor = true;
-         // 
-         // btnProfile
-         // 
-         this.btnProfile.Location = new System.Drawing.Point(24, 265);
-         this.btnProfile.Name = "btnProfile";
-         this.btnProfile.Size = new System.Drawing.Size(134, 28);
-         this.btnProfile.TabIndex = 7;
-         this.btnProfile.Text = "Profile";
-         this.btnProfile.UseVisualStyleBackColor = true;
+         this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
          // 
          // btnViewPayments
          // 
@@ -99,6 +89,7 @@ namespace AppsDev.Student
          this.btnViewPayments.TabIndex = 6;
          this.btnViewPayments.Text = "View Payments";
          this.btnViewPayments.UseVisualStyleBackColor = true;
+         this.btnViewPayments.Click += new System.EventHandler(this.btnViewPayments_Click);
          // 
          // btnDashboard
          // 
@@ -163,20 +154,20 @@ namespace AppsDev.Student
          this.linklViewCollection.AutoSize = true;
          this.linklViewCollection.Location = new System.Drawing.Point(440, 358);
          this.linklViewCollection.Name = "linklViewCollection";
-         this.linklViewCollection.Size = new System.Drawing.Size(66, 13);
+         this.linklViewCollection.Size = new System.Drawing.Size(79, 13);
          this.linklViewCollection.TabIndex = 21;
          this.linklViewCollection.TabStop = true;
-         this.linklViewCollection.Text = "View Events";
+         this.linklViewCollection.Text = "View Collection";
          // 
          // linklViewEvents
          // 
          this.linklViewEvents.AutoSize = true;
-         this.linklViewEvents.Location = new System.Drawing.Point(635, 358);
+         this.linklViewEvents.Location = new System.Drawing.Point(663, 358);
          this.linklViewEvents.Name = "linklViewEvents";
-         this.linklViewEvents.Size = new System.Drawing.Size(67, 13);
+         this.linklViewEvents.Size = new System.Drawing.Size(66, 13);
          this.linklViewEvents.TabIndex = 20;
          this.linklViewEvents.TabStop = true;
-         this.linklViewEvents.Text = "Total Events";
+         this.linklViewEvents.Text = "View Events";
          // 
          // linklViewpayments
          // 
@@ -194,19 +185,9 @@ namespace AppsDev.Student
          this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.label6.Location = new System.Drawing.Point(440, 301);
          this.label6.Name = "label6";
-         this.label6.Size = new System.Drawing.Size(151, 18);
+         this.label6.Size = new System.Drawing.Size(111, 18);
          this.label6.TabIndex = 18;
-         this.label6.Text = "Total Events Attended";
-         // 
-         // label4
-         // 
-         this.label4.AutoSize = true;
-         this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label4.Location = new System.Drawing.Point(651, 301);
-         this.label4.Name = "label4";
-         this.label4.Size = new System.Drawing.Size(61, 18);
-         this.label4.TabIndex = 17;
-         this.label4.Text = "Balance";
+         this.label6.Text = "Total Collection";
          // 
          // label5
          // 
@@ -221,40 +202,40 @@ namespace AppsDev.Student
          // panel4
          // 
          this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-         this.panel4.Controls.Add(this.lblBalance);
+         this.panel4.Controls.Add(this.lblTotalEvents);
          this.panel4.Location = new System.Drawing.Point(634, 129);
          this.panel4.Name = "panel4";
-         this.panel4.Size = new System.Drawing.Size(120, 150);
+         this.panel4.Size = new System.Drawing.Size(170, 150);
          this.panel4.TabIndex = 14;
          // 
-         // lblBalance
+         // lblTotalEvents
          // 
-         this.lblBalance.AutoSize = true;
-         this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblBalance.Location = new System.Drawing.Point(26, 36);
-         this.lblBalance.Name = "lblBalance";
-         this.lblBalance.Size = new System.Drawing.Size(68, 73);
-         this.lblBalance.TabIndex = 7;
-         this.lblBalance.Text = "0";
+         this.lblTotalEvents.AutoSize = true;
+         this.lblTotalEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTotalEvents.Location = new System.Drawing.Point(26, 36);
+         this.lblTotalEvents.Name = "lblTotalEvents";
+         this.lblTotalEvents.Size = new System.Drawing.Size(68, 73);
+         this.lblTotalEvents.TabIndex = 7;
+         this.lblTotalEvents.Text = "0";
          // 
          // panel3
          // 
          this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-         this.panel3.Controls.Add(this.lblTotalAttendance);
+         this.panel3.Controls.Add(this.lvlTotalCollection);
          this.panel3.Location = new System.Drawing.Point(431, 129);
          this.panel3.Name = "panel3";
-         this.panel3.Size = new System.Drawing.Size(120, 150);
+         this.panel3.Size = new System.Drawing.Size(170, 150);
          this.panel3.TabIndex = 15;
          // 
-         // lblTotalAttendance
+         // lvlTotalCollection
          // 
-         this.lblTotalAttendance.AutoSize = true;
-         this.lblTotalAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTotalAttendance.Location = new System.Drawing.Point(28, 36);
-         this.lblTotalAttendance.Name = "lblTotalAttendance";
-         this.lblTotalAttendance.Size = new System.Drawing.Size(68, 73);
-         this.lblTotalAttendance.TabIndex = 6;
-         this.lblTotalAttendance.Text = "0";
+         this.lvlTotalCollection.AutoSize = true;
+         this.lvlTotalCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lvlTotalCollection.Location = new System.Drawing.Point(28, 36);
+         this.lvlTotalCollection.Name = "lvlTotalCollection";
+         this.lvlTotalCollection.Size = new System.Drawing.Size(68, 73);
+         this.lvlTotalCollection.TabIndex = 6;
+         this.lvlTotalCollection.Text = "0";
          // 
          // panel2
          // 
@@ -262,18 +243,28 @@ namespace AppsDev.Student
          this.panel2.Controls.Add(this.lblTotalPayments);
          this.panel2.Location = new System.Drawing.Point(232, 129);
          this.panel2.Name = "panel2";
-         this.panel2.Size = new System.Drawing.Size(120, 150);
+         this.panel2.Size = new System.Drawing.Size(170, 150);
          this.panel2.TabIndex = 13;
          // 
          // lblTotalPayments
          // 
          this.lblTotalPayments.AutoSize = true;
-         this.lblTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTotalPayments.Location = new System.Drawing.Point(26, 36);
+         this.lblTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTotalPayments.Location = new System.Drawing.Point(29, 60);
          this.lblTotalPayments.Name = "lblTotalPayments";
-         this.lblTotalPayments.Size = new System.Drawing.Size(51, 55);
+         this.lblTotalPayments.Size = new System.Drawing.Size(39, 42);
          this.lblTotalPayments.TabIndex = 5;
          this.lblTotalPayments.Text = "0";
+         // 
+         // Label1111
+         // 
+         this.Label1111.AutoSize = true;
+         this.Label1111.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.Label1111.Location = new System.Drawing.Point(651, 301);
+         this.Label1111.Name = "Label1111";
+         this.Label1111.Size = new System.Drawing.Size(90, 18);
+         this.Label1111.TabIndex = 17;
+         this.Label1111.Text = "Total Events";
          // 
          // StudentDashboard
          // 
@@ -285,7 +276,7 @@ namespace AppsDev.Student
          this.Controls.Add(this.linklViewEvents);
          this.Controls.Add(this.linklViewpayments);
          this.Controls.Add(this.label6);
-         this.Controls.Add(this.label4);
+         this.Controls.Add(this.Label1111);
          this.Controls.Add(this.label5);
          this.Controls.Add(this.panel4);
          this.Controls.Add(this.panel3);
@@ -315,7 +306,6 @@ namespace AppsDev.Student
 
       private System.Windows.Forms.Panel panel1;
       private System.Windows.Forms.Button btnLogout;
-      private System.Windows.Forms.Button btnProfile;
       private System.Windows.Forms.Button btnViewPayments;
       private System.Windows.Forms.Button btnDashboard;
       private System.Windows.Forms.Label labelLastname;
@@ -327,13 +317,13 @@ namespace AppsDev.Student
       private System.Windows.Forms.LinkLabel linklViewEvents;
       private System.Windows.Forms.LinkLabel linklViewpayments;
       private System.Windows.Forms.Label label6;
-      private System.Windows.Forms.Label label4;
       private System.Windows.Forms.Label label5;
       private System.Windows.Forms.Panel panel4;
-      private System.Windows.Forms.Label lblBalance;
+      private System.Windows.Forms.Label lblTotalEvents;
       private System.Windows.Forms.Panel panel3;
-      private System.Windows.Forms.Label lblTotalAttendance;
+      private System.Windows.Forms.Label lvlTotalCollection;
       private System.Windows.Forms.Panel panel2;
       private System.Windows.Forms.Label lblTotalPayments;
+      private System.Windows.Forms.Label Label1111;
    }
 }

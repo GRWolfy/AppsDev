@@ -56,7 +56,6 @@ namespace AppsDev.Admin
          this.txtLastName = new System.Windows.Forms.TextBox();
          this.label21 = new System.Windows.Forms.Label();
          this.label23 = new System.Windows.Forms.Label();
-         this.txtConfirmPassword = new System.Windows.Forms.TextBox();
          this.label123123 = new System.Windows.Forms.Label();
          this.txtEmail = new System.Windows.Forms.TextBox();
          this.label1111 = new System.Windows.Forms.Label();
@@ -71,13 +70,10 @@ namespace AppsDev.Admin
          this.label = new System.Windows.Forms.Label();
          this.label28 = new System.Windows.Forms.Label();
          this.label29 = new System.Windows.Forms.Label();
-         this.label30 = new System.Windows.Forms.Label();
          this.tabPage2 = new System.Windows.Forms.TabPage();
          this.label3 = new System.Windows.Forms.Label();
          this.txtSearch = new System.Windows.Forms.TextBox();
          this.dataGridRegister = new System.Windows.Forms.DataGridView();
-         this.rbtnLastName = new System.Windows.Forms.RadioButton();
-         this.rbtnFirstName = new System.Windows.Forms.RadioButton();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControlRegistration.SuspendLayout();
@@ -239,7 +235,6 @@ namespace AppsDev.Admin
          this.tabPage1.Controls.Add(this.txtLastName);
          this.tabPage1.Controls.Add(this.label21);
          this.tabPage1.Controls.Add(this.label23);
-         this.tabPage1.Controls.Add(this.txtConfirmPassword);
          this.tabPage1.Controls.Add(this.label123123);
          this.tabPage1.Controls.Add(this.txtEmail);
          this.tabPage1.Controls.Add(this.label1111);
@@ -254,7 +249,6 @@ namespace AppsDev.Admin
          this.tabPage1.Controls.Add(this.label);
          this.tabPage1.Controls.Add(this.label28);
          this.tabPage1.Controls.Add(this.label29);
-         this.tabPage1.Controls.Add(this.label30);
          this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.tabPage1.Location = new System.Drawing.Point(4, 29);
          this.tabPage1.Name = "tabPage1";
@@ -268,7 +262,7 @@ namespace AppsDev.Admin
          // 
          this.lblUserid.AutoSize = true;
          this.lblUserid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblUserid.Location = new System.Drawing.Point(279, 228);
+         this.lblUserid.Location = new System.Drawing.Point(279, 194);
          this.lblUserid.Name = "lblUserid";
          this.lblUserid.Size = new System.Drawing.Size(46, 13);
          this.lblUserid.TabIndex = 91;
@@ -278,7 +272,7 @@ namespace AppsDev.Admin
          // txtUserid
          // 
          this.txtUserid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtUserid.Location = new System.Drawing.Point(358, 225);
+         this.txtUserid.Location = new System.Drawing.Point(358, 191);
          this.txtUserid.Multiline = true;
          this.txtUserid.Name = "txtUserid";
          this.txtUserid.Size = new System.Drawing.Size(122, 20);
@@ -320,7 +314,7 @@ namespace AppsDev.Admin
          // DateTimePick
          // 
          this.DateTimePick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.DateTimePick.Location = new System.Drawing.Point(358, 159);
+         this.DateTimePick.Location = new System.Drawing.Point(358, 125);
          this.DateTimePick.Name = "DateTimePick";
          this.DateTimePick.Size = new System.Drawing.Size(152, 20);
          this.DateTimePick.TabIndex = 86;
@@ -330,7 +324,7 @@ namespace AppsDev.Admin
          // 
          this.lblDate.AutoSize = true;
          this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblDate.Location = new System.Drawing.Point(292, 165);
+         this.lblDate.Location = new System.Drawing.Point(292, 131);
          this.lblDate.Name = "lblDate";
          this.lblDate.Size = new System.Drawing.Size(33, 13);
          this.lblDate.TabIndex = 85;
@@ -341,7 +335,7 @@ namespace AppsDev.Admin
          // 
          this.lblRoleid.AutoSize = true;
          this.lblRoleid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblRoleid.Location = new System.Drawing.Point(279, 198);
+         this.lblRoleid.Location = new System.Drawing.Point(279, 164);
          this.lblRoleid.Name = "lblRoleid";
          this.lblRoleid.Size = new System.Drawing.Size(46, 13);
          this.lblRoleid.TabIndex = 84;
@@ -351,7 +345,7 @@ namespace AppsDev.Admin
          // txtRoleId
          // 
          this.txtRoleId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtRoleId.Location = new System.Drawing.Point(358, 195);
+         this.txtRoleId.Location = new System.Drawing.Point(358, 161);
          this.txtRoleId.Multiline = true;
          this.txtRoleId.Name = "txtRoleId";
          this.txtRoleId.Size = new System.Drawing.Size(122, 20);
@@ -396,15 +390,6 @@ namespace AppsDev.Admin
          this.label23.TabIndex = 78;
          this.label23.Text = "Status:";
          // 
-         // txtConfirmPassword
-         // 
-         this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtConfirmPassword.Location = new System.Drawing.Point(358, 84);
-         this.txtConfirmPassword.Name = "txtConfirmPassword";
-         this.txtConfirmPassword.Size = new System.Drawing.Size(122, 20);
-         this.txtConfirmPassword.TabIndex = 69;
-         this.txtConfirmPassword.UseSystemPasswordChar = true;
-         // 
          // label123123
          // 
          this.label123123.AutoSize = true;
@@ -418,7 +403,7 @@ namespace AppsDev.Admin
          // txtEmail
          // 
          this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtEmail.Location = new System.Drawing.Point(358, 120);
+         this.txtEmail.Location = new System.Drawing.Point(358, 86);
          this.txtEmail.Multiline = true;
          this.txtEmail.Name = "txtEmail";
          this.txtEmail.Size = new System.Drawing.Size(122, 20);
@@ -516,7 +501,7 @@ namespace AppsDev.Admin
          // 
          this.label26.AutoSize = true;
          this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label26.Location = new System.Drawing.Point(292, 127);
+         this.label26.Location = new System.Drawing.Point(292, 93);
          this.label26.Name = "label26";
          this.label26.Size = new System.Drawing.Size(35, 13);
          this.label26.TabIndex = 62;
@@ -552,20 +537,8 @@ namespace AppsDev.Admin
          this.label29.TabIndex = 60;
          this.label29.Text = "Password:";
          // 
-         // label30
-         // 
-         this.label30.AutoSize = true;
-         this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label30.Location = new System.Drawing.Point(258, 87);
-         this.label30.Name = "label30";
-         this.label30.Size = new System.Drawing.Size(94, 13);
-         this.label30.TabIndex = 61;
-         this.label30.Text = "Confirm Password:";
-         // 
          // tabPage2
          // 
-         this.tabPage2.Controls.Add(this.rbtnFirstName);
-         this.tabPage2.Controls.Add(this.rbtnLastName);
          this.tabPage2.Controls.Add(this.label3);
          this.tabPage2.Controls.Add(this.txtSearch);
          this.tabPage2.Controls.Add(this.dataGridRegister);
@@ -602,29 +575,6 @@ namespace AppsDev.Admin
          this.dataGridRegister.Size = new System.Drawing.Size(587, 238);
          this.dataGridRegister.TabIndex = 0;
          this.dataGridRegister.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridRegister_CellMouseClick);
-         // 
-         // rbtnLastName
-         // 
-         this.rbtnLastName.AutoSize = true;
-         this.rbtnLastName.Location = new System.Drawing.Point(352, 11);
-         this.rbtnLastName.Name = "rbtnLastName";
-         this.rbtnLastName.Size = new System.Drawing.Size(100, 24);
-         this.rbtnLastName.TabIndex = 3;
-         this.rbtnLastName.TabStop = true;
-         this.rbtnLastName.Text = "LastName";
-         this.rbtnLastName.UseVisualStyleBackColor = true;
-         this.rbtnLastName.CheckedChanged += new System.EventHandler(this.rbtnLastName_CheckedChanged);
-         // 
-         // rbtnFirstName
-         // 
-         this.rbtnFirstName.AutoSize = true;
-         this.rbtnFirstName.Location = new System.Drawing.Point(38, 11);
-         this.rbtnFirstName.Name = "rbtnFirstName";
-         this.rbtnFirstName.Size = new System.Drawing.Size(100, 24);
-         this.rbtnFirstName.TabIndex = 4;
-         this.rbtnFirstName.TabStop = true;
-         this.rbtnFirstName.Text = "FirstName";
-         this.rbtnFirstName.UseVisualStyleBackColor = true;
          // 
          // AdminRegistration
          // 
@@ -681,7 +631,6 @@ namespace AppsDev.Admin
       private System.Windows.Forms.TextBox txtLastName;
       private System.Windows.Forms.Label label21;
       private System.Windows.Forms.Label label23;
-      private System.Windows.Forms.TextBox txtConfirmPassword;
       private System.Windows.Forms.Label label123123;
       private System.Windows.Forms.TextBox txtEmail;
       private System.Windows.Forms.Label label1111;
@@ -696,7 +645,6 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Label label;
       private System.Windows.Forms.Label label28;
       private System.Windows.Forms.Label label29;
-      private System.Windows.Forms.Label label30;
       private System.Windows.Forms.Button btnDelete;
       private System.Windows.Forms.Button btnUpdate;
       private System.Windows.Forms.Button btnSave;
@@ -705,7 +653,5 @@ namespace AppsDev.Admin
       private System.Windows.Forms.TextBox txtUserid;
       private System.Windows.Forms.Label label3;
       private System.Windows.Forms.TextBox txtSearch;
-      private System.Windows.Forms.RadioButton rbtnFirstName;
-      private System.Windows.Forms.RadioButton rbtnLastName;
    }
 }

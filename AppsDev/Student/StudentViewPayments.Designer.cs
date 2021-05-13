@@ -31,7 +31,6 @@ namespace AppsDev.Student
       {
          this.panel1 = new System.Windows.Forms.Panel();
          this.btnLogout = new System.Windows.Forms.Button();
-         this.btnProfile = new System.Windows.Forms.Button();
          this.btnViewPayments = new System.Windows.Forms.Button();
          this.btnDashboard = new System.Windows.Forms.Button();
          this.labelLastname = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@ namespace AppsDev.Student
          // 
          this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
          this.panel1.Controls.Add(this.btnLogout);
-         this.panel1.Controls.Add(this.btnProfile);
          this.panel1.Controls.Add(this.btnViewPayments);
          this.panel1.Controls.Add(this.btnDashboard);
          this.panel1.Controls.Add(this.labelLastname);
@@ -59,21 +57,13 @@ namespace AppsDev.Student
          // 
          // btnLogout
          // 
-         this.btnLogout.Location = new System.Drawing.Point(24, 309);
+         this.btnLogout.Location = new System.Drawing.Point(24, 267);
          this.btnLogout.Name = "btnLogout";
          this.btnLogout.Size = new System.Drawing.Size(134, 28);
          this.btnLogout.TabIndex = 10;
          this.btnLogout.Text = "Logout";
          this.btnLogout.UseVisualStyleBackColor = true;
-         // 
-         // btnProfile
-         // 
-         this.btnProfile.Location = new System.Drawing.Point(24, 265);
-         this.btnProfile.Name = "btnProfile";
-         this.btnProfile.Size = new System.Drawing.Size(134, 28);
-         this.btnProfile.TabIndex = 7;
-         this.btnProfile.Text = "Profile";
-         this.btnProfile.UseVisualStyleBackColor = true;
+         this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
          // 
          // btnViewPayments
          // 
@@ -92,6 +82,7 @@ namespace AppsDev.Student
          this.btnDashboard.TabIndex = 3;
          this.btnDashboard.Text = "Dashboard";
          this.btnDashboard.UseVisualStyleBackColor = true;
+         this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
          // 
          // labelLastname
          // 
@@ -140,7 +131,9 @@ namespace AppsDev.Student
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
          this.Name = "StudentViewPayments";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "StudentViewPayments";
+         this.Load += new System.EventHandler(this.StudentViewPayments_Load);
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -153,7 +146,6 @@ namespace AppsDev.Student
 
       private System.Windows.Forms.Panel panel1;
       private System.Windows.Forms.Button btnLogout;
-      private System.Windows.Forms.Button btnProfile;
       private System.Windows.Forms.Button btnViewPayments;
       private System.Windows.Forms.Button btnDashboard;
       private System.Windows.Forms.Label labelLastname;
