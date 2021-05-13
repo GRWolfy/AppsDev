@@ -73,9 +73,11 @@ namespace AppsDev.Admin
          this.label29 = new System.Windows.Forms.Label();
          this.label30 = new System.Windows.Forms.Label();
          this.tabPage2 = new System.Windows.Forms.TabPage();
-         this.dataGridRegister = new System.Windows.Forms.DataGridView();
-         this.txtSearch = new System.Windows.Forms.TextBox();
          this.label3 = new System.Windows.Forms.Label();
+         this.txtSearch = new System.Windows.Forms.TextBox();
+         this.dataGridRegister = new System.Windows.Forms.DataGridView();
+         this.rbtnLastName = new System.Windows.Forms.RadioButton();
+         this.rbtnFirstName = new System.Windows.Forms.RadioButton();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControlRegistration.SuspendLayout();
@@ -562,6 +564,8 @@ namespace AppsDev.Admin
          // 
          // tabPage2
          // 
+         this.tabPage2.Controls.Add(this.rbtnFirstName);
+         this.tabPage2.Controls.Add(this.rbtnLastName);
          this.tabPage2.Controls.Add(this.label3);
          this.tabPage2.Controls.Add(this.txtSearch);
          this.tabPage2.Controls.Add(this.dataGridRegister);
@@ -573,14 +577,14 @@ namespace AppsDev.Admin
          this.tabPage2.Text = "View Registration";
          this.tabPage2.UseVisualStyleBackColor = true;
          // 
-         // dataGridRegister
+         // label3
          // 
-         this.dataGridRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridRegister.Location = new System.Drawing.Point(2, 35);
-         this.dataGridRegister.Name = "dataGridRegister";
-         this.dataGridRegister.Size = new System.Drawing.Size(587, 238);
-         this.dataGridRegister.TabIndex = 0;
-         this.dataGridRegister.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridRegister_CellMouseClick);
+         this.label3.AutoSize = true;
+         this.label3.Location = new System.Drawing.Point(163, 9);
+         this.label3.Name = "label3";
+         this.label3.Size = new System.Drawing.Size(64, 20);
+         this.label3.TabIndex = 2;
+         this.label3.Text = "Search:";
          // 
          // txtSearch
          // 
@@ -590,14 +594,37 @@ namespace AppsDev.Admin
          this.txtSearch.TabIndex = 1;
          this.txtSearch.TextChanged += new System.EventHandler(this.txrSearch_TextChanged);
          // 
-         // label3
+         // dataGridRegister
          // 
-         this.label3.AutoSize = true;
-         this.label3.Location = new System.Drawing.Point(163, 9);
-         this.label3.Name = "label3";
-         this.label3.Size = new System.Drawing.Size(64, 20);
-         this.label3.TabIndex = 2;
-         this.label3.Text = "Search:";
+         this.dataGridRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridRegister.Location = new System.Drawing.Point(2, 35);
+         this.dataGridRegister.Name = "dataGridRegister";
+         this.dataGridRegister.Size = new System.Drawing.Size(587, 238);
+         this.dataGridRegister.TabIndex = 0;
+         this.dataGridRegister.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridRegister_CellMouseClick);
+         // 
+         // rbtnLastName
+         // 
+         this.rbtnLastName.AutoSize = true;
+         this.rbtnLastName.Location = new System.Drawing.Point(352, 11);
+         this.rbtnLastName.Name = "rbtnLastName";
+         this.rbtnLastName.Size = new System.Drawing.Size(100, 24);
+         this.rbtnLastName.TabIndex = 3;
+         this.rbtnLastName.TabStop = true;
+         this.rbtnLastName.Text = "LastName";
+         this.rbtnLastName.UseVisualStyleBackColor = true;
+         this.rbtnLastName.CheckedChanged += new System.EventHandler(this.rbtnLastName_CheckedChanged);
+         // 
+         // rbtnFirstName
+         // 
+         this.rbtnFirstName.AutoSize = true;
+         this.rbtnFirstName.Location = new System.Drawing.Point(38, 11);
+         this.rbtnFirstName.Name = "rbtnFirstName";
+         this.rbtnFirstName.Size = new System.Drawing.Size(100, 24);
+         this.rbtnFirstName.TabIndex = 4;
+         this.rbtnFirstName.TabStop = true;
+         this.rbtnFirstName.Text = "FirstName";
+         this.rbtnFirstName.UseVisualStyleBackColor = true;
          // 
          // AdminRegistration
          // 
@@ -678,5 +705,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.TextBox txtUserid;
       private System.Windows.Forms.Label label3;
       private System.Windows.Forms.TextBox txtSearch;
+      private System.Windows.Forms.RadioButton rbtnFirstName;
+      private System.Windows.Forms.RadioButton rbtnLastName;
    }
 }

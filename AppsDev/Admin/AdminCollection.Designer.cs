@@ -46,16 +46,16 @@ namespace AppsDev.Admin
          this.label2 = new System.Windows.Forms.Label();
          this.tabControlCollection = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
-         this.dataGridCollection = new System.Windows.Forms.DataGridView();
+         this.dataGridSetCollection = new System.Windows.Forms.DataGridView();
          this.tabPage2 = new System.Windows.Forms.TabPage();
-         this.dataGridViewCollections = new System.Windows.Forms.DataGridView();
+         this.dataGridViewCollection = new System.Windows.Forms.DataGridView();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControlCollection.SuspendLayout();
          this.tabPage1.SuspendLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollection)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridSetCollection)).BeginInit();
          this.tabPage2.SuspendLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollections)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollection)).BeginInit();
          this.SuspendLayout();
          // 
          // label1
@@ -198,7 +198,7 @@ namespace AppsDev.Admin
          // 
          // tabPage1
          // 
-         this.tabPage1.Controls.Add(this.dataGridCollection);
+         this.tabPage1.Controls.Add(this.dataGridSetCollection);
          this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.tabPage1.Location = new System.Drawing.Point(4, 29);
          this.tabPage1.Name = "tabPage1";
@@ -208,7 +208,7 @@ namespace AppsDev.Admin
          this.tabPage1.Text = "Add | Update Collection";
          this.tabPage1.UseVisualStyleBackColor = true;
          // 
-         // dataGridCollection
+         // dataGridSetCollection
          // 
          dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -217,8 +217,8 @@ namespace AppsDev.Admin
          dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
          dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
          dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridCollection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-         this.dataGridCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridSetCollection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+         this.dataGridSetCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
          dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
          dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,9 +226,9 @@ namespace AppsDev.Admin
          dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
          dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
          dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-         this.dataGridCollection.DefaultCellStyle = dataGridViewCellStyle2;
-         this.dataGridCollection.Location = new System.Drawing.Point(2, 4);
-         this.dataGridCollection.Name = "dataGridCollection";
+         this.dataGridSetCollection.DefaultCellStyle = dataGridViewCellStyle2;
+         this.dataGridSetCollection.Location = new System.Drawing.Point(2, 4);
+         this.dataGridSetCollection.Name = "dataGridSetCollection";
          dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
          dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,14 +236,14 @@ namespace AppsDev.Admin
          dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
          dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
          dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridCollection.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-         this.dataGridCollection.Size = new System.Drawing.Size(587, 267);
-         this.dataGridCollection.TabIndex = 1;
-         this.dataGridCollection.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridCollection_CellMouseClick);
+         this.dataGridSetCollection.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+         this.dataGridSetCollection.Size = new System.Drawing.Size(587, 267);
+         this.dataGridSetCollection.TabIndex = 1;
+         this.dataGridSetCollection.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridCollection_CellMouseClick);
          // 
          // tabPage2
          // 
-         this.tabPage2.Controls.Add(this.dataGridViewCollections);
+         this.tabPage2.Controls.Add(this.dataGridViewCollection);
          this.tabPage2.Location = new System.Drawing.Point(4, 29);
          this.tabPage2.Name = "tabPage2";
          this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -252,13 +252,13 @@ namespace AppsDev.Admin
          this.tabPage2.Text = "View Collection";
          this.tabPage2.UseVisualStyleBackColor = true;
          // 
-         // dataGridViewCollections
+         // dataGridViewCollection
          // 
-         this.dataGridViewCollections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridViewCollections.Location = new System.Drawing.Point(2, 6);
-         this.dataGridViewCollections.Name = "dataGridViewCollections";
-         this.dataGridViewCollections.Size = new System.Drawing.Size(587, 267);
-         this.dataGridViewCollections.TabIndex = 0;
+         this.dataGridViewCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridViewCollection.Location = new System.Drawing.Point(2, 6);
+         this.dataGridViewCollection.Name = "dataGridViewCollection";
+         this.dataGridViewCollection.Size = new System.Drawing.Size(587, 267);
+         this.dataGridViewCollection.TabIndex = 0;
          // 
          // AdminCollection
          // 
@@ -281,9 +281,9 @@ namespace AppsDev.Admin
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
          this.tabControlCollection.ResumeLayout(false);
          this.tabPage1.ResumeLayout(false);
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridCollection)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridSetCollection)).EndInit();
          this.tabPage2.ResumeLayout(false);
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollections)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollection)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -306,7 +306,7 @@ namespace AppsDev.Admin
       private System.Windows.Forms.TabControl tabControlCollection;
       private System.Windows.Forms.TabPage tabPage1;
       private System.Windows.Forms.TabPage tabPage2;
-      private System.Windows.Forms.DataGridView dataGridViewCollections;
-      private System.Windows.Forms.DataGridView dataGridCollection;
+      private System.Windows.Forms.DataGridView dataGridViewCollection;
+      private System.Windows.Forms.DataGridView dataGridSetCollection;
    }
 }

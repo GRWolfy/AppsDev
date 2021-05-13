@@ -20,7 +20,7 @@ namespace AppsDev.Admin
          labelFirstname.Text = Login.setfirstname;
          labelLastname.Text = Login.setlastname;
          btnCollection.Enabled = false;
-         getRecords();
+         viewSetCollection();
          ViewCollection();
          tabControlCollection.SelectedIndex = 1;
       }
@@ -73,26 +73,26 @@ namespace AppsDev.Admin
          Hide();
       }
 
-      public void getRecords()
+      public void viewSetCollection()
       {
          Connection.Connection.DB();
          Functions.Function.gen = "SELECT Users.UserId AS [USER ID], Users.FirstName AS [FIRST NAME], Users.LastName AS [LAST NAME], Users.Age AS [AGE], Users.Gender AS [GENDER], Users.Status AS [STATUS], Users.Username AS [USERNAME], Users.Password AS [PASSWORD], Users.Dateregistered AS [DATE REGISTERED], Role.RoleId as [ROLE], Users.Email AS [EMAIL] FROM Users INNER JOIN Role ON Role.RoleId = Users.RoleId WHERE Users.RoleId = 1";
-         Functions.Function.fill(Functions.Function.gen, dataGridCollection);
+         Functions.Function.fill(Functions.Function.gen, dataGridSetCollection);
       }
 
       public void ViewCollection()
       {
          Connection.Connection.DB();
-         Functions.Function.gen = "SELECT Users.UserId AS [USER ID], Users.FirstName AS [FIRST NAME], Users.LastName AS [LAST NAME], Events.Eventname AS [EVENT], Events.Eventprice AS [EVENT FEE], Collections.Status AS [STATUS], Collections.CollectionDate AS [DATE COLLECTED], Collections.CollectedBy AS [COLLECTED BY] FROM Users INNER JOIN Collections ON Users.UserId = Collections.UserId INNER JOIN Events On Events.EventId = Collections.EventId";
-         Functions.Function.fill(Functions.Function.gen, dataGridViewCollections);
+         Functions.Function.gen = "SELECT Users.UserId AS [USER ID], Users.FirstName AS [FIRST NAME], Users.LastName AS [LAST NAME], Events.Eventname AS [EVENT NAME], 'Php' + convert(varchar, cast(Events.Eventprice AS MONEY), 1) AS [EVENT FEE], Collections.Status AS [STATUS], Collections.CollectionDate AS [DATE COLLECTED], Collections.CollectedBy AS [COLLECTED BY] FROM Users INNER JOIN Collections ON Users.UserId = Collections.UserId INNER JOIN Events On Events.EventId = Collections.EventId";
+         Functions.Function.fill(Functions.Function.gen, dataGridViewCollection);
       }
 
       private void dataGridCollection_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
       {
          var collect = new AddCollection();
-         setID = dataGridViewCollections.CurrentRow.Cells[0].Value.ToString();
-         setFirstname = dataGridViewCollections.CurrentRow.Cells[1].Value.ToString();
-         setLastname = dataGridViewCollections.CurrentRow.Cells[2].Value.ToString();
+         setID = dataGridSetCollection.CurrentRow.Cells[0].Value.ToString();
+         setFirstname = dataGridSetCollection.CurrentRow.Cells[1].Value.ToString();
+         setLastname = dataGridSetCollection.CurrentRow.Cells[2].Value.ToString();
          collect.Show();
          Hide();
       }

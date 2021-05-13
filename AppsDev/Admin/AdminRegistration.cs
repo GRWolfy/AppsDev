@@ -243,5 +243,19 @@ namespace AppsDev.Admin
             MessageBox.Show(ex.Message);
          }
       }
+
+      private void rbtnLastName_CheckedChanged(object sender, EventArgs e)
+      {
+         try
+         {
+            Functions.Function.gen = "SELECT * FROM USERS ORDER BY '"+ rbtnLastName.Text +"' ";
+            Functions.Function.fill(Functions.Function.gen, dataGridRegister);
+         }
+
+         catch (Exception ex)
+         {
+            MessageBox.Show(ex.Message);
+         }
+      }
    }
 }

@@ -78,7 +78,8 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "SELECT * FROM Events (EventName + ' - Php' + CONVERT(varchar, cast(EventPrice AS MONEY), 1)) = '"+ cmbEvents.Text +"' ";
+            Functions.Function.gen = "SELECT * FROM Events WHERE (EventName + ' - Php' + CONVERT(varchar, cast(EventPrice AS MONEY), 1)) = '"+ cmbEvents.Text +"' ";
+            Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.reader = Functions.Function.command.ExecuteReader();
 
             if (Functions.Function.reader.Read())

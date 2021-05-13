@@ -181,9 +181,9 @@ namespace AppsDev.Admin
          // 
          this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.panel2.Controls.Add(this.lblTotalRegistration);
-         this.panel2.Location = new System.Drawing.Point(226, 123);
+         this.panel2.Location = new System.Drawing.Point(200, 123);
          this.panel2.Name = "panel2";
-         this.panel2.Size = new System.Drawing.Size(120, 150);
+         this.panel2.Size = new System.Drawing.Size(170, 150);
          this.panel2.TabIndex = 3;
          // 
          // lblTotalRegistration
@@ -200,16 +200,16 @@ namespace AppsDev.Admin
          // 
          this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.panel3.Controls.Add(this.lblTotalCollection);
-         this.panel3.Location = new System.Drawing.Point(425, 123);
+         this.panel3.Location = new System.Drawing.Point(402, 123);
          this.panel3.Name = "panel3";
-         this.panel3.Size = new System.Drawing.Size(120, 150);
+         this.panel3.Size = new System.Drawing.Size(170, 150);
          this.panel3.TabIndex = 4;
          // 
          // lblTotalCollection
          // 
          this.lblTotalCollection.AutoSize = true;
          this.lblTotalCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTotalCollection.Location = new System.Drawing.Point(28, 36);
+         this.lblTotalCollection.Location = new System.Drawing.Point(35, 55);
          this.lblTotalCollection.Name = "lblTotalCollection";
          this.lblTotalCollection.Size = new System.Drawing.Size(39, 42);
          this.lblTotalCollection.TabIndex = 6;
@@ -219,9 +219,9 @@ namespace AppsDev.Admin
          // 
          this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.panel4.Controls.Add(this.lblTotalEvents);
-         this.panel4.Location = new System.Drawing.Point(628, 123);
+         this.panel4.Location = new System.Drawing.Point(603, 123);
          this.panel4.Name = "panel4";
-         this.panel4.Size = new System.Drawing.Size(120, 150);
+         this.panel4.Size = new System.Drawing.Size(170, 150);
          this.panel4.TabIndex = 4;
          // 
          // lblTotalEvents

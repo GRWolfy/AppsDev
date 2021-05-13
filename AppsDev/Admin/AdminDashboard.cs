@@ -142,14 +142,15 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "SELECT SUM(Events.Eventprice) AS [Total] FROM Collections INNER JOIN Events ON Collections.EventId = Events.EventId WHERE Collections.Status = 'Paid'";
+            Functions.Function.gen = "SELECT convert(varchar, cast(SUM(Events.Eventprice) AS MONEY), 1) AS [Total] FROM Collections INNER JOIN Events ON Collections.EventId = Events.EventId";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.reader = Functions.Function.command.ExecuteReader();
 
             if (Functions.Function.reader.HasRows)
             {
                Functions.Function.reader.Read();
-               lblTotalCollection.Text = (Functions.Function.reader["Total"].ToString());
+               string s = (Functions.Function.reader["Total"].ToString());
+               lblTotalCollection.Text = Decimal.Parse(s).ToString("N2");
             }
          }
 
