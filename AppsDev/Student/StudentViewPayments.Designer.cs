@@ -39,6 +39,8 @@ namespace AppsDev.Student
          this.label1 = new System.Windows.Forms.Label();
          this.tabControl1 = new System.Windows.Forms.TabControl();
          this.tabPage1 = new System.Windows.Forms.TabPage();
+         this.lblFullname = new System.Windows.Forms.Label();
+         this.txtFullname = new System.Windows.Forms.TextBox();
          this.label3 = new System.Windows.Forms.Label();
          this.label2 = new System.Windows.Forms.Label();
          this.btnPay = new System.Windows.Forms.Button();
@@ -47,8 +49,6 @@ namespace AppsDev.Student
          this.txtEventId = new System.Windows.Forms.TextBox();
          this.tabPage2 = new System.Windows.Forms.TabPage();
          this.dataGridViewPayments = new System.Windows.Forms.DataGridView();
-         this.txtFullname = new System.Windows.Forms.TextBox();
-         this.lblFullname = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.tabControl1.SuspendLayout();
@@ -175,8 +175,25 @@ namespace AppsDev.Student
          this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
          this.tabPage1.Size = new System.Drawing.Size(889, 439);
          this.tabPage1.TabIndex = 0;
-         this.tabPage1.Text = "Unpaid Payments";
+         this.tabPage1.Text = "Pay Event";
          this.tabPage1.UseVisualStyleBackColor = true;
+         // 
+         // lblFullname
+         // 
+         this.lblFullname.AutoSize = true;
+         this.lblFullname.Location = new System.Drawing.Point(201, 102);
+         this.lblFullname.Name = "lblFullname";
+         this.lblFullname.Size = new System.Drawing.Size(78, 20);
+         this.lblFullname.TabIndex = 7;
+         this.lblFullname.Text = "Full name";
+         // 
+         // txtFullname
+         // 
+         this.txtFullname.Enabled = false;
+         this.txtFullname.Location = new System.Drawing.Point(293, 96);
+         this.txtFullname.Name = "txtFullname";
+         this.txtFullname.Size = new System.Drawing.Size(156, 26);
+         this.txtFullname.TabIndex = 6;
          // 
          // label3
          // 
@@ -249,23 +266,6 @@ namespace AppsDev.Student
          this.dataGridViewPayments.Size = new System.Drawing.Size(880, 411);
          this.dataGridViewPayments.TabIndex = 0;
          this.dataGridViewPayments.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPayments_CellMouseClick);
-         // 
-         // txtFullname
-         // 
-         this.txtFullname.Enabled = false;
-         this.txtFullname.Location = new System.Drawing.Point(293, 96);
-         this.txtFullname.Name = "txtFullname";
-         this.txtFullname.Size = new System.Drawing.Size(156, 26);
-         this.txtFullname.TabIndex = 6;
-         // 
-         // lblFullname
-         // 
-         this.lblFullname.AutoSize = true;
-         this.lblFullname.Location = new System.Drawing.Point(201, 102);
-         this.lblFullname.Name = "lblFullname";
-         this.lblFullname.Size = new System.Drawing.Size(78, 20);
-         this.lblFullname.TabIndex = 7;
-         this.lblFullname.Text = "Full name";
          // 
          // StudentViewPayments
          // 

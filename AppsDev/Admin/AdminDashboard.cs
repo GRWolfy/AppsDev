@@ -6,6 +6,7 @@ namespace AppsDev.Admin
 {
    public partial class AdminDashboard : Form
    {
+      public static string setTotalCollection = "";
       public AdminDashboard()
       {
          InitializeComponent();
@@ -144,7 +145,7 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "SELECT convert(varchar, cast(SUM(Events.Eventprice) AS MONEY), 1) AS [Total] FROM Collections INNER JOIN Events ON Collections.EventId = Events.EventId";
+            Functions.Function.gen = "SELECT convert(varchar, cast(SUM(Events.Eventprice) AS MONEY), 1) AS [Total], SUM(Events.Eventprice) AS [setTOTAL] FROM Collections INNER JOIN Events ON Collections.EventId = Events.EventId";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.reader = Functions.Function.command.ExecuteReader();
 
@@ -152,6 +153,7 @@ namespace AppsDev.Admin
             {
                Functions.Function.reader.Read();
                string s = (Functions.Function.reader["Total"].ToString());
+               setTotalCollection = (Functions.Function.reader["setTOTAL"].ToString());
                lblTotalCollection.Text = Decimal.Parse(s).ToString("N2");
             }
          }

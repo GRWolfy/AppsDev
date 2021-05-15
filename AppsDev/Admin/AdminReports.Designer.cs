@@ -41,8 +41,26 @@ namespace AppsDev.Admin
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
          this.labelFirstname = new System.Windows.Forms.Label();
          this.label2 = new System.Windows.Forms.Label();
+         this.txtReportSubject = new System.Windows.Forms.TextBox();
+         this.btnDelete = new System.Windows.Forms.Button();
+         this.btnUpdate = new System.Windows.Forms.Button();
+         this.btnSave = new System.Windows.Forms.Button();
+         this.tabControl1 = new System.Windows.Forms.TabControl();
+         this.tabPage1 = new System.Windows.Forms.TabPage();
+         this.tabPage2 = new System.Windows.Forms.TabPage();
+         this.txtTotalSales = new System.Windows.Forms.TextBox();
+         this.label3 = new System.Windows.Forms.Label();
+         this.dataGridViewReports = new System.Windows.Forms.DataGridView();
+         this.txtReportEncodedby = new System.Windows.Forms.TextBox();
+         this.lblTotalSales = new System.Windows.Forms.Label();
+         this.txtReportBody = new System.Windows.Forms.TextBox();
+         this.txtReportId = new System.Windows.Forms.TextBox();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+         this.tabControl1.SuspendLayout();
+         this.tabPage1.SuspendLayout();
+         this.tabPage2.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReports)).BeginInit();
          this.SuspendLayout();
          // 
          // label1
@@ -184,11 +202,160 @@ namespace AppsDev.Admin
          this.label2.TabIndex = 3;
          this.label2.Text = "Reports";
          // 
+         // txtReportSubject
+         // 
+         this.txtReportSubject.Location = new System.Drawing.Point(88, 34);
+         this.txtReportSubject.Name = "txtReportSubject";
+         this.txtReportSubject.Size = new System.Drawing.Size(294, 26);
+         this.txtReportSubject.TabIndex = 5;
+         // 
+         // btnDelete
+         // 
+         this.btnDelete.Enabled = false;
+         this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnDelete.Location = new System.Drawing.Point(301, 393);
+         this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+         this.btnDelete.Name = "btnDelete";
+         this.btnDelete.Size = new System.Drawing.Size(108, 55);
+         this.btnDelete.TabIndex = 92;
+         this.btnDelete.Text = "Delete";
+         this.btnDelete.UseVisualStyleBackColor = true;
+         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+         // 
+         // btnUpdate
+         // 
+         this.btnUpdate.Enabled = false;
+         this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnUpdate.Location = new System.Drawing.Point(185, 393);
+         this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+         this.btnUpdate.Name = "btnUpdate";
+         this.btnUpdate.Size = new System.Drawing.Size(108, 55);
+         this.btnUpdate.TabIndex = 91;
+         this.btnUpdate.Text = "Update";
+         this.btnUpdate.UseVisualStyleBackColor = true;
+         this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+         // 
+         // btnSave
+         // 
+         this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnSave.Location = new System.Drawing.Point(69, 393);
+         this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+         this.btnSave.Name = "btnSave";
+         this.btnSave.Size = new System.Drawing.Size(108, 55);
+         this.btnSave.TabIndex = 90;
+         this.btnSave.Text = "Save";
+         this.btnSave.UseVisualStyleBackColor = true;
+         this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+         // 
+         // tabControl1
+         // 
+         this.tabControl1.Controls.Add(this.tabPage1);
+         this.tabControl1.Controls.Add(this.tabPage2);
+         this.tabControl1.Location = new System.Drawing.Point(335, 162);
+         this.tabControl1.Name = "tabControl1";
+         this.tabControl1.SelectedIndex = 0;
+         this.tabControl1.Size = new System.Drawing.Size(807, 512);
+         this.tabControl1.TabIndex = 93;
+         // 
+         // tabPage1
+         // 
+         this.tabPage1.Controls.Add(this.txtReportId);
+         this.tabPage1.Controls.Add(this.txtReportBody);
+         this.tabPage1.Controls.Add(this.lblTotalSales);
+         this.tabPage1.Controls.Add(this.txtReportEncodedby);
+         this.tabPage1.Controls.Add(this.label3);
+         this.tabPage1.Controls.Add(this.txtTotalSales);
+         this.tabPage1.Controls.Add(this.btnDelete);
+         this.tabPage1.Controls.Add(this.txtReportSubject);
+         this.tabPage1.Controls.Add(this.btnUpdate);
+         this.tabPage1.Controls.Add(this.btnSave);
+         this.tabPage1.Location = new System.Drawing.Point(4, 29);
+         this.tabPage1.Name = "tabPage1";
+         this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+         this.tabPage1.Size = new System.Drawing.Size(799, 479);
+         this.tabPage1.TabIndex = 0;
+         this.tabPage1.Text = "ADD | UPDATE Report";
+         this.tabPage1.UseVisualStyleBackColor = true;
+         // 
+         // tabPage2
+         // 
+         this.tabPage2.Controls.Add(this.dataGridViewReports);
+         this.tabPage2.Location = new System.Drawing.Point(4, 29);
+         this.tabPage2.Name = "tabPage2";
+         this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+         this.tabPage2.Size = new System.Drawing.Size(799, 479);
+         this.tabPage2.TabIndex = 1;
+         this.tabPage2.Text = "View Reports";
+         this.tabPage2.UseVisualStyleBackColor = true;
+         // 
+         // txtTotalSales
+         // 
+         this.txtTotalSales.Enabled = false;
+         this.txtTotalSales.Location = new System.Drawing.Point(521, 153);
+         this.txtTotalSales.Name = "txtTotalSales";
+         this.txtTotalSales.Size = new System.Drawing.Size(189, 26);
+         this.txtTotalSales.TabIndex = 93;
+         this.txtTotalSales.Visible = false;
+         // 
+         // label3
+         // 
+         this.label3.AutoSize = true;
+         this.label3.Location = new System.Drawing.Point(565, 56);
+         this.label3.Name = "label3";
+         this.label3.Size = new System.Drawing.Size(88, 20);
+         this.label3.TabIndex = 94;
+         this.label3.Text = "Total Sales";
+         // 
+         // dataGridViewReports
+         // 
+         this.dataGridViewReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridViewReports.Location = new System.Drawing.Point(0, 3);
+         this.dataGridViewReports.Name = "dataGridViewReports";
+         this.dataGridViewReports.Size = new System.Drawing.Size(799, 473);
+         this.dataGridViewReports.TabIndex = 0;
+         this.dataGridViewReports.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewReports_CellMouseClick);
+         // 
+         // txtReportEncodedby
+         // 
+         this.txtReportEncodedby.Enabled = false;
+         this.txtReportEncodedby.Location = new System.Drawing.Point(569, 209);
+         this.txtReportEncodedby.Name = "txtReportEncodedby";
+         this.txtReportEncodedby.Size = new System.Drawing.Size(100, 26);
+         this.txtReportEncodedby.TabIndex = 95;
+         this.txtReportEncodedby.Visible = false;
+         // 
+         // lblTotalSales
+         // 
+         this.lblTotalSales.AutoSize = true;
+         this.lblTotalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTotalSales.Location = new System.Drawing.Point(575, 94);
+         this.lblTotalSales.Name = "lblTotalSales";
+         this.lblTotalSales.Size = new System.Drawing.Size(60, 24);
+         this.lblTotalSales.TabIndex = 96;
+         this.lblTotalSales.Text = "label4";
+         // 
+         // txtReportBody
+         // 
+         this.txtReportBody.Location = new System.Drawing.Point(88, 94);
+         this.txtReportBody.Multiline = true;
+         this.txtReportBody.Name = "txtReportBody";
+         this.txtReportBody.Size = new System.Drawing.Size(294, 234);
+         this.txtReportBody.TabIndex = 97;
+         // 
+         // txtReportId
+         // 
+         this.txtReportId.Location = new System.Drawing.Point(579, 271);
+         this.txtReportId.Name = "txtReportId";
+         this.txtReportId.Size = new System.Drawing.Size(100, 26);
+         this.txtReportId.TabIndex = 98;
+         this.txtReportId.Visible = false;
+         // 
          // AdminReports
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1200, 692);
+         this.Controls.Add(this.tabControl1);
          this.Controls.Add(this.label2);
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
@@ -204,6 +371,11 @@ namespace AppsDev.Admin
          this.panel1.ResumeLayout(false);
          this.panel1.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+         this.tabControl1.ResumeLayout(false);
+         this.tabPage1.ResumeLayout(false);
+         this.tabPage1.PerformLayout();
+         this.tabPage2.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReports)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -223,5 +395,19 @@ namespace AppsDev.Admin
       private System.Windows.Forms.Button btnDashboard;
       private System.Windows.Forms.Button btnLogout;
       private System.Windows.Forms.Label label2;
+      private System.Windows.Forms.TextBox txtReportSubject;
+      private System.Windows.Forms.Button btnDelete;
+      private System.Windows.Forms.Button btnUpdate;
+      private System.Windows.Forms.Button btnSave;
+      private System.Windows.Forms.TabControl tabControl1;
+      private System.Windows.Forms.TabPage tabPage1;
+      private System.Windows.Forms.TextBox txtTotalSales;
+      private System.Windows.Forms.TabPage tabPage2;
+      private System.Windows.Forms.Label label3;
+      private System.Windows.Forms.DataGridView dataGridViewReports;
+      private System.Windows.Forms.TextBox txtReportEncodedby;
+      private System.Windows.Forms.Label lblTotalSales;
+      private System.Windows.Forms.TextBox txtReportBody;
+      private System.Windows.Forms.TextBox txtReportId;
    }
 }
