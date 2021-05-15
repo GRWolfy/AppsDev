@@ -48,9 +48,11 @@ namespace AppsDev
          // 
          // btnLoginAccount
          // 
-         this.btnLoginAccount.Location = new System.Drawing.Point(577, 306);
+         this.btnLoginAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnLoginAccount.Location = new System.Drawing.Point(885, 485);
+         this.btnLoginAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnLoginAccount.Name = "btnLoginAccount";
-         this.btnLoginAccount.Size = new System.Drawing.Size(105, 32);
+         this.btnLoginAccount.Size = new System.Drawing.Size(166, 71);
          this.btnLoginAccount.TabIndex = 0;
          this.btnLoginAccount.Text = "Login";
          this.btnLoginAccount.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@ namespace AppsDev
          // linklRegister
          // 
          this.linklRegister.AutoSize = true;
-         this.linklRegister.Location = new System.Drawing.Point(421, 315);
+         this.linklRegister.Location = new System.Drawing.Point(632, 485);
+         this.linklRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.linklRegister.Name = "linklRegister";
-         this.linklRegister.Size = new System.Drawing.Size(103, 13);
+         this.linklRegister.Size = new System.Drawing.Size(153, 20);
          this.linklRegister.TabIndex = 1;
          this.linklRegister.TabStop = true;
          this.linklRegister.Text = "Click here to register";
@@ -69,37 +72,43 @@ namespace AppsDev
          // 
          // txtUsername
          // 
-         this.txtUsername.Location = new System.Drawing.Point(551, 125);
+         this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtUsername.Location = new System.Drawing.Point(826, 228);
+         this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.txtUsername.Name = "txtUsername";
-         this.txtUsername.Size = new System.Drawing.Size(150, 20);
+         this.txtUsername.Size = new System.Drawing.Size(223, 26);
          this.txtUsername.TabIndex = 2;
          // 
          // txtPassword
          // 
-         this.txtPassword.Location = new System.Drawing.Point(552, 197);
+         this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtPassword.Location = new System.Drawing.Point(826, 314);
+         this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.PasswordChar = '•';
-         this.txtPassword.Size = new System.Drawing.Size(150, 20);
+         this.txtPassword.Size = new System.Drawing.Size(223, 26);
          this.txtPassword.TabIndex = 3;
          this.txtPassword.UseSystemPasswordChar = true;
          // 
          // lblUsername
          // 
          this.lblUsername.AutoSize = true;
-         this.lblUsername.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblUsername.Location = new System.Drawing.Point(448, 132);
+         this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblUsername.Location = new System.Drawing.Point(672, 225);
+         this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lblUsername.Name = "lblUsername";
-         this.lblUsername.Size = new System.Drawing.Size(76, 16);
+         this.lblUsername.Size = new System.Drawing.Size(87, 20);
          this.lblUsername.TabIndex = 4;
          this.lblUsername.Text = "Username:";
          // 
          // lvlPassword
          // 
          this.lvlPassword.AutoSize = true;
-         this.lvlPassword.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lvlPassword.Location = new System.Drawing.Point(451, 204);
+         this.lvlPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lvlPassword.Location = new System.Drawing.Point(676, 314);
+         this.lvlPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lvlPassword.Name = "lvlPassword";
-         this.lvlPassword.Size = new System.Drawing.Size(73, 16);
+         this.lvlPassword.Size = new System.Drawing.Size(82, 20);
          this.lvlPassword.TabIndex = 5;
          this.lvlPassword.Text = "Password:";
          // 
@@ -108,17 +117,19 @@ namespace AppsDev
          this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
          this.panel1.Controls.Add(this.pictureBox2);
          this.panel1.Controls.Add(this.pictureBox1);
-         this.panel1.Location = new System.Drawing.Point(0, 2);
+         this.panel1.Location = new System.Drawing.Point(0, 3);
+         this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.panel1.Name = "panel1";
-         this.panel1.Size = new System.Drawing.Size(344, 453);
+         this.panel1.Size = new System.Drawing.Size(516, 697);
          this.panel1.TabIndex = 6;
          // 
          // pictureBox2
          // 
          this.pictureBox2.Image = global::AppsDev.Properties.Resources.AngryPaimon;
-         this.pictureBox2.Location = new System.Drawing.Point(44, 242);
+         this.pictureBox2.Location = new System.Drawing.Point(66, 372);
+         this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.pictureBox2.Name = "pictureBox2";
-         this.pictureBox2.Size = new System.Drawing.Size(159, 172);
+         this.pictureBox2.Size = new System.Drawing.Size(238, 265);
          this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.pictureBox2.TabIndex = 1;
          this.pictureBox2.TabStop = false;
@@ -126,9 +137,10 @@ namespace AppsDev
          // pictureBox1
          // 
          this.pictureBox1.Image = global::AppsDev.Properties.Resources.Paimon;
-         this.pictureBox1.Location = new System.Drawing.Point(44, 242);
+         this.pictureBox1.Location = new System.Drawing.Point(66, 372);
+         this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.pictureBox1.Name = "pictureBox1";
-         this.pictureBox1.Size = new System.Drawing.Size(159, 172);
+         this.pictureBox1.Size = new System.Drawing.Size(238, 265);
          this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.pictureBox1.TabIndex = 0;
          this.pictureBox1.TabStop = false;
@@ -144,9 +156,9 @@ namespace AppsDev
          // 
          // Login
          // 
-         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(800, 450);
+         this.ClientSize = new System.Drawing.Size(1200, 692);
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.lvlPassword);
          this.Controls.Add(this.lblUsername);
@@ -154,7 +166,9 @@ namespace AppsDev
          this.Controls.Add(this.txtUsername);
          this.Controls.Add(this.linklRegister);
          this.Controls.Add(this.btnLoginAccount);
+         this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+         this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.Name = "Login";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Login";

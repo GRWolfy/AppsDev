@@ -62,7 +62,8 @@ namespace AppsDev.Admin
          // 
          this.label1.AutoSize = true;
          this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label1.Location = new System.Drawing.Point(321, 12);
+         this.label1.Location = new System.Drawing.Point(482, 18);
+         this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label1.Name = "label1";
          this.label1.Size = new System.Drawing.Size(251, 37);
          this.label1.TabIndex = 1;
@@ -80,17 +81,20 @@ namespace AppsDev.Admin
          this.panel1.Controls.Add(this.labelLastname);
          this.panel1.Controls.Add(this.pictureBox1);
          this.panel1.Controls.Add(this.labelFirstname);
-         this.panel1.Location = new System.Drawing.Point(2, 1);
+         this.panel1.Location = new System.Drawing.Point(3, 2);
+         this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.panel1.Name = "panel1";
-         this.panel1.Size = new System.Drawing.Size(182, 437);
+         this.panel1.Size = new System.Drawing.Size(273, 672);
          this.panel1.TabIndex = 2;
          this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
          // 
          // btnLogout
          // 
-         this.btnLogout.Location = new System.Drawing.Point(24, 394);
+         this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnLogout.Location = new System.Drawing.Point(36, 606);
+         this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnLogout.Name = "btnLogout";
-         this.btnLogout.Size = new System.Drawing.Size(134, 28);
+         this.btnLogout.Size = new System.Drawing.Size(201, 43);
          this.btnLogout.TabIndex = 10;
          this.btnLogout.Text = "Logout";
          this.btnLogout.UseVisualStyleBackColor = true;
@@ -98,9 +102,11 @@ namespace AppsDev.Admin
          // 
          // btnReports
          // 
-         this.btnReports.Location = new System.Drawing.Point(24, 351);
+         this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnReports.Location = new System.Drawing.Point(36, 540);
+         this.btnReports.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnReports.Name = "btnReports";
-         this.btnReports.Size = new System.Drawing.Size(134, 28);
+         this.btnReports.Size = new System.Drawing.Size(201, 43);
          this.btnReports.TabIndex = 9;
          this.btnReports.Text = "Reports";
          this.btnReports.UseVisualStyleBackColor = true;
@@ -108,9 +114,11 @@ namespace AppsDev.Admin
          // 
          // btnCollection
          // 
-         this.btnCollection.Location = new System.Drawing.Point(24, 308);
+         this.btnCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnCollection.Location = new System.Drawing.Point(36, 474);
+         this.btnCollection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnCollection.Name = "btnCollection";
-         this.btnCollection.Size = new System.Drawing.Size(134, 28);
+         this.btnCollection.Size = new System.Drawing.Size(201, 43);
          this.btnCollection.TabIndex = 8;
          this.btnCollection.Text = "Collection";
          this.btnCollection.UseVisualStyleBackColor = true;
@@ -118,9 +126,11 @@ namespace AppsDev.Admin
          // 
          // btnEvents
          // 
-         this.btnEvents.Location = new System.Drawing.Point(24, 265);
+         this.btnEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnEvents.Location = new System.Drawing.Point(36, 408);
+         this.btnEvents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnEvents.Name = "btnEvents";
-         this.btnEvents.Size = new System.Drawing.Size(134, 28);
+         this.btnEvents.Size = new System.Drawing.Size(201, 43);
          this.btnEvents.TabIndex = 7;
          this.btnEvents.Text = "Events";
          this.btnEvents.UseVisualStyleBackColor = true;
@@ -128,9 +138,11 @@ namespace AppsDev.Admin
          // 
          // btnRegistration
          // 
-         this.btnRegistration.Location = new System.Drawing.Point(24, 222);
+         this.btnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnRegistration.Location = new System.Drawing.Point(36, 342);
+         this.btnRegistration.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnRegistration.Name = "btnRegistration";
-         this.btnRegistration.Size = new System.Drawing.Size(134, 28);
+         this.btnRegistration.Size = new System.Drawing.Size(201, 43);
          this.btnRegistration.TabIndex = 6;
          this.btnRegistration.Text = "Registration";
          this.btnRegistration.UseVisualStyleBackColor = true;
@@ -138,9 +150,11 @@ namespace AppsDev.Admin
          // 
          // btnDashboard
          // 
-         this.btnDashboard.Location = new System.Drawing.Point(24, 179);
+         this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnDashboard.Location = new System.Drawing.Point(36, 275);
+         this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnDashboard.Name = "btnDashboard";
-         this.btnDashboard.Size = new System.Drawing.Size(134, 28);
+         this.btnDashboard.Size = new System.Drawing.Size(201, 43);
          this.btnDashboard.TabIndex = 3;
          this.btnDashboard.Text = "Dashboard";
          this.btnDashboard.UseVisualStyleBackColor = true;
@@ -149,9 +163,10 @@ namespace AppsDev.Admin
          // labelLastname
          // 
          this.labelLastname.AutoSize = true;
-         this.labelLastname.Location = new System.Drawing.Point(102, 145);
+         this.labelLastname.Location = new System.Drawing.Point(153, 223);
+         this.labelLastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.labelLastname.Name = "labelLastname";
-         this.labelLastname.Size = new System.Drawing.Size(58, 13);
+         this.labelLastname.Size = new System.Drawing.Size(86, 20);
          this.labelLastname.TabIndex = 5;
          this.labelLastname.Text = "Last Name";
          // 
@@ -159,9 +174,10 @@ namespace AppsDev.Admin
          // 
          this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.pictureBox1.Image = global::AppsDev.Properties.Resources.WolfAvatar;
-         this.pictureBox1.Location = new System.Drawing.Point(24, 11);
+         this.pictureBox1.Location = new System.Drawing.Point(36, 17);
+         this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.pictureBox1.Name = "pictureBox1";
-         this.pictureBox1.Size = new System.Drawing.Size(134, 113);
+         this.pictureBox1.Size = new System.Drawing.Size(199, 172);
          this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.pictureBox1.TabIndex = 0;
          this.pictureBox1.TabStop = false;
@@ -169,9 +185,10 @@ namespace AppsDev.Admin
          // labelFirstname
          // 
          this.labelFirstname.AutoSize = true;
-         this.labelFirstname.Location = new System.Drawing.Point(37, 145);
+         this.labelFirstname.Location = new System.Drawing.Point(56, 223);
+         this.labelFirstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.labelFirstname.Name = "labelFirstname";
-         this.labelFirstname.Size = new System.Drawing.Size(57, 13);
+         this.labelFirstname.Size = new System.Drawing.Size(86, 20);
          this.labelFirstname.TabIndex = 3;
          this.labelFirstname.Text = "First Name";
          // 
@@ -179,7 +196,8 @@ namespace AppsDev.Admin
          // 
          this.label2.AutoSize = true;
          this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label2.Location = new System.Drawing.Point(210, 70);
+         this.label2.Location = new System.Drawing.Point(315, 108);
+         this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label2.Name = "label2";
          this.label2.Size = new System.Drawing.Size(118, 25);
          this.label2.TabIndex = 4;
@@ -190,10 +208,11 @@ namespace AppsDev.Admin
          this.tabControlCollection.Controls.Add(this.tabPage1);
          this.tabControlCollection.Controls.Add(this.tabPage2);
          this.tabControlCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.tabControlCollection.Location = new System.Drawing.Point(190, 116);
+         this.tabControlCollection.Location = new System.Drawing.Point(285, 178);
+         this.tabControlCollection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.tabControlCollection.Name = "tabControlCollection";
          this.tabControlCollection.SelectedIndex = 0;
-         this.tabControlCollection.Size = new System.Drawing.Size(598, 307);
+         this.tabControlCollection.Size = new System.Drawing.Size(897, 472);
          this.tabControlCollection.TabIndex = 7;
          // 
          // tabPage1
@@ -201,9 +220,10 @@ namespace AppsDev.Admin
          this.tabPage1.Controls.Add(this.dataGridSetCollection);
          this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.tabPage1.Location = new System.Drawing.Point(4, 29);
+         this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.tabPage1.Name = "tabPage1";
-         this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-         this.tabPage1.Size = new System.Drawing.Size(590, 274);
+         this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+         this.tabPage1.Size = new System.Drawing.Size(889, 439);
          this.tabPage1.TabIndex = 0;
          this.tabPage1.Text = "Add | Update Collection";
          this.tabPage1.UseVisualStyleBackColor = true;
@@ -227,7 +247,8 @@ namespace AppsDev.Admin
          dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
          dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
          this.dataGridSetCollection.DefaultCellStyle = dataGridViewCellStyle2;
-         this.dataGridSetCollection.Location = new System.Drawing.Point(2, 4);
+         this.dataGridSetCollection.Location = new System.Drawing.Point(3, 6);
+         this.dataGridSetCollection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.dataGridSetCollection.Name = "dataGridSetCollection";
          dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -237,7 +258,7 @@ namespace AppsDev.Admin
          dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
          dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
          this.dataGridSetCollection.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-         this.dataGridSetCollection.Size = new System.Drawing.Size(587, 267);
+         this.dataGridSetCollection.Size = new System.Drawing.Size(880, 411);
          this.dataGridSetCollection.TabIndex = 1;
          this.dataGridSetCollection.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridCollection_CellMouseClick);
          // 
@@ -245,9 +266,10 @@ namespace AppsDev.Admin
          // 
          this.tabPage2.Controls.Add(this.dataGridViewCollection);
          this.tabPage2.Location = new System.Drawing.Point(4, 29);
+         this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.tabPage2.Name = "tabPage2";
-         this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-         this.tabPage2.Size = new System.Drawing.Size(590, 274);
+         this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+         this.tabPage2.Size = new System.Drawing.Size(889, 439);
          this.tabPage2.TabIndex = 1;
          this.tabPage2.Text = "View Collection";
          this.tabPage2.UseVisualStyleBackColor = true;
@@ -255,22 +277,25 @@ namespace AppsDev.Admin
          // dataGridViewCollection
          // 
          this.dataGridViewCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridViewCollection.Location = new System.Drawing.Point(2, 6);
+         this.dataGridViewCollection.Location = new System.Drawing.Point(3, 9);
+         this.dataGridViewCollection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.dataGridViewCollection.Name = "dataGridViewCollection";
-         this.dataGridViewCollection.Size = new System.Drawing.Size(587, 267);
+         this.dataGridViewCollection.Size = new System.Drawing.Size(880, 411);
          this.dataGridViewCollection.TabIndex = 0;
          // 
          // AdminCollection
          // 
-         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(800, 450);
+         this.ClientSize = new System.Drawing.Size(1200, 692);
          this.Controls.Add(this.tabControlCollection);
          this.Controls.Add(this.label2);
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
          this.DoubleBuffered = true;
+         this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.MaximizeBox = false;
          this.Name = "AdminCollection";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

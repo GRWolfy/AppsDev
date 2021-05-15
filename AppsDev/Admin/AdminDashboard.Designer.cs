@@ -64,7 +64,8 @@ namespace AppsDev.Admin
          // 
          this.label1.AutoSize = true;
          this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label1.Location = new System.Drawing.Point(321, 12);
+         this.label1.Location = new System.Drawing.Point(482, 18);
+         this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label1.Name = "label1";
          this.label1.Size = new System.Drawing.Size(251, 37);
          this.label1.TabIndex = 1;
@@ -82,17 +83,20 @@ namespace AppsDev.Admin
          this.panel1.Controls.Add(this.labelLastname);
          this.panel1.Controls.Add(this.pictureBox1);
          this.panel1.Controls.Add(this.labelFirstname);
-         this.panel1.Location = new System.Drawing.Point(2, 1);
+         this.panel1.Location = new System.Drawing.Point(3, 2);
+         this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.panel1.Name = "panel1";
-         this.panel1.Size = new System.Drawing.Size(182, 437);
+         this.panel1.Size = new System.Drawing.Size(273, 672);
          this.panel1.TabIndex = 2;
          this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
          // 
          // btnLogout
          // 
-         this.btnLogout.Location = new System.Drawing.Point(24, 394);
+         this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnLogout.Location = new System.Drawing.Point(36, 606);
+         this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnLogout.Name = "btnLogout";
-         this.btnLogout.Size = new System.Drawing.Size(134, 28);
+         this.btnLogout.Size = new System.Drawing.Size(201, 43);
          this.btnLogout.TabIndex = 10;
          this.btnLogout.Text = "Logout";
          this.btnLogout.UseVisualStyleBackColor = true;
@@ -100,9 +104,11 @@ namespace AppsDev.Admin
          // 
          // btnReports
          // 
-         this.btnReports.Location = new System.Drawing.Point(24, 351);
+         this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnReports.Location = new System.Drawing.Point(36, 540);
+         this.btnReports.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnReports.Name = "btnReports";
-         this.btnReports.Size = new System.Drawing.Size(134, 28);
+         this.btnReports.Size = new System.Drawing.Size(201, 43);
          this.btnReports.TabIndex = 9;
          this.btnReports.Text = "Reports";
          this.btnReports.UseVisualStyleBackColor = true;
@@ -110,9 +116,11 @@ namespace AppsDev.Admin
          // 
          // btnCollection
          // 
-         this.btnCollection.Location = new System.Drawing.Point(24, 308);
+         this.btnCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnCollection.Location = new System.Drawing.Point(36, 474);
+         this.btnCollection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnCollection.Name = "btnCollection";
-         this.btnCollection.Size = new System.Drawing.Size(134, 28);
+         this.btnCollection.Size = new System.Drawing.Size(201, 43);
          this.btnCollection.TabIndex = 8;
          this.btnCollection.Text = "Collection";
          this.btnCollection.UseVisualStyleBackColor = true;
@@ -120,9 +128,11 @@ namespace AppsDev.Admin
          // 
          // btnEvents
          // 
-         this.btnEvents.Location = new System.Drawing.Point(24, 265);
+         this.btnEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnEvents.Location = new System.Drawing.Point(36, 408);
+         this.btnEvents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnEvents.Name = "btnEvents";
-         this.btnEvents.Size = new System.Drawing.Size(134, 28);
+         this.btnEvents.Size = new System.Drawing.Size(201, 43);
          this.btnEvents.TabIndex = 7;
          this.btnEvents.Text = "Events";
          this.btnEvents.UseVisualStyleBackColor = true;
@@ -130,9 +140,11 @@ namespace AppsDev.Admin
          // 
          // btnRegistration
          // 
-         this.btnRegistration.Location = new System.Drawing.Point(24, 222);
+         this.btnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnRegistration.Location = new System.Drawing.Point(36, 342);
+         this.btnRegistration.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnRegistration.Name = "btnRegistration";
-         this.btnRegistration.Size = new System.Drawing.Size(134, 28);
+         this.btnRegistration.Size = new System.Drawing.Size(201, 43);
          this.btnRegistration.TabIndex = 6;
          this.btnRegistration.Text = "Registration";
          this.btnRegistration.UseVisualStyleBackColor = true;
@@ -140,9 +152,11 @@ namespace AppsDev.Admin
          // 
          // btnDashboard
          // 
-         this.btnDashboard.Location = new System.Drawing.Point(24, 179);
+         this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.btnDashboard.Location = new System.Drawing.Point(36, 275);
+         this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.btnDashboard.Name = "btnDashboard";
-         this.btnDashboard.Size = new System.Drawing.Size(134, 28);
+         this.btnDashboard.Size = new System.Drawing.Size(201, 43);
          this.btnDashboard.TabIndex = 3;
          this.btnDashboard.Text = "Dashboard";
          this.btnDashboard.UseVisualStyleBackColor = true;
@@ -151,9 +165,10 @@ namespace AppsDev.Admin
          // labelLastname
          // 
          this.labelLastname.AutoSize = true;
-         this.labelLastname.Location = new System.Drawing.Point(102, 145);
+         this.labelLastname.Location = new System.Drawing.Point(153, 223);
+         this.labelLastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.labelLastname.Name = "labelLastname";
-         this.labelLastname.Size = new System.Drawing.Size(58, 13);
+         this.labelLastname.Size = new System.Drawing.Size(86, 20);
          this.labelLastname.TabIndex = 5;
          this.labelLastname.Text = "Last Name";
          // 
@@ -161,9 +176,10 @@ namespace AppsDev.Admin
          // 
          this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.pictureBox1.Image = global::AppsDev.Properties.Resources.WolfAvatar;
-         this.pictureBox1.Location = new System.Drawing.Point(24, 11);
+         this.pictureBox1.Location = new System.Drawing.Point(36, 17);
+         this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.pictureBox1.Name = "pictureBox1";
-         this.pictureBox1.Size = new System.Drawing.Size(134, 113);
+         this.pictureBox1.Size = new System.Drawing.Size(199, 172);
          this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.pictureBox1.TabIndex = 0;
          this.pictureBox1.TabStop = false;
@@ -171,9 +187,10 @@ namespace AppsDev.Admin
          // labelFirstname
          // 
          this.labelFirstname.AutoSize = true;
-         this.labelFirstname.Location = new System.Drawing.Point(37, 145);
+         this.labelFirstname.Location = new System.Drawing.Point(56, 223);
+         this.labelFirstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.labelFirstname.Name = "labelFirstname";
-         this.labelFirstname.Size = new System.Drawing.Size(57, 13);
+         this.labelFirstname.Size = new System.Drawing.Size(86, 20);
          this.labelFirstname.TabIndex = 3;
          this.labelFirstname.Text = "First Name";
          // 
@@ -181,16 +198,18 @@ namespace AppsDev.Admin
          // 
          this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.panel2.Controls.Add(this.lblTotalRegistration);
-         this.panel2.Location = new System.Drawing.Point(200, 123);
+         this.panel2.Location = new System.Drawing.Point(300, 189);
+         this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.panel2.Name = "panel2";
-         this.panel2.Size = new System.Drawing.Size(170, 150);
+         this.panel2.Size = new System.Drawing.Size(253, 229);
          this.panel2.TabIndex = 3;
          // 
          // lblTotalRegistration
          // 
          this.lblTotalRegistration.AutoSize = true;
          this.lblTotalRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTotalRegistration.Location = new System.Drawing.Point(26, 36);
+         this.lblTotalRegistration.Location = new System.Drawing.Point(39, 55);
+         this.lblTotalRegistration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lblTotalRegistration.Name = "lblTotalRegistration";
          this.lblTotalRegistration.Size = new System.Drawing.Size(68, 73);
          this.lblTotalRegistration.TabIndex = 5;
@@ -200,16 +219,18 @@ namespace AppsDev.Admin
          // 
          this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.panel3.Controls.Add(this.lblTotalCollection);
-         this.panel3.Location = new System.Drawing.Point(402, 123);
+         this.panel3.Location = new System.Drawing.Point(603, 189);
+         this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.panel3.Name = "panel3";
-         this.panel3.Size = new System.Drawing.Size(170, 150);
+         this.panel3.Size = new System.Drawing.Size(253, 229);
          this.panel3.TabIndex = 4;
          // 
          // lblTotalCollection
          // 
          this.lblTotalCollection.AutoSize = true;
          this.lblTotalCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTotalCollection.Location = new System.Drawing.Point(35, 55);
+         this.lblTotalCollection.Location = new System.Drawing.Point(52, 85);
+         this.lblTotalCollection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lblTotalCollection.Name = "lblTotalCollection";
          this.lblTotalCollection.Size = new System.Drawing.Size(39, 42);
          this.lblTotalCollection.TabIndex = 6;
@@ -219,16 +240,18 @@ namespace AppsDev.Admin
          // 
          this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.panel4.Controls.Add(this.lblTotalEvents);
-         this.panel4.Location = new System.Drawing.Point(603, 123);
+         this.panel4.Location = new System.Drawing.Point(904, 189);
+         this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.panel4.Name = "panel4";
-         this.panel4.Size = new System.Drawing.Size(170, 150);
+         this.panel4.Size = new System.Drawing.Size(253, 229);
          this.panel4.TabIndex = 4;
          // 
          // lblTotalEvents
          // 
          this.lblTotalEvents.AutoSize = true;
          this.lblTotalEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTotalEvents.Location = new System.Drawing.Point(26, 36);
+         this.lblTotalEvents.Location = new System.Drawing.Point(39, 55);
+         this.lblTotalEvents.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lblTotalEvents.Name = "lblTotalEvents";
          this.lblTotalEvents.Size = new System.Drawing.Size(68, 73);
          this.lblTotalEvents.TabIndex = 7;
@@ -238,7 +261,8 @@ namespace AppsDev.Admin
          // 
          this.label5.AutoSize = true;
          this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label5.Location = new System.Drawing.Point(223, 295);
+         this.label5.Location = new System.Drawing.Point(334, 454);
+         this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label5.Name = "label5";
          this.label5.Size = new System.Drawing.Size(124, 18);
          this.label5.TabIndex = 6;
@@ -248,7 +272,8 @@ namespace AppsDev.Admin
          // 
          this.label4.AutoSize = true;
          this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label4.Location = new System.Drawing.Point(625, 295);
+         this.label4.Location = new System.Drawing.Point(938, 454);
+         this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label4.Name = "label4";
          this.label4.Size = new System.Drawing.Size(90, 18);
          this.label4.TabIndex = 7;
@@ -258,7 +283,8 @@ namespace AppsDev.Admin
          // 
          this.label6.AutoSize = true;
          this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label6.Location = new System.Drawing.Point(422, 295);
+         this.label6.Location = new System.Drawing.Point(633, 454);
+         this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label6.Name = "label6";
          this.label6.Size = new System.Drawing.Size(111, 18);
          this.label6.TabIndex = 8;
@@ -267,9 +293,10 @@ namespace AppsDev.Admin
          // linklViewRegistration
          // 
          this.linklViewRegistration.AutoSize = true;
-         this.linklViewRegistration.Location = new System.Drawing.Point(233, 352);
+         this.linklViewRegistration.Location = new System.Drawing.Point(350, 542);
+         this.linklViewRegistration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.linklViewRegistration.Name = "linklViewRegistration";
-         this.linklViewRegistration.Size = new System.Drawing.Size(90, 13);
+         this.linklViewRegistration.Size = new System.Drawing.Size(134, 20);
          this.linklViewRegistration.TabIndex = 9;
          this.linklViewRegistration.TabStop = true;
          this.linklViewRegistration.Text = "Total Registration";
@@ -278,9 +305,10 @@ namespace AppsDev.Admin
          // linklViewEvents
          // 
          this.linklViewEvents.AutoSize = true;
-         this.linklViewEvents.Location = new System.Drawing.Point(629, 352);
+         this.linklViewEvents.Location = new System.Drawing.Point(944, 542);
+         this.linklViewEvents.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.linklViewEvents.Name = "linklViewEvents";
-         this.linklViewEvents.Size = new System.Drawing.Size(67, 13);
+         this.linklViewEvents.Size = new System.Drawing.Size(97, 20);
          this.linklViewEvents.TabIndex = 10;
          this.linklViewEvents.TabStop = true;
          this.linklViewEvents.Text = "Total Events";
@@ -289,9 +317,10 @@ namespace AppsDev.Admin
          // linklViewCollection
          // 
          this.linklViewCollection.AutoSize = true;
-         this.linklViewCollection.Location = new System.Drawing.Point(434, 352);
+         this.linklViewCollection.Location = new System.Drawing.Point(651, 542);
+         this.linklViewCollection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.linklViewCollection.Name = "linklViewCollection";
-         this.linklViewCollection.Size = new System.Drawing.Size(80, 13);
+         this.linklViewCollection.Size = new System.Drawing.Size(117, 20);
          this.linklViewCollection.TabIndex = 11;
          this.linklViewCollection.TabStop = true;
          this.linklViewCollection.Text = "Total Collection";
@@ -301,7 +330,8 @@ namespace AppsDev.Admin
          // 
          this.label7.AutoSize = true;
          this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label7.Location = new System.Drawing.Point(210, 70);
+         this.label7.Location = new System.Drawing.Point(315, 108);
+         this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label7.Name = "label7";
          this.label7.Size = new System.Drawing.Size(117, 25);
          this.label7.TabIndex = 12;
@@ -309,9 +339,9 @@ namespace AppsDev.Admin
          // 
          // AdminDashboard
          // 
-         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(800, 450);
+         this.ClientSize = new System.Drawing.Size(1200, 692);
          this.Controls.Add(this.label7);
          this.Controls.Add(this.linklViewCollection);
          this.Controls.Add(this.linklViewEvents);
@@ -325,7 +355,9 @@ namespace AppsDev.Admin
          this.Controls.Add(this.panel1);
          this.Controls.Add(this.label1);
          this.DoubleBuffered = true;
+         this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+         this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.MaximizeBox = false;
          this.Name = "AdminDashboard";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
