@@ -91,7 +91,7 @@ namespace AppsDev.Admin
       private void getEvents()
       {
          Connection.Connection.DB();
-         Functions.Function.gen = "SELECT Events.EventId AS [EVENT ID], Events.Eventname AS [EVENT NAME], 'Php' + convert(varchar, cast(Events.Eventprice AS MONEY), 1) AS [EVENT FEE], Events.Dateregistered AS [DATE REGISTERED] FROM Events";
+         Functions.Function.gen = "SELECT Events.EventId AS [EVENT ID], Events.Eventname AS [EVENT NAME], Events.Eventprice AS [EVENT FEE], Events.Dateregistered AS [DATE REGISTERED] FROM Events";
          Functions.Function.fill(Functions.Function.gen, dataGridEvents);
       }
 
@@ -100,7 +100,7 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "UPDATE Events SET Eventname = '" + txtEventname.Text + "', Eventprice = '" + txtEventprice.Text +"', dateregistered = '"+ DateTimePick.Value.Date + "' WHERE EventId = '"+ txtEventid.Text +"' ";
+            Functions.Function.gen = "UPDATE Events SET Eventname = '" + txtEventname.Text + "', Eventprice = '" + txtEventprice.Text +"', dateregistered = '"+ DateTimePick.Value.Date.ToString("yyyy-MM-dd") + "' WHERE EventId = '"+ txtEventid.Text +"' ";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);

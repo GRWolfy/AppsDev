@@ -129,7 +129,7 @@ namespace AppsDev.Admin
             if (Functions.Function.reader.HasRows)
             {
                Functions.Function.reader.Read();
-               lblTotalCollection.Text = (Functions.Function.reader["total"].ToString());
+               lblTotalEvents.Text = (Functions.Function.reader["total"].ToString());
             }
          }
 
