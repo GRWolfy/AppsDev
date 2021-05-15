@@ -124,7 +124,7 @@ namespace AppsDev.Admin
       public void getRegistrationALL()
       {
          Connection.Connection.DB();
-         Functions.Function.gen = "SELECT Users.UserId AS [USER ID], Users.FirstName AS [FIRST NAME], Users.LastName AS [LAST NAME], Users.Age AS [AGE], Users.Gender AS [GENDER], Users.Status AS [STATUS], Users.Username AS [USERNAME], Users.Password AS [PASSWORD], users.Dateregistered AS [DATE REGISTERED], Role.RoleId as [ROLE] FROM Users INNER JOIN Role ON Role.RoleId = Users.RoleId";
+         Functions.Function.gen = "SELECT Users.UserId AS [USER ID], Users.FirstName AS [FIRST NAME], Users.LastName AS [LAST NAME], Users.Age AS [AGE], Users.Gender AS [GENDER], Users.Status AS [STATUS], Users.Username AS [USERNAME], Users.Password AS [PASSWORD], users.Dateregistered AS [DATE REGISTERED], Role.RoleId as [ROLE], Users.Email AS [EMAIL] FROM Users INNER JOIN Role ON Role.RoleId = Users.RoleId";
          Functions.Function.fill(Functions.Function.gen, dataGridRegister);
       }
 
@@ -192,7 +192,7 @@ namespace AppsDev.Admin
          try
          {
             Connection.Connection.DB();
-            Functions.Function.gen = "UPDATE Users SET FirstName = '" + txtFirstName.Text + "', LastName = '" + txtLastName.Text + "', Age = '" + txtAge.Text + "', Gender = '" + getGender() + "', Status = '" + cmboxStatus.Text + "', Username = '" + txtUsername.Text + "', Password = '" + txtPassword.Text + "', Dateregistered = '" + DateTimePick.Value.Date + "', RoleId = '" + txtRoleId.Text + "', Email = '" + txtEmail.Text + "' WHERE userid = '" + txtUserid.Text + "' ";
+            Functions.Function.gen = "UPDATE Users SET FirstName = '" + txtFirstName.Text + "', LastName = '" + txtLastName.Text + "', Age = '" + txtAge.Text + "', Gender = '" + getGender() + "', Status = '" + cmboxStatus.Text + "', Username = '" + txtUsername.Text + "', Password = '" + txtPassword.Text + "', Dateregistered = '" + DateTimePick.Value.Date.ToString("yyyy-MM-dd") + "', RoleId = '" + txtRoleId.Text + "', Email = '" + txtEmail.Text + "' WHERE userid = '" + txtUserid.Text + "' ";
             Functions.Function.command = new SqlCommand(Functions.Function.gen, Connection.Connection.con);
             Functions.Function.command.ExecuteNonQuery();
             MessageBox.Show("Update success.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
